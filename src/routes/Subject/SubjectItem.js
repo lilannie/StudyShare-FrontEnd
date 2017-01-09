@@ -22,7 +22,7 @@ export default class SubjectItem extends React.Component {
         });
 
         var linkProps = {
-            href: '/ltr/mailbox/mail',
+            href: '',
             onClick: ::this.handleClick,
             className: classes,
         };
@@ -41,7 +41,7 @@ export default class SubjectItem extends React.Component {
                                     marginRight: 5,
                                     display: this.props.labelValue ? 'inline' : 'none'
                                 }}>{this.props.labelValue}</Badge>
-                                <span>{this.props.description}</span>
+                                <span className="fg-black">{this.props.description}</span>
                             </small>
                         </div>
                     </div>

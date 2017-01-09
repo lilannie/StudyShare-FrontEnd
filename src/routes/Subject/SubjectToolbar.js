@@ -13,6 +13,8 @@ import {
 
 @withRouter
 export default class SubjectToolbar extends React.Component {
+    handleClick () {}
+
 
     render() {
         return (
@@ -21,7 +23,7 @@ export default class SubjectToolbar extends React.Component {
                     <Col xs={8} style={{paddingTop: 12.5, paddingBottom: 12.5}}>
                         <ButtonToolbar className='inbox-toolbar'>
                             <ButtonGroup>
-                                <Button bsStyle='blue' onClick={::this.handleClick}>
+                                <Button bsStyle='blue' onClick={this.handleClick()}>
                                     <Icon glyph='icon-fontello-edit-1'/>
                                 </Button>
                             </ButtonGroup>

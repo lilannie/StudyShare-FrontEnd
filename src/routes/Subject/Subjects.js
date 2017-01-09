@@ -13,70 +13,76 @@ import {
 
 @withRouter
 export default class Subjects extends React.Component {
-    getInitialState() {
-        return {
-            selected: {
-                subject: 1,
-                items: [],
+    static defaultProps = {
+        subjects: {
+            1: {
+                id: 1,
+                name: 'Calculus',
+                content: [
+                    {
+                        id: 1,
+                        name: 'Derivatives',
+                        labelId: 2,
+                        description: 'Review Derivatives with this notecard deck!',
+                        date: '08/20'
+                    }
+                ]
             },
-            subjects: {
-                1: {
-                    id: 1,
-                    name: 'Calculus',
-                    content: [
-                        {
-                            id: 1,
-                            name: 'Derivatives',
-                            labelId: 2,
-                            description: 'Review Derivatives with this notecard deck!'
-                        }
-                    ]
-                },
-                2: {
-                    id: 2,
-                    name: 'Physics',
-                    content: [
-                        {
-                            id: 2,
-                            name: 'Acceleration',
-                            labelId: 1,
-                            description: 'Learn about acceleration!'
-                        }
-                    ]
-                },
-                3: {
-                    id: 3,
-                    name: 'Data Structures',
-                    content: [
-                        {
-                            id: 3,
-                            name: 'Binary Search Trees',
-                            labelId: 3,
-                            description: 'Here is an animation on Binary Search Trees!'
-                        }
-                    ]
-                },
+            2: {
+                id: 2,
+                name: 'Physics',
+                content: [
+                    {
+                        id: 2,
+                        name: 'Acceleration',
+                        labelId: 1,
+                        description: 'Learn about acceleration!',
+                        date: '08/20'
+                    }
+                ]
             },
-            tags: [
-                {
-                    id: 1,
-                    name: 'Note',
-                    badgeClass: 'bg-green fg-white',
-                },
-                {
-                    id: 2,
-                    name: 'Notecard Deck',
-                    badgeClass: 'bg-red fg-white',
-                },
-                {
-                    id: 3,
-                    name: 'Animation',
-                    badgeClass: 'bg-blue fg-white',
-                },
-            ],
+            3: {
+                id: 3,
+                name: 'Data Structures',
+                content: [
+                    {
+                        id: 3,
+                        name: 'Binary Search Trees',
+                        labelId: 3,
+                        description: 'Here is an animation on Binary Search Trees!',
+                        date: '08/20'
+                    }
+                ]
+            },
+        },
+        labels: {
+            1: {
+                id: 1,
+                name: 'Note',
+                badgeClass: 'bg-green fg-white',
+            },
+            2: {
+                id: 2,
+                name: 'Notecard Deck',
+                badgeClass: 'bg-red fg-white',
+            },
+            3: {
+                id: 3,
+                name: 'Animation',
+                badgeClass: 'bg-blue fg-white',
+            },
+        },
+    };
 
-
+    state = {
+        selected: {
+            subject: 1,
+            items: [],
         }
+    };
+
+    componentWillMount() {
+
     }
 
     changeContent() {
@@ -85,6 +91,7 @@ export default class Subjects extends React.Component {
 
 
     render() {
+
         return (
             <PanelContainer className='subjects' collapseBottom>
                 <Panel>
@@ -95,7 +102,8 @@ export default class Subjects extends React.Component {
                         <Panel horizontal>
 
                             <SubjectSidebar />
-                            <SubjectContent contents={this.state.subjects[this.state.selected.subject].content}/>
+                            <SubjectContent contents={this.props.subjects[this.state.selected.subject].content}
+                                            labels={this.props.labels}/>
 
                         </Panel>
                     </PanelBody>
