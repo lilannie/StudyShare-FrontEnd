@@ -15,29 +15,18 @@ export default class Browse extends React.Component {
         );
     }
 
-    componentWillMount() {
+    componentWillMount() {}
 
-    }
+    componentDidMount() {}
 
-    componentDidMount() {
-
-    }
-
-    componentWillReceiveProps(nextProps) {
-
-    }
-
+    componentWillReceiveProps(nextProps) {}
 
     shouldComponentUpdate(nextProps, nextState) {
-
+        return true;
     }
 
-    componentWillUpdate(nextProps, nextState) {
+    componentWillUpdate(nextProps, nextState) {}
 
-    }
-
-    componentDidUpdate(prevProps, prevState) {
-
-    }
+    componentDidUpdate(prevProps, prevState) {}
 
 }

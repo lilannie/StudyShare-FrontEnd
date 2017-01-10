@@ -11,14 +11,14 @@ export default class Sidebar extends React.Component {
 
     render() {
         return (
-            <div id="wrapper">
+            <div id="sidebar-container" className="">
                 <div id="sidebar-wrapper">
                     <aside id="sidebar">
                         <ul id="sidemenu" className="sidebar-nav">
                             <li>
-                                <a href="#">
+                                <a href="/">
                                     <span className="sidebar-icon">
-                                        <i className="fa fa-dashboard"></i>
+                                        <i className="fa fa-home fa-2x"></i>
                                     </span>
                                     <span className="sidebar-title">
                                         Home
@@ -29,67 +29,63 @@ export default class Sidebar extends React.Component {
                                 <a className="accordion-toggle collapsed toggle-switch" data-toggle="collapse"
                                    href="#submenu-2">
                                     <span className="sidebar-icon">
-                                        <i className="fa fa-users"></i>
+                                        <i className="fa fa-book fa-2x"></i>
                                     </span>
                                     <span className="sidebar-title">
-                                        Management
+                                        Content
                                     </span>
                                     <b className="caret"></b>
                                 </a>
                                 <ul id="submenu-2" className="panel-collapse collapse panel-switch" role="menu">
                                     <li>
-                                        <a href="#">
-                                            <i className="fa fa-caret-right"></i>Users
+                                        <a href="/subjects">
+                                            <i className="fa fa-caret-right"></i>Subjects
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
-                                            <i className="fa fa-caret-right"></i>Roles
+                                        <a href="/notebooks">
+                                            <i className="fa fa-caret-right"></i>Notebooks
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/notecards">
+                                            <i className="fa fa-caret-right"></i>Notecards
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/animations">
+                                            <i className="fa fa-caret-right"></i>Animations
                                         </a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a className="accordion-toggle collapsed toggle-switch" data-toggle="collapse"
-                                   href="#submenu-3">
+                                <a href="/explore">
                                     <span className="sidebar-icon">
-                                        <i className="fa fa-newspaper-o"></i>
+                                        <i className="fa fa-laptop fa-2x"></i>
                                     </span>
                                     <span className="sidebar-title">
-                                        Blog
-                                    </span>
-                                    <b className="caret"></b>
-                                </a>
-                                <ul id="submenu-3" className="panel-collapse collapse panel-switch" role="menu">
-                                    <li>
-                                        <a href="#">
-                                            <i className="fa fa-caret-right"></i>Posts
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i className="fa fa-caret-right"></i>Comments
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span className="sidebar-icon">
-                                        <i className="fa fa-database"></i>
-                                    </span>
-                                    <span className="sidebar-title">
-                                        Data
+                                        Explore
                                     </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/classes">
                                     <span className="sidebar-icon">
-                                        <i className="fa fa-terminal"></i>
+                                        <i className="fa fa-graduation-cap fa-2x"></i>
                                     </span>
                                     <span className="sidebar-title">
-                                        Console
+                                        Classes
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/friends">
+                                    <span className="sidebar-icon">
+                                        <i className="fa fa-users fa-2x"></i>
+                                    </span>
+                                    <span className="sidebar-title">
+                                        Friends
                                     </span>
                                 </a>
                             </li>
@@ -102,29 +98,17 @@ export default class Sidebar extends React.Component {
         );
     }
 
-    componentWillMount() {
+    componentWillMount() {}
 
-    }
+    componentDidMount() {}
 
-    componentDidMount() {
-
-    }
-
-    componentWillReceiveProps(nextProps) {
-
-    }
-
+    componentWillReceiveProps(nextProps) {}
 
     shouldComponentUpdate(nextProps, nextState) {
-
+        return true;
     }
 
-    componentWillUpdate(nextProps, nextState) {
+    componentWillUpdate(nextProps, nextState) {}
 
-    }
-
-    componentDidUpdate(prevProps, prevState) {
-
-    }
-
+    componentDidUpdate(prevProps, prevState) {}
 }
