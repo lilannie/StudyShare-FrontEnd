@@ -16,7 +16,7 @@ export default class Main extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <Header/>
                 <Sidebar/>
                 <div id="body" className="container-fluid">

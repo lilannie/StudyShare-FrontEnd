@@ -24833,7 +24833,7 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                null,
+	                { className: 'container' },
 	                _react2.default.createElement(_Header2.default, null),
 	                _react2.default.createElement(_Sidebar2.default, null),
 	                _react2.default.createElement(
@@ -24930,12 +24930,15 @@
 	    }
 
 	    _createClass(Header, [{
+	        key: 'handleSelect',
+	        value: function handleSelect(selectedKey) {}
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
-	                _reactBootstrap.Button,
-	                null,
-	                'Header'
+	                _reactBootstrap.Nav,
+	                { bsStyle: 'pills', activeKey: 1, onSelect: this.handleSelect },
+	                _react2.default.createElement('img', { className: 'navbar-right', src: 'img/logo-dark.png', alt: 'logo' })
 	            );
 	        }
 	    }, {
