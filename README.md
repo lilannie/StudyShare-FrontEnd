@@ -1,2 +1,5 @@
-# StudyShare-FrontEnd
-Front end for StudyShare app, served using a Node backend
+### Usage
+
+1. npm install
+2. npm run build
+3. npm run server
