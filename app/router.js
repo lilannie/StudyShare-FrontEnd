@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Route, Router, IndexRoute, hashHistory} from 'react-router';
+import {Route, Router, IndexRoute, browserHistory} from 'react-router';
 
 import Main from 'Main';
 import Index from 'Index';
@@ -13,7 +13,7 @@ import Class from 'Class';
 import Friend from 'Friend';
 
 ReactDOM.render(
-    <Router history={hashHistory}>
+    <Router history={browserHistory}>
         <Route path="/" component={Main}>
             <IndexRoute component={Index}/>
         </Route>

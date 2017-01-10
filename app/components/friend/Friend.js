@@ -11,7 +11,7 @@ export default class Friend extends React.Component {
 
     render() {
         return (
-            <h1>Browse</h1>
+            <h1>Friends</h1>
         );
     }
 
