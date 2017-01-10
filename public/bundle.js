@@ -24833,25 +24833,13 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'container' },
+	                { className: 'container-fluid' },
 	                _react2.default.createElement(_Header2.default, null),
 	                _react2.default.createElement(_Sidebar2.default, null),
 	                _react2.default.createElement(
 	                    'div',
 	                    { id: 'body', className: 'container-fluid' },
-	                    _react2.default.createElement(
-	                        _reactBootstrap.Grid,
-	                        null,
-	                        _react2.default.createElement(
-	                            _reactBootstrap.Row,
-	                            null,
-	                            _react2.default.createElement(
-	                                _reactBootstrap.Col,
-	                                { xs: 12 },
-	                                this.props.children
-	                            )
-	                        )
-	                    )
+	                    this.props.children
 	                ),
 	                _react2.default.createElement(_Footer2.default, null)
 	            );
@@ -24900,8 +24888,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactBootstrap = __webpack_require__(218);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24936,9 +24922,13 @@
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
-	                _reactBootstrap.Nav,
+	                Nav,
 	                { bsStyle: 'pills', activeKey: 1, onSelect: this.handleSelect },
-	                _react2.default.createElement('img', { className: 'navbar-right', src: 'img/logo-dark.png', alt: 'logo' })
+	                _react2.default.createElement(
+	                    NavItem,
+	                    { eventKey: 1, href: '/' },
+	                    _react2.default.createElement('img', { className: 'navbar-right', src: 'images/app/logo-dark.png', alt: 'logo' })
+	                )
 	            );
 	        }
 	    }, {

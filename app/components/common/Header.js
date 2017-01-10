@@ -1,5 +1,4 @@
 import React from 'react';
-import { Nav, NavItem } from 'react-bootstrap';
 
 export default class Header extends React.Component {
     static defaultProps = {
@@ -17,7 +16,7 @@ export default class Header extends React.Component {
     render() {
         return (
             <Nav bsStyle="pills" activeKey={1} onSelect={this.handleSelect}>
-                <img className="navbar-right" src="img/logo-dark.png" alt="logo"/>
+                <NavItem  eventKey={1} href="/" ><img className="navbar-right" src="images/app/logo-dark.png" alt="logo"/></NavItem>
             </Nav>
         );
     }

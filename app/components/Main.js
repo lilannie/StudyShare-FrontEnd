@@ -16,17 +16,11 @@ export default class Main extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container-fluid">
                 <Header/>
                 <Sidebar/>
                 <div id="body" className="container-fluid">
-                    <Grid>
-                        <Row>
-                            <Col xs={12}>
-                                {this.props.children}
-                            </Col>
-                        </Row>
-                    </Grid>
+                    {this.props.children}
                 </div>
                 <Footer/>
             </div>
