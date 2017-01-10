@@ -20,10 +20,9 @@ export default class Main extends React.Component {
             <div className="container-fluid">
                 <Header/>
                 <Sidebar/>
-                <div id="body" className="container-fluid">
+                <main id="main-content-wrapper" role="main">
                     {this.props.children}
-                </div>
-                <Footer/>
+                </main>
             </div>
         );
     }

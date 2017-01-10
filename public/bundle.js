@@ -71,6 +71,34 @@
 
 	var _Index2 = _interopRequireDefault(_Index);
 
+	var _Subject = __webpack_require__(228);
+
+	var _Subject2 = _interopRequireDefault(_Subject);
+
+	var _Notebook = __webpack_require__(229);
+
+	var _Notebook2 = _interopRequireDefault(_Notebook);
+
+	var _Deck = __webpack_require__(230);
+
+	var _Deck2 = _interopRequireDefault(_Deck);
+
+	var _Animation = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"Animation\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+	var _Animation2 = _interopRequireDefault(_Animation);
+
+	var _Browse = __webpack_require__(231);
+
+	var _Browse2 = _interopRequireDefault(_Browse);
+
+	var _Class = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"Class\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+	var _Class2 = _interopRequireDefault(_Class);
+
+	var _Friend = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"Friend\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+	var _Friend2 = _interopRequireDefault(_Friend);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	_reactDom2.default.render(_react2.default.createElement(
@@ -80,6 +108,41 @@
 	        _reactRouter.Route,
 	        { path: '/', component: _Main2.default },
 	        _react2.default.createElement(_reactRouter.IndexRoute, { component: _Index2.default })
+	    ),
+	    _react2.default.createElement(
+	        _reactRouter.Route,
+	        { path: '/subjects', component: _Main2.default },
+	        _react2.default.createElement(_reactRouter.IndexRoute, { component: _Subject2.default })
+	    ),
+	    _react2.default.createElement(
+	        _reactRouter.Route,
+	        { path: '/notebooks', component: _Main2.default },
+	        _react2.default.createElement(_reactRouter.IndexRoute, { component: _Notebook2.default })
+	    ),
+	    _react2.default.createElement(
+	        _reactRouter.Route,
+	        { path: '/notecards', component: _Main2.default },
+	        _react2.default.createElement(_reactRouter.IndexRoute, { component: _Deck2.default })
+	    ),
+	    _react2.default.createElement(
+	        _reactRouter.Route,
+	        { path: '/animations', component: _Main2.default },
+	        _react2.default.createElement(_reactRouter.IndexRoute, { component: _Animation2.default })
+	    ),
+	    _react2.default.createElement(
+	        _reactRouter.Route,
+	        { path: '/explore', component: _Main2.default },
+	        _react2.default.createElement(_reactRouter.IndexRoute, { component: _Browse2.default })
+	    ),
+	    _react2.default.createElement(
+	        _reactRouter.Route,
+	        { path: '/classes', component: _Main2.default },
+	        _react2.default.createElement(_reactRouter.IndexRoute, { component: _Class2.default })
+	    ),
+	    _react2.default.createElement(
+	        _reactRouter.Route,
+	        { path: '/friends', component: _Main2.default },
+	        _react2.default.createElement(_reactRouter.IndexRoute, { component: _Friend2.default })
 	    )
 	), document.getElementById('app'));
 
@@ -24841,11 +24904,10 @@
 	                _react2.default.createElement(_Header2.default, null),
 	                _react2.default.createElement(_Sidebar2.default, null),
 	                _react2.default.createElement(
-	                    'div',
-	                    { id: 'body', className: 'container-fluid' },
+	                    'main',
+	                    { id: 'main-content-wrapper', role: 'main' },
 	                    this.props.children
-	                ),
-	                _react2.default.createElement(_Footer2.default, null)
+	                )
 	            );
 	        }
 	    }, {
@@ -25353,7 +25415,7 @@
 
 
 	// module
-	exports.push([module.id, "#header {\n  font-family: \"Lucida Sans Unicode\", \"Lucida Grande\", sans-serif;\n  color: white; }\n  #header .navbar-fixed-top {\n    top: 0;\n    background: #333333; }\n  #header .navbar-default .navbar-nav #user-profile {\n    min-height: 50px;\n    padding-top: 15px;\n    padding-left: 58px; }\n  #header .navbar-default .navbar-nav > .open > a, #header .navbar-default .navbar-nav > .open > a:hover, #header .navbar-default .navbar-nav > .open > a:focus {\n    background-image: none;\n    color: #fff;\n    background-color: #333333; }\n  #header .navbar-default .navbar-nav #user-profile h4 {\n    min-height: 45px;\n    width: 45px;\n    position: absolute;\n    top: 2px;\n    margin-left: -90px;\n    padding: 1px;\n    color: white; }\n  #header .header-logo {\n    height: 45px;\n    margin-right: -2em;\n    padding-bottom: .75em;\n    margin-top: -.30em; }\n  #header button {\n    height: 32px;\n    border-radius: 2px; }\n\n#sidebar-container {\n  padding-top: 50px;\n  padding-left: 0;\n  -webkit-transition: all .5s ease;\n  -moz-transition: all .5s ease;\n  -o-transition: all .5s ease;\n  transition: all .5s ease;\n  font-size: larger; }\n  #sidebar-container #sidebar-wrapper {\n    z-index: 1000;\n    position: fixed;\n    left: 225px;\n    width: 0;\n    height: 100%;\n    margin-left: -225px;\n    overflow-y: auto;\n    background: #333333;\n    -webkit-transition: all .5s ease;\n    -moz-transition: all .5s ease;\n    -o-transition: all .5s ease;\n    transition: all .5s ease; }\n  #sidebar-container #sidebar-wrapper .sidebar-nav {\n    position: absolute;\n    top: 0;\n    width: 225px;\n    font-size: 14px;\n    margin: 0;\n    padding: 0;\n    list-style: none; }\n  #sidebar-container #sidebar-wrapper .sidebar-nav li {\n    text-indent: 0;\n    line-height: 45px; }\n    #sidebar-container #sidebar-wrapper .sidebar-nav li a {\n      display: block;\n      text-decoration: none;\n      color: #428bca; }\n  #sidebar-container #sidemenu li a {\n    padding-top: .4em; }\n  #sidebar-container #sidemenu .sidebar-title {\n    font-size: large; }\n  #sidebar-container .sidebar-nav li:first-child a {\n    background: #ff6e1a !important;\n    color: #fff !important; }\n  #sidebar-container #sidebar-wrapper .sidebar-nav li a .sidebar-icon {\n    width: 45px;\n    height: 45px;\n    font-size: 14px;\n    padding: 0 2px;\n    display: inline-block;\n    text-indent: 7px;\n    margin-right: 10px;\n    color: #fff;\n    float: left; }\n  #sidebar-container #sidebar-wrapper .sidebar-nav li a .caret {\n    position: absolute;\n    right: 23px;\n    top: auto;\n    margin-top: 20px; }\n  #sidebar-container #sidebar-wrapper .sidebar-nav li ul.panel-collapse {\n    list-style: none;\n    -moz-padding-start: 0;\n    -webkit-padding-start: 0;\n    -khtml-padding-start: 0;\n    -o-padding-start: 0;\n    padding-start: 0;\n    padding: 0; }\n  #sidebar-container #sidebar-wrapper .sidebar-nav li ul.panel-collapse li i {\n    margin-right: 10px; }\n  #sidebar-container #sidebar-wrapper .sidebar-nav li ul.panel-collapse li {\n    text-indent: 15px; }\n  #sidebar-container .sidebar-nav li:first-child a {\n    background: #ff6e1a !important;\n    color: #fff !important; }\n  #sidebar-container .sidebar-nav li:nth-child(2) a {\n    background: #e65400 !important;\n    color: #fff !important; }\n  #sidebar-container .sidebar-nav li:nth-child(3) a {\n    background: #c74800 !important;\n    color: #fff !important; }\n  #sidebar-container .sidebar-nav li:nth-child(4) a {\n    background: #993800 !important;\n    color: #fff !important; }\n  #sidebar-container .sidebar-nav li:nth-child(5) a {\n    background: #662500 !important;\n    color: #fff !important; }\n  #sidebar-container #submenu-2 li a {\n    background: #4d1c00 !important;\n    color: #fff !important; }\n\n@media (min-width: 992px) {\n  #sidebar-container {\n    padding-left: 225px; } }\n\n@media (min-width: 992px) {\n  #sidebar-container #sidebar-wrapper {\n    width: 225px; } }\n\n@media (max-width: 992px) {\n  #sidebar-container #sidebar-wrapper {\n    width: 45px; }\n  #sidebar-container #sidebar-wrapper #sidebar #sidemenu li ul {\n    position: fixed;\n    left: 45px;\n    margin-top: -45px;\n    z-index: 1000;\n    width: 200px;\n    height: 0; } }\n", ""]);
+	exports.push([module.id, "#header {\n  font-family: \"Lucida Sans Unicode\", \"Lucida Grande\", sans-serif;\n  color: white; }\n  #header .navbar-fixed-top {\n    top: 0;\n    background: #333333; }\n  #header .navbar-default .navbar-nav #user-profile {\n    min-height: 50px;\n    padding-top: 15px;\n    padding-left: 58px; }\n  #header .navbar-default .navbar-nav > .open > a, #header .navbar-default .navbar-nav > .open > a:hover, #header .navbar-default .navbar-nav > .open > a:focus {\n    background-image: none;\n    color: #fff;\n    background-color: #333333; }\n  #header .navbar-default .navbar-nav #user-profile h4 {\n    min-height: 45px;\n    width: 45px;\n    position: absolute;\n    top: 2px;\n    margin-left: -90px;\n    padding: 1px;\n    color: white; }\n  #header .header-logo {\n    height: 45px;\n    margin-right: -2em;\n    padding-bottom: .75em;\n    margin-top: -.30em; }\n  #header button {\n    height: 32px;\n    border-radius: 2px; }\n\n#sidebar-container {\n  padding-top: 50px;\n  padding-left: 0;\n  -webkit-transition: all .5s ease;\n  -moz-transition: all .5s ease;\n  -o-transition: all .5s ease;\n  transition: all .5s ease;\n  font-size: larger; }\n  #sidebar-container #sidebar-wrapper {\n    z-index: 1000;\n    position: fixed;\n    left: 225px;\n    width: 0;\n    height: 100%;\n    margin-left: -225px;\n    overflow-y: auto;\n    background: #333333;\n    -webkit-transition: all .5s ease;\n    -moz-transition: all .5s ease;\n    -o-transition: all .5s ease;\n    transition: all .5s ease; }\n  #sidebar-container #sidebar-wrapper .sidebar-nav {\n    position: absolute;\n    top: 0;\n    width: 225px;\n    font-size: 14px;\n    margin: 0;\n    padding: 0;\n    list-style: none; }\n  #sidebar-container #sidebar-wrapper .sidebar-nav li {\n    text-indent: 0;\n    line-height: 45px; }\n    #sidebar-container #sidebar-wrapper .sidebar-nav li a {\n      display: block;\n      text-decoration: none;\n      color: #428bca; }\n  #sidebar-container #sidemenu li a {\n    padding-top: .4em; }\n  #sidebar-container #sidemenu .sidebar-title {\n    font-size: large; }\n  #sidebar-container .sidebar-nav li:first-child a {\n    background: #ff6e1a !important;\n    color: #fff !important; }\n  #sidebar-container #sidebar-wrapper .sidebar-nav li a .sidebar-icon {\n    width: 45px;\n    height: 45px;\n    font-size: 14px;\n    padding: 0 2px;\n    display: inline-block;\n    text-indent: 7px;\n    margin-right: 10px;\n    color: #fff;\n    float: left; }\n  #sidebar-container #sidebar-wrapper .sidebar-nav li a .caret {\n    position: absolute;\n    right: 23px;\n    top: auto;\n    margin-top: 20px; }\n  #sidebar-container #sidebar-wrapper .sidebar-nav li ul.panel-collapse {\n    list-style: none;\n    -moz-padding-start: 0;\n    -webkit-padding-start: 0;\n    -khtml-padding-start: 0;\n    -o-padding-start: 0;\n    padding-start: 0;\n    padding: 0; }\n  #sidebar-container #sidebar-wrapper .sidebar-nav li ul.panel-collapse li i {\n    margin-right: 10px; }\n  #sidebar-container #sidebar-wrapper .sidebar-nav li ul.panel-collapse li {\n    text-indent: 15px; }\n  #sidebar-container .sidebar-nav li:first-child a {\n    background: #ff6e1a !important;\n    color: #fff !important; }\n  #sidebar-container .sidebar-nav li:nth-child(2) a {\n    background: #e65400 !important;\n    color: #fff !important; }\n  #sidebar-container .sidebar-nav li:nth-child(3) a {\n    background: #c74800 !important;\n    color: #fff !important; }\n  #sidebar-container .sidebar-nav li:nth-child(4) a {\n    background: #993800 !important;\n    color: #fff !important; }\n  #sidebar-container .sidebar-nav li:nth-child(5) a {\n    background: #662500 !important;\n    color: #fff !important; }\n  #sidebar-container #submenu-2 li a {\n    background: #4d1c00 !important;\n    color: #fff !important; }\n\n@media (min-width: 992px) {\n  #sidebar-container {\n    padding-left: 225px; } }\n\n@media (min-width: 992px) {\n  #sidebar-container #sidebar-wrapper {\n    width: 225px; } }\n\n@media (max-width: 992px) {\n  #sidebar-container #sidebar-wrapper {\n    width: 45px; }\n  #sidebar-container #sidebar-wrapper #sidebar #sidemenu li ul {\n    position: fixed;\n    left: 45px;\n    margin-top: -45px;\n    z-index: 1000;\n    width: 200px;\n    height: 0; } }\n\n#main-content-wrapper {\n  margin-top: 1.5em;\n  margin-left: 17em; }\n", ""]);
 
 	// exports
 
@@ -36200,6 +36262,334 @@
 	return jQuery;
 	} );
 
+
+/***/ },
+/* 228 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Subject = function (_React$Component) {
+	    _inherits(Subject, _React$Component);
+
+	    function Subject() {
+	        var _ref;
+
+	        var _temp, _this, _ret;
+
+	        _classCallCheck(this, Subject);
+
+	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	            args[_key] = arguments[_key];
+	        }
+
+	        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Subject.__proto__ || Object.getPrototypeOf(Subject)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+	            foo: 'bar'
+	        }, _temp), _possibleConstructorReturn(_this, _ret);
+	    }
+
+	    _createClass(Subject, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'h1',
+	                null,
+	                'Subject'
+	            );
+	        }
+	    }, {
+	        key: 'componentWillMount',
+	        value: function componentWillMount() {}
+	    }, {
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {}
+	    }, {
+	        key: 'componentWillReceiveProps',
+	        value: function componentWillReceiveProps(nextProps) {}
+	    }, {
+	        key: 'shouldComponentUpdate',
+	        value: function shouldComponentUpdate(nextProps, nextState) {
+	            return true;
+	        }
+	    }, {
+	        key: 'componentWillUpdate',
+	        value: function componentWillUpdate(nextProps, nextState) {}
+	    }, {
+	        key: 'componentDidUpdate',
+	        value: function componentDidUpdate(prevProps, prevState) {}
+	    }]);
+
+	    return Subject;
+	}(_react2.default.Component);
+
+	Subject.defaultProps = {
+	    foo: 'bar'
+	};
+	exports.default = Subject;
+
+/***/ },
+/* 229 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Notebook = function (_React$Component) {
+	    _inherits(Notebook, _React$Component);
+
+	    function Notebook() {
+	        var _ref;
+
+	        var _temp, _this, _ret;
+
+	        _classCallCheck(this, Notebook);
+
+	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	            args[_key] = arguments[_key];
+	        }
+
+	        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Notebook.__proto__ || Object.getPrototypeOf(Notebook)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+	            foo: 'bar'
+	        }, _temp), _possibleConstructorReturn(_this, _ret);
+	    }
+
+	    _createClass(Notebook, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'h1',
+	                null,
+	                'Notebook'
+	            );
+	        }
+	    }, {
+	        key: 'componentWillMount',
+	        value: function componentWillMount() {}
+	    }, {
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {}
+	    }, {
+	        key: 'componentWillReceiveProps',
+	        value: function componentWillReceiveProps(nextProps) {}
+	    }, {
+	        key: 'shouldComponentUpdate',
+	        value: function shouldComponentUpdate(nextProps, nextState) {
+	            return true;
+	        }
+	    }, {
+	        key: 'componentWillUpdate',
+	        value: function componentWillUpdate(nextProps, nextState) {}
+	    }, {
+	        key: 'componentDidUpdate',
+	        value: function componentDidUpdate(prevProps, prevState) {}
+	    }]);
+
+	    return Notebook;
+	}(_react2.default.Component);
+
+	Notebook.defaultProps = {
+	    foo: 'bar'
+	};
+	exports.default = Notebook;
+
+/***/ },
+/* 230 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Deck = function (_React$Component) {
+	    _inherits(Deck, _React$Component);
+
+	    function Deck() {
+	        var _ref;
+
+	        var _temp, _this, _ret;
+
+	        _classCallCheck(this, Deck);
+
+	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	            args[_key] = arguments[_key];
+	        }
+
+	        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Deck.__proto__ || Object.getPrototypeOf(Deck)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+	            foo: 'bar'
+	        }, _temp), _possibleConstructorReturn(_this, _ret);
+	    }
+
+	    _createClass(Deck, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'h1',
+	                null,
+	                'Deck'
+	            );
+	        }
+	    }, {
+	        key: 'componentWillMount',
+	        value: function componentWillMount() {}
+	    }, {
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {}
+	    }, {
+	        key: 'componentWillReceiveProps',
+	        value: function componentWillReceiveProps(nextProps) {}
+	    }, {
+	        key: 'shouldComponentUpdate',
+	        value: function shouldComponentUpdate(nextProps, nextState) {
+	            return true;
+	        }
+	    }, {
+	        key: 'componentWillUpdate',
+	        value: function componentWillUpdate(nextProps, nextState) {}
+	    }, {
+	        key: 'componentDidUpdate',
+	        value: function componentDidUpdate(prevProps, prevState) {}
+	    }]);
+
+	    return Deck;
+	}(_react2.default.Component);
+
+	Deck.defaultProps = {
+	    foo: 'bar'
+	};
+	exports.default = Deck;
+
+/***/ },
+/* 231 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Browse = function (_React$Component) {
+	    _inherits(Browse, _React$Component);
+
+	    function Browse() {
+	        var _ref;
+
+	        var _temp, _this, _ret;
+
+	        _classCallCheck(this, Browse);
+
+	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	            args[_key] = arguments[_key];
+	        }
+
+	        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Browse.__proto__ || Object.getPrototypeOf(Browse)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+	            foo: 'bar'
+	        }, _temp), _possibleConstructorReturn(_this, _ret);
+	    }
+
+	    _createClass(Browse, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'h1',
+	                null,
+	                'Browse'
+	            );
+	        }
+	    }, {
+	        key: 'componentWillMount',
+	        value: function componentWillMount() {}
+	    }, {
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {}
+	    }, {
+	        key: 'componentWillReceiveProps',
+	        value: function componentWillReceiveProps(nextProps) {}
+	    }, {
+	        key: 'shouldComponentUpdate',
+	        value: function shouldComponentUpdate(nextProps, nextState) {
+	            return true;
+	        }
+	    }, {
+	        key: 'componentWillUpdate',
+	        value: function componentWillUpdate(nextProps, nextState) {}
+	    }, {
+	        key: 'componentDidUpdate',
+	        value: function componentDidUpdate(prevProps, prevState) {}
+	    }]);
+
+	    return Browse;
+	}(_react2.default.Component);
+
+	Browse.defaultProps = {
+	    foo: 'bar'
+	};
+	exports.default = Browse;
 
 /***/ }
 /******/ ]);
