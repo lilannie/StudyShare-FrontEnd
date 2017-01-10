@@ -1,6 +1,7 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 
-export default class Deck extends React.Component {
+export default class Header extends React.Component {
     static defaultProps = {
         foo: 'bar'
     };
@@ -11,7 +12,7 @@ export default class Deck extends React.Component {
 
     render() {
         return (
-            <h1>Deck</h1>
+            <Button>Header</Button>
         );
     }
 

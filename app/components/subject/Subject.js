@@ -10,7 +10,9 @@ export default class Subject extends React.Component {
     };
 
     render() {
-
+        return (
+            <h1>Subject</h1>
+        );
     }
 
     componentWillMount() {

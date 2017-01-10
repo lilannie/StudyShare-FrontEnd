@@ -1,5 +1,7 @@
 module.exports = {
-  entry: './app/app.js',
+  entry: [
+      './app/router.js'
+  ],
   output: {
     path: __dirname,
     filename: './public/bundle.js'
@@ -7,8 +9,14 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias: {
+        Main: 'app/components/Main.js',
+        Footer: 'app/components/common/Footer.js',
+        Header: 'app/components/common/Header.js',
+        Sidebar: 'app/components/common/Sidebar.js',
+        Index: 'app/components/Index.js',
         User: 'app/components/user/User.js',
         Subject: 'app/components/subject/Subject.js',
+
 
     },
     extensions: ['', '.js', '.jsx']
@@ -17,9 +25,7 @@ module.exports = {
     loaders: [
       {
         loader: 'babel-loader',
-        query: {
-          presets: ['react', 'es2015']
-        },
+
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
       }

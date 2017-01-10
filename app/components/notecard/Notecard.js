@@ -10,7 +10,9 @@ export default class Notecard extends React.Component {
     };
 
     render() {
-
+        return (
+            <h1>Notecard</h1>
+        );
     }
 
     componentWillMount() {

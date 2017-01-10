@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Deck extends React.Component {
+export default class Index extends React.Component {
     static defaultProps = {
         foo: 'bar'
     };
@@ -11,7 +11,7 @@ export default class Deck extends React.Component {
 
     render() {
         return (
-            <h1>Deck</h1>
+            <h1>Index</h1>
         );
     }
 

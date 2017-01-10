@@ -10,7 +10,9 @@ export default class Notebook extends React.Component {
     };
 
     render() {
-
+        return (
+            <h1>Notebook</h1>
+        );
     }
 
     componentWillMount() {
