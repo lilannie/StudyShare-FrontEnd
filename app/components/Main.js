@@ -1,9 +1,9 @@
 import React from 'react';
 
-import {Grid, Row, Col} from 'react-bootstrap';
 import Header from 'Header';
 import Footer from 'Footer';
 import Sidebar from 'Sidebar';
+import '../scss/app.scss';
 
 export default class Main extends React.Component {
     static defaultProps = {

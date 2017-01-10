@@ -20,7 +20,7 @@ module.exports = {
         Notebook: 'app/components/notebook/Notebook.js',
         Notecard: 'app/components/notecard/Notecard.js',
         Subject: 'app/components/subject/Subject.js',
-        User: 'app/components/user/User.js',
+        User: 'app/components/user/User.js'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -31,7 +31,11 @@ module.exports = {
 
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
-      }
+      },
+        {
+            test: /\.scss$/,
+            loaders: ['style-loader', 'css-loader', 'sass-loader']
+        }
     ]
   }
 };
