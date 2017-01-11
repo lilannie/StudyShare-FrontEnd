@@ -1,5 +1,5 @@
 import React from 'react';
-import SubjectTable from './SubjectTable';
+import SubjectAll from './SubjectAll';
 
 export default class SubjectContent extends React.Component {
     static defaultProps = {
@@ -12,7 +12,7 @@ export default class SubjectContent extends React.Component {
 
     render() {
         return (
-            <SubjectTable/>
+            <SubjectAll/>
         );
     }
 

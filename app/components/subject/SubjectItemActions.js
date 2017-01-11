@@ -2,7 +2,8 @@ import React from 'react';
 
 import SubjectItemHeader from './SubjectItemHeader';
 import SubjectItemContent from './SubjectItemContent';
-import SubjectItemActions from './SubjectItemActions';
+import SubjectEdit from './SubjectEdit';
+import SubjectDelete from './SubjectDelete';
 
 export default class SubjectItem extends React.Component {
     static defaultProps = {
@@ -17,22 +18,18 @@ export default class SubjectItem extends React.Component {
         super(props);
     }
 
+    handleClick() {}
 
 
     render() {
         return (
-            <div className="container-fluid">
-                <div className="card">
-                    <div className="card-content">
-                        <SubjectItemHeader title={this.props.title}/>
-                        <div className="card-body">
-                            <SubjectItemContent description={this.props.description}/>
-                        </div>
-                        <SubjectItemActions/>
-                    </div>
-                </div>
-
-            </div>
+            <nav className="nav-tabs">
+                <ul className="nav nav-pills pull-left">
+                    <li><a className="card-action-grey" onClick={this.handleClick()}>Edit</a></li>
+                    <li><a className="card-action-grey" onClick={this.handleClick()}>Delete</a></li>
+                    <li><a className="card-action-grey" >Share</a></li>
+                </ul>
+            </nav>
         );
     }
 
