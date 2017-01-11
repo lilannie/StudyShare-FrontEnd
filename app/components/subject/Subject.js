@@ -1,5 +1,9 @@
 import React from 'react';
 
+import {Row, Col} from 'react-bootstrap';
+import SubjectSidebar from './SubjectSidebar';
+import SubjectContent from './SubjectContent';
+
 export default class Subject extends React.Component {
     static defaultProps = {
         foo: 'bar'
@@ -11,22 +15,45 @@ export default class Subject extends React.Component {
 
     render() {
         return (
-            <h1>Subject</h1>
+            <div className="subject">
+                <Row>
+                    <div className="container-fluid">
+                        <h1 className="subject-header text-center">My Subjects</h1>
+                    </div>
+                </Row>
+                <div className="subject-content-wrapper">
+                    <Row>
+                        <Col>
+                            <SubjectSidebar />
+                        </Col>
+                        <Col className="subject-content container-fluid well">
+
+                            <SubjectContent />
+
+                        </Col>
+                    </Row>
+                </div>
+            </div>
         );
     }
 
-    componentWillMount() {}
+    componentWillMount() {
+    }
 
-    componentDidMount() {}
+    componentDidMount() {
+    }
 
-    componentWillReceiveProps(nextProps) {}
+    componentWillReceiveProps(nextProps) {
+    }
 
     shouldComponentUpdate(nextProps, nextState) {
         return true;
     }
 
-    componentWillUpdate(nextProps, nextState) {}
+    componentWillUpdate(nextProps, nextState) {
+    }
 
-    componentDidUpdate(prevProps, prevState) {}
+    componentDidUpdate(prevProps, prevState) {
+    }
 
 }

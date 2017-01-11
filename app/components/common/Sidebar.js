@@ -32,7 +32,7 @@ export default class Sidebar extends React.Component {
                                         <i className="fa fa-book fa-2x"></i>
                                     </span>
                                     <span className="sidebar-title">
-                                        Content
+                                        My Content
                                     </span>
                                     <b className="caret"></b>
                                 </a>
