@@ -10,10 +10,27 @@ export default class SubjectAll extends React.Component {
         foo: 'bar'
     };
 
+    constructor(props) {
+        super(props);
+
+        this.getItems = this.getItems.bind(this);
+    }
+
+    getItems() {
+        return this.props.subjects.map(function (subject) {
+            return <SubjectItem key={"subject-"+subject.id}
+                                title={subject.title}
+                                description={subject.description}
+                                content={subject.content} />;
+        });
+    }
+
     render() {
-        var description = 'Calculus is the study of how things change. It provides a framework for modeling systems in which there is change, and a way to deduce the predictions of such models. Calculus is the study of how things change. It provides a framework for modeling systems in which there is change, and a way to deduce the predictions of such models.';
+
         return (
-            <SubjectItem title="Calculus" description={description}/>
+            <div>
+                {this.getItems()}
+            </div>
         );
     }
 

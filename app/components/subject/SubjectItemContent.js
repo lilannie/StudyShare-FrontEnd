@@ -9,6 +9,26 @@ export default class SubjectItemContent extends React.Component {
         foo: 'bar'
     };
 
+    constructor(props) {
+        super(props);
+
+        this.getContent = this.getContent.bind(this);
+    }
+
+    getContent() {
+        return this.props.content.map(function (item) {
+            return (
+                <tr key={"content-"+item.id}>
+                    <td>{item.title}</td>
+                    <td>{item.type}</td>
+                    <td>{item.description}</td>
+                    <td>{item.date_created}</td>
+                    <td>{item.last_modified}</td>
+                </tr>
+            );
+        });
+    }
+
     render() {
         return (
             <div className="panel panel-default">
@@ -32,14 +52,7 @@ export default class SubjectItemContent extends React.Component {
                         <th>Date Created</th>
                         <th>Last Modified</th>
                     </tr>
-                    <tr>
-                        <td>Fake</td>
-                        <td>Fake</td>
-                        <td>Fake</td>
-                        <td>Fake</td>
-                        <td>Fake</td>
-
-                    </tr>
+                    {this.getContent()}
                     </tbody>
                 </table>
             </div>

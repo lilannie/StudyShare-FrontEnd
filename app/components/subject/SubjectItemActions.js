@@ -1,10 +1,5 @@
 import React from 'react';
 
-import SubjectItemHeader from './SubjectItemHeader';
-import SubjectItemContent from './SubjectItemContent';
-import SubjectEdit from './SubjectEdit';
-import SubjectDelete from './SubjectDelete';
-
 export default class SubjectItem extends React.Component {
     static defaultProps = {
         foo: 'bar'
@@ -16,17 +11,22 @@ export default class SubjectItem extends React.Component {
 
     constructor(props) {
         super(props);
+
+        this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick() {}
+    handleClick(id) {
+        this.props.changeView(id);
+    }
 
 
     render() {
         return (
             <nav className="nav-tabs">
                 <ul className="nav nav-pills pull-left">
-                    <li><a className="card-action-grey" onClick={this.handleClick()}>Edit</a></li>
-                    <li><a className="card-action-grey" onClick={this.handleClick()}>Delete</a></li>
+                    <li><a className="card-action-grey" onClick={this.handleClick.bind(null, 0)}>About</a></li>
+                    <li><a className="card-action-grey" onClick={this.handleClick.bind(null, 1)}>Edit</a></li>
+                    <li><a className="card-action-grey" onClick={this.handleClick.bind(null, 2)}>Delete</a></li>
                     <li><a className="card-action-grey" >Share</a></li>
                 </ul>
             </nav>
