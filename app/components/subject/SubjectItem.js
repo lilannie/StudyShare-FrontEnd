@@ -34,7 +34,9 @@ export default class SubjectItem extends React.Component {
                     content={this.props.content}/>;
             }
             case 1: {
-                return <SubjectEdit />;
+                return <SubjectEdit
+                    title={this.props.title}
+                    description={this.props.description}/>;
             }
             case 2: {
                 return <SubjectDelete />;

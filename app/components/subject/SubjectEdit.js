@@ -15,7 +15,37 @@ export default class SubjectEdit extends React.Component {
 
     render() {
         return (
-            <h1>Edit</h1>
+            <div style={{
+                "minWidth": "1325px",
+            }}
+                 className="panel panel-default">
+                <div className="panel-heading">
+                    <h4 className="panel-title">Edit</h4>
+                </div>
+
+                <table className="table table-striped">
+                    <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>
+                            <input className="form-control"
+                                   type="text"
+                                   value={this.props.title}
+                                   placeholder="Title"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Description</th>
+                        <td>
+                            <textarea
+                                className="form-control"
+                                value={this.props.description}
+                                placeholder="Description"/>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         );
     }
 
