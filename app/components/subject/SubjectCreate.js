@@ -9,13 +9,9 @@ export default class SubjectEdit extends React.Component {
         foo: 'bar'
     };
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
-            <h1>Edit</h1>
+            <h1>Create</h1>
         );
     }
 

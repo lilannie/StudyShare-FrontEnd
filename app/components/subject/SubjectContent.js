@@ -1,5 +1,5 @@
 import React from 'react';
-import SubjectAll from './SubjectAll';
+import SubjectItem from './SubjectItem';
 
 export default class SubjectContent extends React.Component {
     static defaultProps = {
@@ -7,12 +7,7 @@ export default class SubjectContent extends React.Component {
     };
 
     state = {
-        foo: 'bar'
-    };
-
-    render() {
-
-        var subjects = [
+        subjects: [
             {
                 id: 0,
                 title: "Calculus",
@@ -59,9 +54,29 @@ export default class SubjectContent extends React.Component {
                     }
                 ]
             }
-        ];
+        ]
+    };
+
+    constructor(props) {
+        super(props);
+
+        this.getItems = this.getItems.bind(this);
+    }
+
+    getItems() {
+        return this.state.subjects.map(function (subject) {
+            return <SubjectItem key={"subject-"+subject.id}
+                                title={subject.title}
+                                description={subject.description}
+                                content={subject.content} />;
+        });
+    }
+
+    render() {
         return (
-            <SubjectAll subjects={subjects}/>
+            <div>
+                {this.getItems()}
+            </div>
         );
     }
 
