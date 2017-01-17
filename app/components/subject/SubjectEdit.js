@@ -6,11 +6,32 @@ export default class SubjectEdit extends React.Component {
     };
 
     state = {
-        foo: 'bar'
+        title: this.props.title,
+        description: this.props.description
     };
 
     constructor(props) {
         super(props);
+
+        this.updateTitle = this.updateTitle.bind(this);
+        this.updateDesc = this.updateDesc.bind(this);
+        this.handleSave = this.handleSave.bind(this);
+    }
+
+    updateTitle(event) {
+        this.setState({
+            title: event.target.value
+        });
+    }
+
+    updateDesc(event) {
+        this.setState({
+            description: event.target.value
+        });
+    }
+
+    handleSave() {
+        this.props.handleEdit(this.state.title, this.state.description);
     }
 
     render() {
@@ -30,7 +51,7 @@ export default class SubjectEdit extends React.Component {
                         <td>
                             <input className="form-control"
                                    type="text"
-                                   value={this.props.title}
+                                   defaultValue={this.props.title}
                                    placeholder="Title"/>
                         </td>
                     </tr>
@@ -39,12 +60,17 @@ export default class SubjectEdit extends React.Component {
                         <td>
                             <textarea
                                 className="form-control"
-                                value={this.props.description}
+                                defaultValue={this.props.description}
                                 placeholder="Description"/>
                         </td>
                     </tr>
                     </tbody>
                 </table>
+
+                <div className="panel-body">
+                    <button type="button" className="pull-right btn"
+                        onClick={this.handleSave}>Save</button>
+                </div>
             </div>
         );
     }

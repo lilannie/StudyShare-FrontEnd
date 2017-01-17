@@ -1,4 +1,6 @@
 import React from 'react';
+import update from 'react-addons-update';
+
 import SubjectItem from './SubjectItem';
 
 export default class SubjectContent extends React.Component {
@@ -60,16 +62,28 @@ export default class SubjectContent extends React.Component {
     constructor(props) {
         super(props);
 
+        this.handleEdit = this.handleEdit.bind(this);
         this.getItems = this.getItems.bind(this);
+        this.itemMapper = this.itemMapper.bind(this);
+    }
+
+    handleEdit(subject) {
+        this.setState(function(prevState, props) {
+            return update(prevState.subjects, {$merge: subject});
+        });
     }
 
     getItems() {
-        return this.state.subjects.map(function (subject) {
-            return <SubjectItem key={"subject-"+subject.id}
-                                title={subject.title}
-                                description={subject.description}
-                                content={subject.content} />;
-        });
+        return this.state.subjects.map(this.itemMapper);
+    }
+
+    itemMapper(subject) {
+        return <SubjectItem key={"subject-"+subject.id}
+                            id={subject.id}
+                            title={subject.title}
+                            description={subject.description}
+                            content={subject.content}
+                            handleEdit={this.handleEdit}/>;
     }
 
     render() {

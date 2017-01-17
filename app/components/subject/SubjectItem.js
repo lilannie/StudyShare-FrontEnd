@@ -20,10 +20,22 @@ export default class SubjectItem extends React.Component {
 
         this.changeView = this.changeView.bind(this);
         this.getView = this.getView.bind(this);
+        this.handleEdit = this.handleEdit.bind(this);
     }
 
     changeView(viewId) {
         this.setState({view: viewId});
+    }
+
+    handleEdit(title, description) {
+        this.props.handleEdit(
+            {
+                id: this.props.id,
+                title: title,
+                description: description,
+                content: this.props.content,
+            }
+        );
     }
 
     getView() {
@@ -36,7 +48,8 @@ export default class SubjectItem extends React.Component {
             case 1: {
                 return <SubjectEdit
                     title={this.props.title}
-                    description={this.props.description}/>;
+                    description={this.props.description}
+                    handleEdit={this.handleEdit}/>;
             }
             case 2: {
                 return <SubjectDelete />;
