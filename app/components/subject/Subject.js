@@ -4,6 +4,7 @@ import {Row, Col} from 'react-bootstrap';
 import SubjectSidebar from './SubjectSidebar';
 import SubjectContent from './SubjectContent';
 import SubjectCreate from './SubjectCreate';
+import ContentHeader from 'ContentHeader';
 
 export default class Subject extends React.Component {
     static defaultProps = {
@@ -31,7 +32,7 @@ export default class Subject extends React.Component {
     getView() {
         switch(this.state.view) {
             case 0: {
-                return <SubjectContent />;
+                return <SubjectContent changeView={this.changeView}/>;
             }
             case 1: {
                 return <SubjectCreate changeView={this.changeView}/>;
@@ -42,11 +43,7 @@ export default class Subject extends React.Component {
     render() {
         return (
             <div className="subject">
-                <Row>
-                    <div className="container-fluid">
-                        <h1 className="subject-header text-center">My Subjects</h1>
-                    </div>
-                </Row>
+                <ContentHeader title="My Subjects" />
                 <div className="subject-content-wrapper">
                     <Row>
                         <Col>

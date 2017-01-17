@@ -1,17 +1,44 @@
 import React from 'react';
 
-export default class SubjectEdit extends React.Component {
+import CardTemplate from 'CardTemplate';
+import CardActions from 'CardActions';
+import SubjectCreateContent from './SubjectCreateContent';
+
+export default class SubjectHeader extends React.Component {
     static defaultProps = {
         foo: 'bar'
     };
 
     state = {
-        foo: 'bar'
+        view: 0
     };
 
+    constructor(props) {
+        super(props);
+
+        this.handleSave = this.handleSave.bind(this);
+    }
+
+    handleSave() {
+
+    }
+
     render() {
+        var body = <SubjectCreateContent/>;
+        var actionsList = [
+            <li key="subject-save">
+                <a className="card-action-grey"
+                   onClick={this.handleSave}>Save</a>
+            </li>
+        ];
+        var actions = <CardActions actions={actionsList}/>;
         return (
-            <h1>Create</h1>
+            <div>
+                <CardTemplate title="Create"
+                              body={body} actions={actions}/>
+
+            </div>
+
         );
     }
 
@@ -19,7 +46,6 @@ export default class SubjectEdit extends React.Component {
     }
 
     componentDidMount() {
-
     }
 
     componentWillReceiveProps(nextProps) {

@@ -23,7 +23,11 @@ module.exports = {
         Notebook: 'app/components/notebook/Notebook.js',
         Notecard: 'app/components/notecard/Notecard.js',
         Subject: 'app/components/subject/Subject.js',
-        User: 'app/components/user/User.js'
+        User: 'app/components/user/User.js',
+        ContentHeader: 'app/components/common/content/ContentHeader.js',
+        CardTemplate: 'app/components/common/content/CardTemplate.js',
+        CardHeader: 'app/components/common/content/CardHeader.js',
+        CardActions: 'app/components/common/content/CardActions.js'
     },
     extensions: ['', '.js', '.jsx']
   },

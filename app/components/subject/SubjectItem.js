@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SubjectItemHeader from './SubjectItemHeader';
+import CardHeader from 'CardHeader';
 import SubjectItemContent from './SubjectItemContent';
 import SubjectItemActions from './SubjectItemActions';
 import SubjectEdit from './SubjectEdit';
@@ -79,14 +79,13 @@ export default class SubjectItem extends React.Component {
             <div className="container-fluid">
                 <div className="card">
                     <div className="card-content">
-                        <SubjectItemHeader title={this.props.title}/>
+                        <CardHeader title={this.props.title}/>
                         <div className="card-body">
                             {this.getView()}
                         </div>
                         <SubjectItemActions changeView={this.changeView}/>
                     </div>
                 </div>
-
             </div>
         );
     }

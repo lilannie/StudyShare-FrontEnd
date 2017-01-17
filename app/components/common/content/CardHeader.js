@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class SubjectItemHeader extends React.Component {
+export default class CardHeader extends React.Component {
     static defaultProps = {
         foo: 'bar'
     };

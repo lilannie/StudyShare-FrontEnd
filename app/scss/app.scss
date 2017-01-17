@@ -204,6 +204,64 @@ body {
   margin-left: 17em;
 }
 
+.content-header {
+  line-height: 70px;
+  background-color: #E5E5E5;
+  border-radius: 4px;
+}
+
+.card {
+  background:#FFF;
+  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border:1px solid #AAA;
+  border-bottom:3px solid #BBB;
+  border-radius: 4px;
+  padding:0px;
+  overflow:hidden;
+  font-family: 'Roboto', sans-serif;
+  -webkit-transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-body{
+  margin:1em;
+}
+
+.card-header-grey{
+  background-color:#424242;
+  color:#FFFFFF;
+  border-bottom:3px solid #BBB;
+  font-family: 'Roboto', sans-serif;
+  padding:0px;
+  margin-top:0px;
+  overflow:hidden;
+  -webkit-transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-heading {
+  display: block;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 24px;
+  margin-left:1em;
+  border-bottom: 1px #2196F3;
+  color:#fff;
+
+}
+.card-footer{
+  border-top:1px solid #000;
+
+}
+.card-action-grey{
+  color:#424242;
+
+}
+
+
 .subject {
   .subject-header {
     line-height: 70px;

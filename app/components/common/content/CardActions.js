@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class SubjectItem extends React.Component {
+export default class CardActions extends React.Component {
     static defaultProps = {
         foo: 'bar'
     };
@@ -24,21 +24,7 @@ export default class SubjectItem extends React.Component {
         return (
             <nav className="nav-tabs">
                 <ul className="nav nav-pills pull-left">
-                    <li>
-                        <a className="card-action-grey"
-                           onClick={this.handleClick.bind(null, 0)}>About</a>
-                    </li>
-                    <li>
-                        <a className="card-action-grey"
-                           onClick={this.handleClick.bind(null, 1)}>Edit</a>
-                    </li>
-                    <li>
-                        <a className="card-action-grey"
-                           onClick={this.handleClick.bind(null, 2)}>Delete</a>
-                    </li>
-                    <li>
-                        <a className="card-action-grey" >Share</a>
-                    </li>
+                    {this.props.actions}
                 </ul>
             </nav>
         );
