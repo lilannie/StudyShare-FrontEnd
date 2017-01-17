@@ -31,6 +31,9 @@ export default class SubjectEdit extends React.Component {
     }
 
     handleSave() {
+        console.log("SubjectEdit -- Handle Save");
+        console.log("Title: "+this.state.title);
+        console.log("Description: "+this.state.title);
         this.props.handleEdit(this.state.title, this.state.description);
     }
 
@@ -52,7 +55,8 @@ export default class SubjectEdit extends React.Component {
                             <input className="form-control"
                                    type="text"
                                    defaultValue={this.props.title}
-                                   placeholder="Title"/>
+                                   placeholder="Title"
+                                    onChange={this.updateTitle}/>
                         </td>
                     </tr>
                     <tr>
@@ -61,7 +65,9 @@ export default class SubjectEdit extends React.Component {
                             <textarea
                                 className="form-control"
                                 defaultValue={this.props.description}
-                                placeholder="Description"/>
+                                placeholder="Description"
+                                onChange={this.updateDesc}/>
+
                         </td>
                     </tr>
                     </tbody>

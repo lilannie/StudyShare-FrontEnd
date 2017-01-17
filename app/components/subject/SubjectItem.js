@@ -28,6 +28,13 @@ export default class SubjectItem extends React.Component {
     }
 
     handleEdit(title, description) {
+        console.log("SubjectItem -- Handle Edit");
+        console.log("Id: "+this.props.id);
+        console.log("Title: "+title);
+        console.log("Description: "+description);
+        console.log("Content: "+JSON.stringify(this.props.content));
+
+
         this.props.handleEdit(
             {
                 id: this.props.id,
