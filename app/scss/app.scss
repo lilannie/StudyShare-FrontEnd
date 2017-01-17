@@ -236,6 +236,12 @@ body {
     .subject-content {
       margin-left: 15em;
 
+      .create-button {
+        background: #1b6d85;
+        color: white;
+        margin-left: 10px;
+      }
+
       .card {
         background:#FFF;
         display: block;

@@ -3,6 +3,7 @@ import React from 'react';
 import {Row, Col} from 'react-bootstrap';
 import SubjectSidebar from './SubjectSidebar';
 import SubjectContent from './SubjectContent';
+import SubjectCreate from './SubjectCreate';
 
 export default class Subject extends React.Component {
     static defaultProps = {
@@ -10,8 +11,33 @@ export default class Subject extends React.Component {
     };
 
     state = {
-        foo: 'bar'
+        view: 0
     };
+
+    constructor(props) {
+        super(props);
+
+        this.changeView = this.changeView.bind(this);
+        this.getView = this.getView.bind(this);
+    }
+
+    changeView(viewId) {
+        // console.log("Subject - Change View");
+        // console.log("viewId: "+viewId);
+        // console.log("Prev State: "+JSON.stringify(this.state));
+        this.setState({view: viewId})
+;    }
+
+    getView() {
+        switch(this.state.view) {
+            case 0: {
+                return <SubjectContent />;
+            }
+            case 1: {
+                return <SubjectCreate changeView={this.changeView}/>;
+            }
+        }
+    }
 
     render() {
         return (
@@ -24,11 +50,12 @@ export default class Subject extends React.Component {
                 <div className="subject-content-wrapper">
                     <Row>
                         <Col>
-                            <SubjectSidebar />
+                            <SubjectSidebar active={this.state.view}
+                                            changeView={this.changeView}/>
                         </Col>
                         <Col className="subject-content container-fluid well">
 
-                            <SubjectContent />
+                            {this.getView()}
 
                         </Col>
                     </Row>

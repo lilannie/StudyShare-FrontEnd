@@ -1,5 +1,6 @@
 import React from 'react';
 import update from 'react-addons-update';
+import {Row} from 'react-bootstrap';
 
 import SubjectItem from './SubjectItem';
 
@@ -64,6 +65,7 @@ export default class SubjectContent extends React.Component {
 
         this.handleEdit = this.handleEdit.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
+        this.handleChangeView = this.handleChangeView.bind(this);
         this.getItems = this.getItems.bind(this);
     }
 
@@ -101,13 +103,17 @@ export default class SubjectContent extends React.Component {
             // return newState;
             return update(prevState, {$merge: newStateObj});
         });
+    }
 
-
+    handleChangeView() {
+        // console.log("SubjectContent - Handle Change View");
+        this.props.changeView(1);
     }
 
     getItems() {
         // console.log("SubjectContent - Getting Items");
         // console.log("State.subjects: "+this.state.subjects);
+
         var arr = [];
         for (var key in this.state.subjects) {
             var subject = this.state.subjects[key];
@@ -125,6 +131,17 @@ export default class SubjectContent extends React.Component {
 
 
     render() {
+        if (this.state.subjects.length <= 0) {
+            return (
+                <div className="container-fluid">
+                    <h3>You have no Subjects! :(</h3>
+                    <Row>
+                        <button className="btn create-button"
+                            onClick={this.handleChangeView}>Create New</button>
+                    </Row>
+                </div>
+            );
+        }
         return (
             <div>
                 {this.getItems()}
