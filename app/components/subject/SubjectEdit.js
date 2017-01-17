@@ -31,9 +31,9 @@ export default class SubjectEdit extends React.Component {
     }
 
     handleSave() {
-        console.log("SubjectEdit -- Handle Save");
-        console.log("Title: "+this.state.title);
-        console.log("Description: "+this.state.title);
+        // console.log("SubjectEdit -- Handle Save");
+        // console.log("Title: "+this.state.title);
+        // console.log("Description: "+this.state.title);
         this.props.handleEdit(this.state.title, this.state.description);
     }
 

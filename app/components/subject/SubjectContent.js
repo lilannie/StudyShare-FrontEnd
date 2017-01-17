@@ -68,16 +68,16 @@ export default class SubjectContent extends React.Component {
     }
 
     handleEdit(subject) {
-        console.log("SubjectContent - Handle Edit");
-        console.log("New Subject: "+JSON.stringify(subject));
-        console.log("Prev State: "+JSON.stringify(this.state));
+        // console.log("SubjectContent - Handle Edit");
+        // console.log("New Subject: "+JSON.stringify(subject));
+        // console.log("Prev State: "+JSON.stringify(this.state));
         this.setState(function(prevState, props) {
-            console.log("New Subject in function: "+JSON.stringify(subject));
-            console.log("Prev State in function: "+JSON.stringify(prevState));
-            var newState = update(prevState, {subjects: [{$merge: subject}]});
-            console.log("New State in function: "+JSON.stringify(newState));
-            console.log("State has changed");
-            return newState;
+            // console.log("New Subject in function: "+JSON.stringify(subject));
+            // console.log("Prev State in function: "+JSON.stringify(prevState));
+            // var newState = update(prevState, {subjects: [{$merge: subject}]});
+            // console.log("New State in function: "+JSON.stringify(newState));
+            // console.log("State has changed");
+            return update(prevState, {subjects: [{$merge: subject}]});
         });
     }
 
