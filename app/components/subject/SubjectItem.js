@@ -21,6 +21,7 @@ export default class SubjectItem extends React.Component {
         this.changeView = this.changeView.bind(this);
         this.getView = this.getView.bind(this);
         this.handleEdit = this.handleEdit.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
     changeView(viewId) {
@@ -34,7 +35,6 @@ export default class SubjectItem extends React.Component {
         // console.log("Description: "+description);
         // console.log("Content: "+JSON.stringify(this.props.content));
 
-
         this.props.handleEdit(
             {
                 id: this.props.id,
@@ -44,6 +44,13 @@ export default class SubjectItem extends React.Component {
             }
         );
     }
+
+    handleDelete() {
+        // console.log("SubjectItem -- Handle Delete");
+        // console.log("Id: "+this.props.id);
+        this.props.handleDelete(this.props.id);
+    }
+
 
     getView() {
         switch (this.state.view) {
@@ -59,7 +66,9 @@ export default class SubjectItem extends React.Component {
                     handleEdit={this.handleEdit}/>;
             }
             case 2: {
-                return <SubjectDelete />;
+                return <SubjectDelete
+                    changeView={this.changeView}
+                    handleDelete={this.handleDelete}/>;
             }
         }
     }

@@ -39,9 +39,7 @@ export default class SubjectEdit extends React.Component {
 
     render() {
         return (
-            <div style={{
-                "minWidth": "1325px",
-            }}
+            <div style={{"minWidth": "1325px"}}
                  className="panel panel-default">
                 <div className="panel-heading">
                     <h4 className="panel-title">Edit</h4>

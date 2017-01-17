@@ -296,6 +296,12 @@ body {
         button {
           background: #1b6d85;
           color: white;
+          margin-left: 5px;
+
+          .delete-warning {
+            background: #e43a45;
+
+          }
         }
       }
     }
