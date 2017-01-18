@@ -1,5 +1,11 @@
 import React from 'react';
 
+import ContentHeader from 'ContentHeader';
+import ContentSidebar from 'ContentSidebar';
+import ContentBody from 'ContentBody';
+import DeckSidebar from './DeckSidebar';
+import DeckBody from './DeckBody';
+
 export default class Deck extends React.Component {
     static defaultProps = {
         foo: 'bar'
@@ -11,7 +17,11 @@ export default class Deck extends React.Component {
 
     render() {
         return (
-            <h1>Deck</h1>
+            <div>
+                <ContentHeader title="Decks"/>
+                <ContentSidebar list={<DeckSidebar/>} />
+                <ContentBody children={<DeckBody />}/>
+            </div>
         );
     }
 

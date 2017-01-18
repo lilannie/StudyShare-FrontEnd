@@ -43,7 +43,7 @@ export default class Subject extends React.Component {
     render() {
         return (
             <div className="subject">
-                <ContentHeader title="My Subjects" />
+                <ContentHeader title="Subjects" />
                 <div className="subject-content-wrapper">
                     <Row>
                         <Col>

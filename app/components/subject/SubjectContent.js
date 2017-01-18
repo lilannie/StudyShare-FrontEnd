@@ -9,6 +9,7 @@ export default class SubjectContent extends React.Component {
         foo: 'bar'
     };
 
+
     state = {
         subjects: [
             {

@@ -25,9 +25,12 @@ module.exports = {
         Subject: 'app/components/subject/Subject.js',
         User: 'app/components/user/User.js',
         ContentHeader: 'app/components/common/content/ContentHeader.js',
+        ContentSidebar: 'app/components/common/content/ContentSidebar.js',
+        ContentBody: 'app/components/common/content/ContentBody.js',
         CardTemplate: 'app/components/common/content/CardTemplate.js',
         CardHeader: 'app/components/common/content/CardHeader.js',
-        CardActions: 'app/components/common/content/CardActions.js'
+        CardActions: 'app/components/common/content/CardActions.js',
+        EditorApp: 'app/components/common/editor/EditorApp.js'
     },
     extensions: ['', '.js', '.jsx']
   },
