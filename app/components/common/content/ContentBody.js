@@ -17,7 +17,7 @@ export default class ContentBody extends React.Component {
 
     render() {
         return (
-            <div className="subject-content-wrapper">
+            <div className="subject-content-wrapper col-md-9">
                 <div className="container-fluid">
                     {this.props.children}
                 </div>

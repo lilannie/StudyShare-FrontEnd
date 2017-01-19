@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {Row, Col} from 'react-bootstrap';
-import EditorApp from 'EditorApp';
+import EditorApp from 'RichEditor';
+import '../../scss/editor.scss';
 
 export default class DeckBody extends React.Component {
     static defaultProps = {
@@ -18,8 +18,7 @@ export default class DeckBody extends React.Component {
 
     render() {
         return (
-            <div className="well">
-                <h1>Deck</h1>
+            <div className="well text-editor ">
                 <EditorApp  />
             </div>
         );
