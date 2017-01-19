@@ -9,6 +9,7 @@
     font-weight: 400;
     font-family: "Lora", Georgia, serif;
     color: #444;
+    padding-top: 25px;
   *,
   *::before,
   *::after {
@@ -172,10 +173,11 @@
   }
   .side-toolbar {
     position: absolute;
-    top: 25px;
+    margin-top: -10px;
+    margin-left: 50px;
     right: 0;
     bottom: 0;
-    left: -50px;
+    left: -25px;
     width: 70px;
   }
   .side-toolbar i {

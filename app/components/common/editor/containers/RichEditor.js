@@ -142,6 +142,8 @@ class RichEditor extends Component {
                 - 31; // height of side toolbar
         }
 
+        sideToolbarOffsetTop = 5;
+
         return (
                 <div className="editor" id="richEditor" onClick={this.focus}>
                     {selectedBlock
