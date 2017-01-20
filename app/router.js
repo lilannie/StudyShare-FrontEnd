@@ -6,6 +6,7 @@ import Main from 'Main';
 import Index from 'Index';
 import Subject from 'Subject';
 import Notebook from 'Notebook';
+import Notecard from 'Notecard';
 import Deck from 'Deck';
 import Animation from 'Animation';
 import Browse from 'Browse';
@@ -25,6 +26,9 @@ ReactDOM.render(
         </Route>
         <Route path="/notecards" component={Main}>
             <IndexRoute component={Deck}/>
+        </Route>
+        <Route path="/notecard" component={Main}>
+            <IndexRoute component={Notecard}/>
         </Route>
         <Route path="/animations" component={Main}>
             <IndexRoute component={Animation}/>
