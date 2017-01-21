@@ -11,7 +11,7 @@ export default class CardHeader extends React.Component {
 
     render() {
         return (
-            <div className="card-header-grey">
+            <div className="card-header-grey" >
                 <h1 className="card-heading">{this.props.title}</h1>
             </div>
         );
