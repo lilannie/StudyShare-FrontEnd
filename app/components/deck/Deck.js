@@ -44,11 +44,9 @@ export default class Deck extends React.Component {
     getView() {
         switch(this.state.viewId) {
             case 0: {
-                console.log("Body View");
                 return <DeckBody decks={this.state.decks}/>;
             }
             case 1: {
-                console.log("Deck Create");
                 return <DeckCreate/>;
             }
         }
