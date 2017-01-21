@@ -1,7 +1,6 @@
 import React from 'react';
 
-import EditorApp from 'RichEditor';
-import '../../scss/editor.scss';
+import DeckItem from './DeckItem';
 
 export default class DeckBody extends React.Component {
     static defaultProps = {
@@ -14,12 +13,23 @@ export default class DeckBody extends React.Component {
 
     constructor(props) {
         super(props);
+
+        this.getDeckItems = this.getDeckItems.bind(this);
+    }
+
+    getDeckItems() {
+        return this.props.decks.map(function(deck) {
+            return <DeckItem key={"deck-"+deck.id}
+                deckId={deck.id} title={deck.title}
+                             description={deck.description}/>
+
+        });
     }
 
     render() {
         return (
-            <div className="well text-editor ">
-                <EditorApp  />
+            <div className="">
+                {this.getDeckItems()}
             </div>
         );
     }

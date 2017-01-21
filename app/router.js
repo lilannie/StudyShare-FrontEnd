@@ -27,8 +27,7 @@ ReactDOM.render(
         <Route path="/notecards" component={Main}>
             <IndexRoute component={Deck}/>
         </Route>
-        <Route path="/notecard" component={Main}>
-            <IndexRoute component={Notecard}/>
+        <Route path="/notecard" component={Notecard}>
         </Route>
         <Route path="/animations" component={Main}>
             <IndexRoute component={Animation}/>

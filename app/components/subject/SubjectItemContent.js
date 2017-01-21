@@ -31,8 +31,7 @@ export default class SubjectItemContent extends React.Component {
 
     render() {
         return (
-            <div style={{"minWidth": "1325px"}}
-                 className="panel panel-default">
+            <div className="panel panel-default">
                 <div className="panel-heading">
                     <h4 className="panel-title">Description</h4>
                 </div>

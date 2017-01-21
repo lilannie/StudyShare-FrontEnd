@@ -29,7 +29,7 @@ export default class ContentSidebar extends React.Component {
         // <li key="subjects-create" className="active" onClick={this.handleChangeView.bind(null, 1)}><a>Create</a></li>
 
         return (
-            <div id="subject-sidebar" className="well col-md-3">
+            <div id="subject-sidebar" className="well col-md-3" style={{"width": 200}}>
 
                     {this.props.list}
             </div>

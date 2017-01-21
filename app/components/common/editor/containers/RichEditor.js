@@ -17,6 +17,9 @@ import SideToolbar from './SideToolbar';
 import InlineToolbar from '../InlineToolbar';
 import ImageComponent from '../ImageComponent';
 
+import '../../scss/editor.scss';
+
+
 class RichEditor extends Component {
     constructor(props) {
         super(props);
@@ -145,6 +148,7 @@ class RichEditor extends Component {
         sideToolbarOffsetTop = 5;
 
         return (
+            <div className="text-editor">
                 <div className="editor" id="richEditor" onClick={this.focus}>
                     {selectedBlock
                         ? <SideToolbar
@@ -177,7 +181,7 @@ class RichEditor extends Component {
                     <input type="file" ref="fileInput" style={{display: 'none'}}
                            onChange={this.handleFileInput}/>
                 </div>
-
+            </div>
         );
     }
 }

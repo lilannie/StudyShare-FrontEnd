@@ -262,6 +262,27 @@ body {
 }
 
 
+
+  #subject-sidebar {
+    width: 200px;
+    padding: 8px 0;
+
+    ul {
+      margin: .1em .5em;
+    }
+
+    li.active a {
+      background: #1b6d85;
+      color: white;
+    }
+
+    li a {
+      color: #1b6d85;
+
+    }
+  }
+
+
 .subject {
   .subject-header {
     line-height: 70px;

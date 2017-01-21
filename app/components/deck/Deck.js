@@ -12,7 +12,19 @@ export default class Deck extends React.Component {
     };
 
     state = {
-        foo: 'bar'
+        decks: [
+            {
+                id: 0,
+                title: "Derivatives",
+                description: "Calculus Derivatives"
+            },
+            {
+                id: 1,
+                title: "Integrals",
+                description: "Calculus Integrals"
+            }
+        ]
+
     };
 
     render() {
@@ -20,7 +32,9 @@ export default class Deck extends React.Component {
             <div>
                 <ContentHeader title="Decks"/>
                 <ContentSidebar list={<DeckSidebar/>} />
-                <ContentBody children={<DeckBody />}/>
+                <ContentBody children={
+                    <DeckBody decks={this.state.decks}/>
+                }/>
             </div>
         );
     }
