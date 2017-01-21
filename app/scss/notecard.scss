@@ -1,26 +1,26 @@
 .notecard {
-  @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:100,200,300,400,500,700,800,900');
-  .btn:hover,
-  .btn:focus,
-  .btn:active{
-    outline: 0 !important;
-  }
-  /* entire container, keeps perspective */
-  .card-container {
-    -webkit-perspective: 800px;
-    -moz-perspective: 800px;
-    -o-perspective: 800px;
-    perspective: 800px;
-    margin-bottom: 30px;
-  }
-  /* flip the pane when hovered */
-  .card-container:not(.manual-flip):hover .card,
-  .card-container.hover.manual-flip .card{
-    -webkit-transform: rotateY( 180deg );
-    -moz-transform: rotateY( 180deg );
-    -o-transform: rotateY( 180deg );
-    transform: rotateY( 180deg );
-  }
+    @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:100,200,300,400,500,700,800,900');
+    .btn:hover,
+    .btn:focus,
+    .btn:active{
+      outline: 0 !important;
+    }
+    /* entire container, keeps perspective */
+    .card-container {
+      -webkit-perspective: 800px;
+      -moz-perspective: 800px;
+      -o-perspective: 800px;
+      perspective: 800px;
+      margin-bottom: 30px;
+    }
+    /* flip the pane when hovered */
+    .card-container:not(.manual-flip):hover .card,
+    .card-container.hover.manual-flip .card{
+      -webkit-transform: rotateY( 180deg );
+      -moz-transform: rotateY( 180deg );
+      -o-transform: rotateY( 180deg );
+      transform: rotateY( 180deg );
+    }
 
 
   .card-container.static:hover .card,
