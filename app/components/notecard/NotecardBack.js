@@ -1,11 +1,9 @@
 import React from 'react';
+import $ from 'jquery';
 
-import NotecardFront from './NotecardFront';
-import NotecardBack from './NotecardBack';
+import '../../scss/notecard.scss';
 
-// import '../../scss/notecard.scss';
-
-export default class Notecard extends React.Component {
+export default class NotecardBack extends React.Component {
     static defaultProps = {
         id: 0
     };
@@ -20,13 +18,13 @@ export default class Notecard extends React.Component {
 
     render() {
         return (
-            <div id={"notecard-"+this.props.id} className="notecard">
-                <div className="info-card">
-                    <NotecardFront />
-                    <NotecardBack />
-                </div>
+            <div id={"notecard-back-"+this.props.id}
+                className="back"
+                    onClick={rotateCard.bind(null
+                        , this.props.id, false)}>
+                <h2>Back</h2>
             </div>
-    );
+        );
     }
 
     componentWillMount() {
@@ -48,4 +46,4 @@ export default class Notecard extends React.Component {
     componentDidUpdate(prevProps, prevState) {
     }
 
-    }
+}
