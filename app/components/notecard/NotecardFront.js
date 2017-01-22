@@ -1,5 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
+import NotecardSelector from './NotecardSelector';
 
 import '../../scss/notecard.scss';
 
@@ -19,10 +20,12 @@ export default class NotecardFront extends React.Component {
 
     render() {
         return (
-            <div id={"notecard-front-"+this.props.id}
-                 onClick={rotateCard.bind(null, this.props.id, true)}
+            <div id={"notecard-front-"+this.props.cardId}
+                 onClick={rotateCard.bind(null, this.props.cardId, true)}
                  className="front">
-                <h1>Annie Steenson</h1>
+                <NotecardSelector cardId={this.props.cardId}/>
+
+                {this.props.content}
             </div>
         );
     }

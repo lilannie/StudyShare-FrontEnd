@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router';
 import '../../scss/deckitem.scss';
 
 export default class DeckItem extends React.Component {
@@ -22,7 +22,7 @@ export default class DeckItem extends React.Component {
                                 <p>
                                     {this.props.description}
                                 </p>
-                                <a href="">View</a>
+                                <Link to={"/notecard/"+this.props.deckId}>View</Link>
                                 <a href="">Edit</a>
                             </figcaption>
                         </figure>

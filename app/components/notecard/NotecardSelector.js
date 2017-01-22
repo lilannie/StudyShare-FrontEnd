@@ -1,30 +1,34 @@
 import React from 'react';
+import $ from 'jquery';
 
-import NotecardContent from './NotecardContent';
-import NotecardSidebar from './NotecardSidebar';
-import ContentHeader from 'ContentHeader';
-export default class Notecard extends React.Component {
+import '../../scss/notecard.scss';
+
+export default class NotecardSelector extends React.Component {
     static defaultProps = {
-        foo: "bar"
+        id: 0
     };
 
     state = {
-        foo: "bar"
-
+        view: 0
     };
 
     constructor(props) {
         super(props);
 
+        this.selectItem = this.selectItem.bind(this);
     }
+
+    selectItem(cardId) {
+
+    }
+
 
     render() {
         return (
-            <div>
-                <ContentHeader title="Edit Deck"/>
-                <NotecardSidebar/>
-                <NotecardContent />
-            </div>
+            <input className="notecard-selector"
+                name={"selected-"+this.props.cardId}
+                   type="checkbox"
+                   onSelect={this.selectItem.bind(null, this.props.cardId)}/>
         );
     }
 

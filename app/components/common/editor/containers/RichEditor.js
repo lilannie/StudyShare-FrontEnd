@@ -17,7 +17,7 @@ import SideToolbar from './SideToolbar';
 import InlineToolbar from '../InlineToolbar';
 import ImageComponent from '../ImageComponent';
 
-import '../../scss/editor.scss';
+import '../../../../scss/editor.scss';
 
 
 class RichEditor extends Component {

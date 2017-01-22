@@ -1,9 +1,6 @@
 import React from 'react';
 
-import NotecardContent from './NotecardContent';
-import NotecardSidebar from './NotecardSidebar';
-import ContentHeader from 'ContentHeader';
-export default class Notecard extends React.Component {
+export default class NotecardEdit extends React.Component {
     static defaultProps = {
         foo: "bar"
     };
@@ -16,14 +13,17 @@ export default class Notecard extends React.Component {
     constructor(props) {
         super(props);
 
+        this.editCard = this.editCard.bind(this);
+    }
+
+    editCard() {
+
     }
 
     render() {
         return (
             <div>
-                <ContentHeader title="Edit Deck"/>
-                <NotecardSidebar/>
-                <NotecardContent />
+
             </div>
         );
     }

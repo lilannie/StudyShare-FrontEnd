@@ -8,7 +8,7 @@ export default class DeckCreateContent extends React.Component {
     state = {
         title: "",
         description: "",
-        cards: [
+        notecards: [
             {
                 id: 0,
                 order: 1,
@@ -45,11 +45,11 @@ export default class DeckCreateContent extends React.Component {
     }
 
     getCards() {
-        this.state.cards.sort(function(x, y){
+        this.state.notecards.sort(function(x, y){
             return x.order - y.order;
         });
 
-        return this.state.cards.map(function (item) {
+        return this.state.notecards.map(function (item) {
             return (
                 <tr key={"card-"+item.id}>
                     <td>{item.order}</td>
@@ -93,7 +93,7 @@ export default class DeckCreateContent extends React.Component {
                 </table>
 
                 <div className="panel-heading">
-                    <h4 className="panel-title">Cards</h4>
+                    <h4 className="panel-title">Notecards</h4>
                 </div>
 
                 <table className="table table-striped">

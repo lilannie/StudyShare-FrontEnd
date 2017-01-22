@@ -1,4 +1,44 @@
 $theme-blue: #1b6d85;
+$theme-blue-light: #d5f6f6;
+
+$zoom-scale: 1.2;
+.notecard-selector {
+  zoom: $zoom-scale;
+  transform:scale($zoom-scale);
+  -ms-transform:scale($zoom-scale);
+  -webkit-transform:scale($zoom-scale);
+  -o-transform:scale($zoom-scale);
+  -moz-transform:scale($zoom-scale);
+  transform-origin:0 0;
+  -ms-transform-origin:0 0;
+  -webkit-transform-origin:0 0;
+  -o-transform-origin:0 0;
+  -moz-transform-origin:0 0;
+  -webkit-transform-origin:0 0;
+  -ms-transform: translate(0px, 0px); /* IE 9 */
+  -webkit-transform: translate(0px,0px); /* Safari */
+  transform: translate(0px,0px);
+
+}
+.notecard-sidebar {
+  border-radius: 10px;
+  background-color: $theme-blue-light;
+  border: 1px solid black;
+  padding: 5px;
+  min-width: 200px;
+
+}
+
+.notecard-deck {
+  min-height: 450px;
+}
+
+#save-deck {
+  background-color: $theme-blue;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 .notecard {
     float: left;
@@ -6,8 +46,6 @@ $theme-blue: #1b6d85;
     -webkit-perspective: 600px;
 
   .front, .back {
-    background-color: $theme-blue;
-    color: white;
     box-shadow: 5px 5px 5px #888888;
     border-radius: 10px;
     border: 1px solid black;
@@ -17,6 +55,8 @@ $theme-blue: #1b6d85;
   }
 
   .front {
+    background-color: $theme-blue;
+    color: white;
     padding: 20px;
     width: 250px;
     height: 330px;
@@ -26,6 +66,8 @@ $theme-blue: #1b6d85;
   }
 
   .back {
+    background-color: white;
+    color: $theme-blue;
     padding: 20px;
     width: 250px;
     height: 330px;
