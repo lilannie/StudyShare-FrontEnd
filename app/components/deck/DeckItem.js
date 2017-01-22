@@ -22,8 +22,8 @@ export default class DeckItem extends React.Component {
                                 <p>
                                     {this.props.description}
                                 </p>
-                                <Link to={"/notecard/"+this.props.deckId}>View</Link>
-                                <a href="">Edit</a>
+                                <a href="">View</a>
+                                <Link to={"/notecard/"}>Edit</Link>
                             </figcaption>
                         </figure>
                     </div>

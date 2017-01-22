@@ -9,17 +9,13 @@ $zoom-scale: 1.2;
   -webkit-transform:scale($zoom-scale);
   -o-transform:scale($zoom-scale);
   -moz-transform:scale($zoom-scale);
-  transform-origin:0 0;
-  -ms-transform-origin:0 0;
-  -webkit-transform-origin:0 0;
-  -o-transform-origin:0 0;
-  -moz-transform-origin:0 0;
-  -webkit-transform-origin:0 0;
-  -ms-transform: translate(0px, 0px); /* IE 9 */
-  -webkit-transform: translate(0px,0px); /* Safari */
-  transform: translate(0px,0px);
-
 }
+
+.notecard-selector-container {
+  margin-top: 5px;
+  margin-left: 9px;
+}
+
 .notecard-sidebar {
   border-radius: 10px;
   background-color: $theme-blue-light;
@@ -44,11 +40,13 @@ $zoom-scale: 1.2;
     float: left;
     margin: 10px;
     -webkit-perspective: 600px;
+    border-radius: 10px;
+
 
   .front, .back {
     box-shadow: 5px 5px 5px #888888;
-    border-radius: 10px;
     border: 1px solid black;
+    border-radius: 10px;
     transition: -webkit-transform 1s;
     -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
@@ -57,22 +55,57 @@ $zoom-scale: 1.2;
   .front {
     background-color: $theme-blue;
     color: white;
-    padding: 20px;
     width: 250px;
     height: 330px;
-    overflow: scroll;
     position: absolute;
     z-index: 1;
+
+    .panel-body {
+      padding: 10px;
+      height: 245git statuspx;
+    }
+
+    .panel-footer {
+      background-color: $theme-blue;
+
+      button {
+        background-color: white;
+        color: $theme-blue;
+        border-radius: 5px;
+        border: 0 solid black;
+      }
+
+    }
   }
 
   .back {
     background-color: white;
     color: $theme-blue;
-    padding: 20px;
     width: 250px;
     height: 330px;
-    overflow: scroll;
     -webkit-transform: rotateY(-180deg);
+
+    .panel-body {
+      padding: 10px;
+      height: 275px;
+    }
+
+    .panel-footer {
+      background-color: white;
+
+      button {
+        background-color: $theme-blue;
+        color: white;
+        border-radius: 5px;
+        border: 0 solid black;
+      }
+    }
+  }
+
+  .panel-footer {
+    border-radius: 10px;
+    border: 0 solid black;
+
   }
 
   .rotate-back {

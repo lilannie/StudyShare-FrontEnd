@@ -18,8 +18,8 @@ export default class CardTemplate extends React.Component {
     render() {
         return (
             <div className="container-fluid">
-                <div className="card container-fluid" style={{"minWidth": "1127px"}}>
-                    <div className="card-content" style={{"minWidth": "1127px"}}>
+                <div className="card container-fluid" style={{"minWidth": "1355px"}}>
+                    <div className="card-content" style={{"minWidth": "1355px"}}>
                         <CardHeader title={this.props.title}/>
                         <div className="card-body">
                             {this.props.body}

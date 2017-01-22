@@ -25,10 +25,12 @@ export default class NotecardSelector extends React.Component {
 
     render() {
         return (
-            <input className="notecard-selector"
-                name={"selected-"+this.props.cardId}
-                   type="checkbox"
-                   onSelect={this.selectItem.bind(null, this.props.cardId)}/>
+            <div className="notecard-selector-container">
+                <input className="notecard-selector"
+                       name={"selected-" + this.props.cardId}
+                       type="checkbox"
+                       onSelect={this.selectItem.bind(null, this.props.cardId)}/>
+            </div>
         );
     }
 

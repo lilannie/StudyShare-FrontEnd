@@ -19,13 +19,20 @@ export default class NotecardBack extends React.Component {
 
     render() {
         return (
-            <div id={"notecard-back-"+this.props.cardId}
-                className="back"
-                    onClick={rotateCard.bind(null, this.props.cardId, false)}>
-                <NotecardSelector cardId={this.props.cardId}/>
+        <div id={"notecard-back-"+this.props.cardId}
+             className="back panel panel-default">
 
+            <div className="panel-body">
                 {this.props.content}
             </div>
+
+            <div className="panel-footer">
+                <button className="btn"
+                        onClick={rotateCard.bind(null, this.props.cardId, false)}>
+                    Front
+                </button>
+            </div>
+        </div>
         );
     }
 

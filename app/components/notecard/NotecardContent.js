@@ -20,18 +20,18 @@ export default class NotecardContent extends React.Component {
                 notecards: [
                     {
                         id: 0,
-                        front: "card 0 front",
-                        back: "card 0 back"
+                        front: "First Derivative",
+                        back: "Change in X"
                     },
                     {
                         id: 1,
-                        front: "card 1 front",
-                        back: "card 1 back"
+                        front: "Second Derivative",
+                        back: "Change in X^2"
                     },
                     {
                         id: 2,
-                        front: "card 2 front",
-                        back: "card 2 back"
+                        front: "Acceleration",
+                        back: "Second Derivative"
                     },
                 ]
             },
