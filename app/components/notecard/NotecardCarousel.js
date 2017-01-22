@@ -1,14 +1,15 @@
 import React from 'react';
 
-import {Row, Col} from 'react-bootstrap';
+import NotecardLeft from './NotecardLeft'
+import NotecardCreate from './NotecardCreate';
 
-export default class ContentBody extends React.Component {
+export default class NotecardCarousel extends React.Component {
     static defaultProps = {
-        foo: 'bar'
+        foo: "bar"
     };
 
     state = {
-        view: 0
+        foo: "bar"
     };
 
     constructor(props) {
@@ -17,11 +18,9 @@ export default class ContentBody extends React.Component {
 
     render() {
         return (
-            <div className="subject-content-wrapper col-md-9"
-                style={{"margin": "10px"}}>
-                <div className="container-fluid">
-                    {this.props.children}
-                </div>
+            <div className="modal fade" id="addCardModal" tabIndex="-1" role="dialog">
+                <NotecardLeft />
+                <NotecardCreate />
             </div>
         );
     }

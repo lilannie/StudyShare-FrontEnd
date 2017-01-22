@@ -28,7 +28,8 @@ export default class DeckBody extends React.Component {
 
     render() {
         return (
-            <div className="">
+            <div className=""
+                 style={{"margin": "10px"}}>
                 {this.getDeckItems()}
             </div>
         );

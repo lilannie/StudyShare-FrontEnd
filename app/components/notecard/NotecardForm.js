@@ -1,27 +1,33 @@
 import React from 'react';
+import RichEditor from 'RichEditor';
 
-import {Row, Col} from 'react-bootstrap';
-
-export default class ContentBody extends React.Component {
+export default class NotecardForm extends React.Component {
     static defaultProps = {
-        foo: 'bar'
+        foo: "bar"
     };
 
     state = {
-        view: 0
+        foo: "bar"
+
     };
 
     constructor(props) {
         super(props);
+
     }
 
     render() {
         return (
-            <div className="subject-content-wrapper col-md-9"
-                style={{"margin": "10px"}}>
-                <div className="container-fluid">
-                    {this.props.children}
-                </div>
+            <div className="modal-body">
+                <h5>
+                    Front
+                </h5>
+                <RichEditor />
+                <hr/>
+                <h5>
+                    Back
+                </h5>
+                <RichEditor />
             </div>
         );
     }

@@ -1,5 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
+import {Row, Col} from 'react-bootstrap';
 
 import Header from 'Header';
 import Footer from 'Footer';
@@ -19,10 +20,14 @@ export default class Main extends React.Component {
         return (
             <div className="container-fluid">
                 <Header/>
+                <Row>
                 <Sidebar/>
-                <main id="main-content-wrapper" role="main">
+                <Col id="main-content-wrapper"
+                     style={{"padding":"0px"}}
+                     role="main">
                     {this.props.children}
-                </main>
+                </Col>
+                </Row>
             </div>
         );
     }

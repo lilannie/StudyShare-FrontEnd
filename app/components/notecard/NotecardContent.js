@@ -2,7 +2,7 @@ import React from 'react';
 
 import NotecardItem from './NotecardItem';
 import NotecardToolbar from './NotecardToolbar';
-import NotecardCreate from './NotecardCreate';
+import NotecardCarousel from './NotecardCarousel';
 import NotecardDelete from './NotecardDelete';
 import NotecardEdit from './NotecardEdit';
 
@@ -88,15 +88,14 @@ export default class NotecardContent extends React.Component {
 
     render() {
         return (
-            <div className="col-md-10">
-                <div className="notecard-deck well">
+
+                <div className="notecard-deck">
                     <NotecardToolbar />
                     {this.getNotecardItems()}
-                    <NotecardCreate />
+                    <NotecardCarousel />
                     <NotecardDelete />
                     <NotecardEdit />
                 </div>
-            </div>
         );
     }
 

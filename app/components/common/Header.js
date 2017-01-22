@@ -18,7 +18,8 @@ export default class Header extends React.Component {
     render() {
         return (
             <header id="header">
-                <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
+                <nav className="col-md-12 navbar navbar-default navbar-fixed-top"
+                    role="navigation">
                     <div className="container-fluid">
                         <div className="navbar-header">
                             <button type="button" className="navbar-toggle" data-toggle="collapse"

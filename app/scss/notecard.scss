@@ -17,12 +17,9 @@ $zoom-scale: 1.2;
 }
 
 .notecard-sidebar {
-  border-radius: 10px;
   background-color: $theme-blue-light;
-  border: 1px solid black;
   padding: 5px;
   min-width: 200px;
-
 }
 
 .notecard-deck {
@@ -62,7 +59,7 @@ $zoom-scale: 1.2;
 
     .panel-body {
       padding: 10px;
-      height: 245git statuspx;
+      height: 245px;
     }
 
     .panel-footer {
@@ -114,5 +111,23 @@ $zoom-scale: 1.2;
 
   .rotate-front {
     -webkit-transform: rotateY(180deg);
+  }
+
+  .carousel-left {
+    position: absolute;
+    -webkit-transform: rotateY(-180deg);
+  }
+}
+
+.notecard-container {
+  .col-md-2 {
+    padding: 0px;
+    border-radius: 0px;
+
+  }
+  .col-md-10 {
+    padding: 0px;
+    border-radius: 0px;
+
   }
 }

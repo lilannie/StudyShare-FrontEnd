@@ -30,7 +30,8 @@ module.exports = {
         CardTemplate: 'app/components/common/content/CardTemplate.js',
         CardHeader: 'app/components/common/content/CardHeader.js',
         CardActions: 'app/components/common/content/CardActions.js',
-        RichEditor: 'app/components/common/editor/containers/RichEditor.js'
+        RichEditor: 'app/components/common/editor/containers/RichEditor.js',
+        Background: 'public/images/app/background.jpg'
     },
     extensions: ['', '.js', '.jsx']
   },

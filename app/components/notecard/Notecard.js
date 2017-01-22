@@ -1,8 +1,10 @@
 import React from 'react';
+import {Row, Col} from 'react-bootstrap';
 
 import NotecardContent from './NotecardContent';
 import NotecardSidebar from './NotecardSidebar';
 import ContentHeader from 'ContentHeader';
+
 export default class Notecard extends React.Component {
     static defaultProps = {
         foo: "bar"
@@ -20,10 +22,17 @@ export default class Notecard extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="notecard-container">
                 <ContentHeader title="Edit Deck"/>
-                <NotecardSidebar/>
-                <NotecardContent />
+                <Row>
+                    <Col md={1} style={{"padding": "0px"}}>
+                        <NotecardSidebar/>
+                    </Col>
+                    <Col md={9} style={{"padding": "0px"}}>
+
+                        <NotecardContent />
+                    </Col>
+                </Row>
             </div>
         );
     }

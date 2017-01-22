@@ -42,15 +42,16 @@ export default class Subject extends React.Component {
 
     render() {
         return (
-            <div className="subject">
+            <div className="subject" >
                 <ContentHeader title="Subjects" />
                 <div className="subject-content-wrapper">
                     <Row>
-                        <Col>
+                        <Col md={1} style={{"padding": "0px"}}>
                             <SubjectSidebar active={this.state.view}
                                             changeView={this.changeView}/>
                         </Col>
-                        <Col className="subject-content container-fluid well">
+                        <Col md={9} style={{"padding": "0px"}}
+                            className="subject-content container-fluid ">
 
                             {this.getView()}
 

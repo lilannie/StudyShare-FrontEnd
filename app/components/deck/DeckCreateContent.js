@@ -62,7 +62,8 @@ export default class DeckCreateContent extends React.Component {
 
     render() {
         return (
-            <div style={{"marginRight": "10px"}}
+            <div style={{"margin": "10px"}}
+
                  className="panel panel-default">
                 <div className="panel-heading">
                     <h4 className="panel-title">General</h4>

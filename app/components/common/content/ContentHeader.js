@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Row} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap';
 
 export default class ContentHeader extends React.Component {
     static defaultProps = {
@@ -16,13 +16,17 @@ export default class ContentHeader extends React.Component {
     }
 
     render() {
+        var noPadding = {"padding": "0px"};
         return (
             <Row>
-                <div className="container-fluid">
-                    <h1 className="content-header text-center">
+            <Col md={4} mdPull={3} style={noPadding}>
+                <div className="container-fluid" style={noPadding}>
+                    <h1 className="content-header text-right"
+                        style={{"paddingRight": "20px"}}>
                         {this.props.title}
                     </h1>
                 </div>
+            </Col>
             </Row>
         );
     }

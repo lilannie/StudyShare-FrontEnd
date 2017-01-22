@@ -1,6 +1,6 @@
 import React from 'react';
 import update from 'react-addons-update';
-import {Row} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap';
 
 import SubjectItem from './SubjectItem';
 
@@ -74,7 +74,7 @@ export default class SubjectContent extends React.Component {
         // console.log("SubjectContent - Handle Edit");
         // console.log("New Subject: "+JSON.stringify(subject));
         // console.log("Prev State: "+JSON.stringify(this.state));
-        this.setState(function(prevState, props) {
+        this.setState(function (prevState, props) {
             // console.log("New Subject in function: "+JSON.stringify(subject));
             // console.log("Prev State in function: "+JSON.stringify(prevState));
             // var newState = update(prevState, {subjects: [{$merge: subject}]});
@@ -88,7 +88,7 @@ export default class SubjectContent extends React.Component {
         // console.log("SubjectContent - Handle Delete");
         // console.log("Subject Id: "+id);
         // console.log("Prev State: "+JSON.stringify(this.state));
-        this.setState(function(prevState, props){
+        this.setState(function (prevState, props) {
             // console.log("Subject Id in function: "+id);
             // console.log("Prev State in function: "+JSON.stringify(prevState));
             var newStateObj = {subjects: []};
@@ -119,7 +119,7 @@ export default class SubjectContent extends React.Component {
         for (var key in this.state.subjects) {
             var subject = this.state.subjects[key];
             // console.log("Key: "+JSON.stringify(subject));
-            arr.push(<SubjectItem key={"subject-"+subject.id}
+            arr.push(<SubjectItem key={"subject-" + subject.id}
                                   id={subject.id}
                                   title={subject.title}
                                   description={subject.description}
@@ -134,12 +134,12 @@ export default class SubjectContent extends React.Component {
     render() {
         if (this.state.subjects.length <= 0) {
             return (
-                <div className="container-fluid">
+                <div className="container-fluid" style={{"padding": "0px"}}>
                     <h3>You have no Subjects! :(</h3>
-                    <Row>
+
                         <button className="btn create-button"
-                            onClick={this.handleChangeView}>Create New</button>
-                    </Row>
+                                onClick={this.handleChangeView}>Create New
+                        </button>
                 </div>
             );
         }
@@ -150,20 +150,24 @@ export default class SubjectContent extends React.Component {
         );
     }
 
-    componentWillMount() {}
+    componentWillMount() {
+    }
 
     componentDidMount() {
 
     }
 
-    componentWillReceiveProps(nextProps) {}
+    componentWillReceiveProps(nextProps) {
+    }
 
     shouldComponentUpdate(nextProps, nextState) {
         return true;
     }
 
-    componentWillUpdate(nextProps, nextState) {}
+    componentWillUpdate(nextProps, nextState) {
+    }
 
-    componentDidUpdate(prevProps, prevState) {}
+    componentDidUpdate(prevProps, prevState) {
+    }
 
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Col, Row} from 'react-bootstrap'
 
 import ContentHeader from 'ContentHeader';
 import ContentSidebar from 'ContentSidebar';
@@ -53,12 +54,21 @@ export default class Deck extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className="deck">
                 <ContentHeader title="Decks"/>
-                <ContentSidebar list={<DeckSidebar
-                    viewId={this.state.viewId}
-                    changeView={this.changeView}/>} />
-                <ContentBody children={this.getView()}/>
+                <Row>
+                    <Col md={1} style={{"padding": "0px"}}>
+                        <ContentSidebar list={<DeckSidebar
+                            viewId={this.state.viewId}
+                            changeView={this.changeView}/>} />
+                    </Col>
+                    <Col md={9} style={{"padding": "0px"}}
+                         className="subject-content container-fluid ">
+
+                        <ContentBody children={this.getView()}/>
+
+                    </Col>
+                </Row>
             </div>
         );
     }

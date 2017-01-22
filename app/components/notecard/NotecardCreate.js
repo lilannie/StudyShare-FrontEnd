@@ -1,5 +1,5 @@
 import React from 'react';
-import RichEditor from 'RichEditor';
+import NotecardForm from './NotecardForm';
 
 export default class NotecardCreate extends React.Component {
     static defaultProps = {
@@ -18,37 +18,25 @@ export default class NotecardCreate extends React.Component {
     }
 
     addCard() {
-        console.log("Add Card");
+
     }
 
     render() {
         return (
-            <div className="modal fade" id="addCardModal" tabIndex="-1" role="dialog">
-                <div className="modal-dialog" role="document">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLongTitle">
-                               Add Notecard
-                            </h5>
-                            <button type="button" className="close" data-dismiss="modal" >
-                                <span>&times;</span>
-                            </button>
-                        </div>
-                        <div className="modal-body">
-                            <h5>
-                                Front
-                            </h5>
-                            <RichEditor />
-                            <hr/>
-                            <h5>
-                                Back
-                            </h5>
-                            <RichEditor />
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary">Save changes</button>
-                        </div>
+            <div className="modal-dialog" role="document">
+                <div className="modal-content">
+                    <div className="modal-header">
+                        <h5 className="modal-title" id="exampleModalLongTitle">
+                           Add Notecard
+                        </h5>
+                        <button type="button" className="close" data-dismiss="modal" >
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <NotecardForm/>
+                    <div className="modal-footer">
+                        <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" className="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
