@@ -50,7 +50,8 @@ export default class Subject extends React.Component {
                             <SubjectSidebar active={this.state.view}
                                             changeView={this.changeView}/>
                         </Col>
-                        <Col md={9} style={{"padding": "0px"}}
+                        <Col md={9} style={{"padding": "0px",
+                                    "margin": "10px"}}
                             className="subject-content container-fluid ">
 
                             {this.getView()}

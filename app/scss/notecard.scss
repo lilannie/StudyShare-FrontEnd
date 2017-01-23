@@ -42,8 +42,7 @@ $zoom-scale: 1.2;
 
 
   .front, .back {
-    box-shadow: 5px 5px 5px #888888;
-    border: 1px solid black;
+    border: 0px solid black;
     border-radius: 10px;
     transition: -webkit-transform 1s;
     -webkit-transform-style: preserve-3d;
@@ -70,7 +69,7 @@ $zoom-scale: 1.2;
         background-color: white;
         color: $theme-blue;
         border-radius: 5px;
-        border: 0 solid black;
+        border: 1px solid white;
       }
 
     }
