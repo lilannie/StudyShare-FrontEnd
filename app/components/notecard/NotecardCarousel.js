@@ -1,7 +1,7 @@
 import React from 'react';
 
-import NotecardLeft from './NotecardLeft'
-import NotecardCreate from './NotecardCreate';
+import NotecardCreate from './NotecardCreate'
+import CarouselItem from './CarouselItem';
 
 export default class NotecardCarousel extends React.Component {
     static defaultProps = {
@@ -18,10 +18,18 @@ export default class NotecardCarousel extends React.Component {
 
     render() {
         return (
-            <div className="modal fade" id="addCardModal" tabIndex="-1" role="dialog">
-                <NotecardLeft />
-                <NotecardCreate />
+        <div className="modal fade" id="addCardModal" tabIndex="-1" role="dialog">
+            <div className="notecard-carousel carousel-left">
+                <CarouselItem viewId={0}/>
             </div>
+
+            <div className="notecard-carousel carousel-right">
+                <CarouselItem viewId={1}/>
+            </div>
+
+            <NotecardCreate />
+
+        </div>
         );
     }
 

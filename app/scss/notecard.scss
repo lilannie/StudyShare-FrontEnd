@@ -131,15 +131,13 @@ $zoom-scale: 1.2;
   }
 }
 
-.carousel-left {
+.notecard-carousel {
+
   .modal-dialog {
     position: absolute;
     -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
-    -webkit-transform: rotateY(-60deg);
-    transform-origin: 200px 0px 0px;
     opacity: 0.85;
-    margin-left: 100px;
   }
 
   .modal-content {
@@ -156,8 +154,8 @@ $zoom-scale: 1.2;
   }
 
   .card-grey {
-    .model-content {
-      background: -webkit-linear-gradient(left, black, $grey);
+    .modal-content {
+      background: -webkit-linear-gradient(left, #000000, #333333);
 
     }
   }
@@ -169,5 +167,23 @@ $zoom-scale: 1.2;
       color: black;
       background: black;
     }
+  }
+}
+
+.carousel-left {
+  .modal-dialog {
+    transform-origin: 200px 0px 0px;
+    -webkit-transform: rotateY(-60deg);
+    margin-left: 160px;
+
+  }
+}
+
+.carousel-right {
+  .modal-dialog {
+    transform-origin: 1000px 0px 0px;
+    -webkit-transform: rotateY(60deg);
+    margin-left: 1400px;
+
   }
 }
