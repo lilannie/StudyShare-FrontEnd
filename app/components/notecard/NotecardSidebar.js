@@ -17,44 +17,39 @@ export default class NotecardSidebar extends React.Component {
 
     render() {
         return (
-            <div className="col-md-2">
-                <div className="notecard-sidebar">
-                    <Grid>
-                        <Row className="show-grid">
-                            <Col xs={6} md={1}>
-                                <h3>Title</h3>
-                            </Col>
-                        </Row>
-                        <Row className="show-grid">
+            <div className="notecard-sidebar">
+                <Row className="show-grid">
+                    <Col xs={6} md={1}>
+                        <h3>Title</h3>
+                    </Col>
+                </Row>
+                <Row className="show-grid">
 
-                            <Col xs={6} md={1}>
-                                <input type="text" name="title"
-                                       placeholder="Title"/>
-                            </Col>
-                        </Row>
-                        <Row className="show-grid">
-                            <Col xs={6} md={1}>
-                                <h3>Description</h3>
-                            </Col>
-                        </Row>
-                        <Row className="show-grid">
-                            <Col xs={6} md={1}>
-                        <textarea name="description"
-                                  placeholder="description"/>
-                            </Col>
-                        </Row>
-                        <Row className="show-grid">
-                            <Col xs={6} md={1}>
-                                <button id="save-deck"
-                                        className="btn">Save</button>
-                            </Col>
-                        </Row>
-                    </Grid>
-                </div>
+                    <Col xs={6} md={1}>
+                        <input type="text" name="title"
+                               className="form-control"
+                               placeholder="Title"/>
+                    </Col>
+                </Row>
+                <Row className="show-grid">
+                    <Col xs={6} md={1}>
+                        <h3>Description</h3>
+                    </Col>
+                </Row>
+                <Row className="show-grid">
+                    <Col xs={6} md={1}>
+                <textarea name="description"
+                          className="form-control"
+                          placeholder="description"/>
+                    </Col>
+                </Row>
+                <Row className="show-grid">
+                    <Col xs={6} md={1}>
+                        <button id="save-deck"
+                                className="btn">Save</button>
+                    </Col>
+                </Row>
             </div>
-
-
-
         );
 
     }
