@@ -156,7 +156,12 @@ $zoom-scale: 1.2;
   .card-grey {
     .modal-content {
       background: -webkit-linear-gradient(left, #000000, #333333);
+    }
+  }
 
+  .arrow {
+    .modal-content {
+      background: #b3ffff;
     }
   }
 
@@ -172,18 +177,50 @@ $zoom-scale: 1.2;
 
 .carousel-left {
   .modal-dialog {
-    transform-origin: 200px 0px 0px;
     -webkit-transform: rotateY(-60deg);
     margin-left: 160px;
+  }
 
+  .modal-content {
+    height: 404px;
+    width: 350px;
+  }
+}
+
+.carousel-left-arrow {
+  .modal-dialog {
+    -webkit-transform: rotateY(-60deg);
+    margin-left: 601px;
+    opacity: .80;
+  }
+
+  .modal-content {
+    height: 404px;
+    width: 50px;
   }
 }
 
 .carousel-right {
   .modal-dialog {
-    transform-origin: 1000px 0px 0px;
     -webkit-transform: rotateY(60deg);
     margin-left: 1400px;
+  }
 
+  .modal-content {
+    height: 404px;
+    width: 350px;
+  }
+}
+
+.carousel-right-arrow {
+  .modal-dialog {
+    -webkit-transform: rotateY(-60deg);
+    margin-left: 1250px;
+    opacity: .80;
+  }
+
+  .modal-content {
+    height: 404px;
+    width: 50px;
   }
 }

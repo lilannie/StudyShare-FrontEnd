@@ -23,6 +23,14 @@ export default class NotecardCarousel extends React.Component {
                 <CarouselItem viewId={0}/>
             </div>
 
+            <div className="notecard-carousel carousel-left-arrow">
+                <CarouselItem viewId={2}/>
+            </div>
+
+            <div className="notecard-carousel carousel-right-arrow">
+                <CarouselItem viewId={2}/>
+            </div>
+
             <div className="notecard-carousel carousel-right">
                 <CarouselItem viewId={1}/>
             </div>

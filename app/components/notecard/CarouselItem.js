@@ -41,8 +41,14 @@ export default class CarouselItem extends React.Component {
                         <NotecardCarouselCard
                             view={<NotecardView
                                 front={this.props.notecard.front}
-                                back={this.props.notecard.back}/>}
-                        />
+                                back={this.props.notecard.back}/>}/>
+                    </div>
+                );
+            }
+            case 2: {
+                return (
+                    <div className="arrow">
+                        <NotecardCarouselCard  />
                     </div>
                 );
             }
