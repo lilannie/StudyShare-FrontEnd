@@ -73,7 +73,7 @@ export default class CarouselItem extends React.Component {
                         <NotecardCarouselCard
                             view={
                                 <div className="center-vertical">
-                                    <i className="fa fa-4x fa-plus"></i>
+                                    <i className="fa fa-2x fa-plus"></i>
                                 </div>}/>
                     </div>
                 );
@@ -84,7 +84,7 @@ export default class CarouselItem extends React.Component {
                         <NotecardCarouselCard
                             view={
                                 <div className="center-vertical">
-                                    <i className="fa fa-4x fa-angle-right"></i>
+                                    <i className="fa fa-2x fa-plus"></i>
                                 </div>}/>
                     </div>
                 );

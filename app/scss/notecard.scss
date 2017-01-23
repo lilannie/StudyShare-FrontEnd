@@ -1,9 +1,8 @@
 $theme-blue: #1b6d85;
 $theme-blue-light: #d5f6f6;
 $grey: #333333;
-
-
 $zoom-scale: 1.2;
+
 .notecard-selector {
   zoom: $zoom-scale;
   transform:scale($zoom-scale);
@@ -37,10 +36,10 @@ $zoom-scale: 1.2;
 }
 
 .notecard {
-    float: left;
-    margin: 10px;
-    -webkit-perspective: 600px;
-    border-radius: 10px;
+  float: left;
+  margin: 10px;
+  -webkit-perspective: 600px;
+  border-radius: 10px;
 
 
   .front, .back {
@@ -143,8 +142,6 @@ $zoom-scale: 1.2;
   .modal-content {
     color: black;
     border: 0px solid black;
-    height: 404px;
-    width: 350px;
   }
 
   .card-blue {
@@ -180,11 +177,6 @@ $zoom-scale: 1.2;
     -webkit-transform: rotateY(-60deg);
     margin-left: 160px;
   }
-
-  .modal-content {
-    height: 404px;
-    width: 350px;
-  }
 }
 
 .carousel-right {
@@ -192,7 +184,9 @@ $zoom-scale: 1.2;
     -webkit-transform: rotateY(60deg);
     margin-left: 1400px;
   }
+}
 
+.carousel-left, .carousel-right {
   .modal-content {
     height: 404px;
     width: 350px;
@@ -202,41 +196,26 @@ $zoom-scale: 1.2;
 .carousel-left-arrow {
   .modal-dialog {
     margin-left: 610px;
-    margin-top: 40px;
-    opacity: .70;
-  }
-
-  .modal-content {
-    height: 380px;
-    width: 50px;
-  }
-
-  .modal-dialog:hover {
-    opacity: 1;
   }
 
   .left-arrow {
-      .fa-angle-left {
-        margin-left: 15px;
-        color: $theme-blue;
-      }
+    .fa-angle-left {
+      margin-left: 13px;
+      color: $theme-blue;
+    }
+  }
+
+  .left-plus {
+    .fa-plus {
+      margin-left: 13px;
+      color: $theme-blue;
+    }
   }
 }
 
 .carousel-right-arrow {
   .modal-dialog {
     margin-left: 1252px;
-    margin-top: 40px;
-    opacity: .70;
-  }
-
-  .modal-content {
-    height: 380px;
-    width: 50px;
-  }
-
-  .modal-dialog:hover {
-    opacity: 1;
   }
 
   .right-arrow {
@@ -244,6 +223,29 @@ $zoom-scale: 1.2;
       margin-left: 19px;
       color: $theme-blue;
     }
+  }
+
+  .right-plus {
+    .fa-plus {
+      margin-left: 13px;
+      color: $theme-blue;
+    }
+  }
+}
+
+.carousel-left-arrow, .carousel-right-arrow {
+  .modal-dialog {
+    margin-top: 40px;
+    opacity: .70;
+  }
+
+  .modal-content {
+    height: 380px;
+    width: 50px;
+  }
+
+  .modal-dialog:hover {
+    opacity: 1;
   }
 }
 
