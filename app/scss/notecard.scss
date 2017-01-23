@@ -187,19 +187,6 @@ $zoom-scale: 1.2;
   }
 }
 
-.carousel-left-arrow {
-  .modal-dialog {
-    -webkit-transform: rotateY(-60deg);
-    margin-left: 601px;
-    opacity: .80;
-  }
-
-  .modal-content {
-    height: 404px;
-    width: 50px;
-  }
-}
-
 .carousel-right {
   .modal-dialog {
     -webkit-transform: rotateY(60deg);
@@ -212,15 +199,58 @@ $zoom-scale: 1.2;
   }
 }
 
-.carousel-right-arrow {
+.carousel-left-arrow {
   .modal-dialog {
     -webkit-transform: rotateY(-60deg);
-    margin-left: 1250px;
-    opacity: .80;
+    margin-left: 610px;
+    margin-top: 40px;
+    opacity: .70;
   }
 
   .modal-content {
-    height: 404px;
+    height: 380px;
     width: 50px;
   }
+
+  .modal-dialog:hover {
+    opacity: 1;
+  }
+
+  .left-arrow {
+      .fa-angle-left {
+        margin-left: 15px;
+        color: $theme-blue;
+      }
+  }
+}
+
+.carousel-right-arrow {
+  .modal-dialog {
+    -webkit-transform: rotateY(-60deg);
+    margin-left: 1252px;
+    margin-top: 40px;
+    opacity: .70;
+  }
+
+  .modal-content {
+    height: 380px;
+    width: 50px;
+  }
+
+  .modal-dialog:hover {
+    opacity: 1;
+  }
+
+  .right-arrow {
+    .fa-angle-right {
+      margin-left: 19px;
+      color: $theme-blue;
+    }
+  }
+}
+
+.center-vertical {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }

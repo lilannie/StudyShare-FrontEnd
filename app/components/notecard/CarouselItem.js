@@ -39,7 +39,7 @@ export default class CarouselItem extends React.Component {
                 return (
                     <div className="card-blue">
                         <NotecardCarouselCard
-                            view={<NotecardView
+                                view={<NotecardView
                                 front={this.props.notecard.front}
                                 back={this.props.notecard.back}/>}/>
                     </div>
@@ -47,8 +47,23 @@ export default class CarouselItem extends React.Component {
             }
             case 2: {
                 return (
-                    <div className="arrow">
-                        <NotecardCarouselCard  />
+                    <div className="left-arrow">
+                        <NotecardCarouselCard
+                            view={
+                                <div className="center-vertical">
+                                    <i className="fa fa-4x fa-angle-left"></i>
+                                </div>}/>
+                    </div>
+                );
+            }
+            case 3: {
+                return (
+                    <div className="right-arrow">
+                        <NotecardCarouselCard
+                            view={
+                                <div className="center-vertical">
+                                    <i className="fa fa-4x fa-angle-right"></i>
+                                </div>}/>
                     </div>
                 );
             }
