@@ -1,14 +1,12 @@
 import React from 'react';
-import NotecardCarouselCard from './NotecardCarouselCard';
-import NotecardView from './NotecardView';
 
-export default class NotecardLeft extends React.Component {
+export default class NotecardView extends React.Component {
     static defaultProps = {
-        foo: "bar"
+        front: "Front Content"
     };
 
     state = {
-        foo: "bar"
+        back: "Back Content"
 
     };
 
@@ -23,10 +21,20 @@ export default class NotecardLeft extends React.Component {
 
     render() {
         return (
-            <div className="carousel-left">
-                <div className="card-grey">
-                    <NotecardCarouselCard  />
-                </div>
+            <div className="modal-body">
+                <h3>
+                    Front
+                </h3>
+                <p>
+                    {this.props.front}
+                </p>
+                <hr />
+                <h3>
+                    Back
+                </h3>
+                <p>
+                    {this.props.back}
+                </p>
             </div>
         );
     }
