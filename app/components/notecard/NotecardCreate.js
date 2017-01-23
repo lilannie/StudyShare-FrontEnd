@@ -23,7 +23,7 @@ export default class NotecardCreate extends React.Component {
 
     render() {
         return (
-            <div className="modal-dialog" role="document">
+            <div className="modal-dialog notecard-create" role="document">
                 <div className="modal-content">
                     <div className="modal-header">
                         <h5 className="modal-title" id="exampleModalLongTitle">

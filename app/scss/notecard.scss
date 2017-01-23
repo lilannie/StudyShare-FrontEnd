@@ -254,3 +254,11 @@ $zoom-scale: 1.2;
   top: 50%;
   transform: translateY(-50%);
 }
+
+.notecard-create {
+  .modal-footer {
+    button.btn-primary {
+        background: $theme-blue;
+    }
+  }
+}
