@@ -67,6 +67,28 @@ export default class CarouselItem extends React.Component {
                     </div>
                 );
             }
+            case 4: {
+                return (
+                    <div className="left-plus">
+                        <NotecardCarouselCard
+                            view={
+                                <div className="center-vertical">
+                                    <i className="fa fa-4x fa-plus"></i>
+                                </div>}/>
+                    </div>
+                );
+            }
+            case 5: {
+                return (
+                    <div className="right-plus">
+                        <NotecardCarouselCard
+                            view={
+                                <div className="center-vertical">
+                                    <i className="fa fa-4x fa-angle-right"></i>
+                                </div>}/>
+                    </div>
+                );
+            }
             default: {
                 return (
                     <div>
