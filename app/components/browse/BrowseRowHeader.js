@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BrowseCard from './BrowseCard';
+import {Row, Col} from 'react-bootstrap';
 
 export default class BrowseRowHeader extends React.Component {
     static defaultProps = {
@@ -15,9 +15,11 @@ export default class BrowseRowHeader extends React.Component {
         return (
             <div className="browse-header">
                 <h2>{this.props.title}</h2>
-                <div className="col-md-10">
+                <Row>
+                <Col md={10}>
                     <hr/>
-                </div>
+                </Col>
+                </Row>
             </div>
         );
     }
