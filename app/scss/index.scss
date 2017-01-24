@@ -24,14 +24,14 @@ $grey: #333333;
 }
 
 .browse-header {
+  h2 {
+    margin: 0px;
+  }
   hr {
-    display: block;
-    height: 2px;
     border: 0;
-    border-top: 1px solid $grey;
-    margin: 1em 0;
+    border-top: 5px solid $grey;
     padding: 0;
     overflow: hidden;
-    width: 1000px;
+    width: 100%;
   }
 }

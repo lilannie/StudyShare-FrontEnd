@@ -15,7 +15,9 @@ export default class BrowseRowHeader extends React.Component {
         return (
             <div className="browse-header">
                 <h2>{this.props.title}</h2>
-                <hr/>
+                <div className="col-md-10">
+                    <hr/>
+                </div>
             </div>
         );
     }
