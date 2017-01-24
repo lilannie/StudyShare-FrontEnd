@@ -8,13 +8,25 @@ export default class NotecardForm extends React.Component {
     };
 
     state = {
-        foo: "bar"
-
+        front: "",
+        back: ""
     };
 
     constructor(props) {
         super(props);
 
+        this.state.front = this.props.front;
+        this.state.back = this.props.back;
+        this.updateFront = this.updateFront.bind(this);
+        this.updateBack = this.updateBack.bind(this);
+    }
+
+    updateFront() {
+        this.setState({front: event.target.value});
+    }
+
+    updateBack(event) {
+        this.setState({back: event.target.value});
     }
 
     render() {
@@ -24,13 +36,14 @@ export default class NotecardForm extends React.Component {
                     Front
                 </h5>
                 <textarea className="form-control" placeholder="Front"
-                          value={this.props.front}  />
+                          value={this.state.front} onChange={this.updateFront} />
                 <hr/>
                 <h5>
                     Back
                 </h5>
                 <textarea className="form-control" placeholder="Back"
-                          value={this.props.back}  />            </div>
+                          value={this.state.back}  onChange={this.updateBack}/>
+            </div>
         );
     }
 

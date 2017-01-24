@@ -62,8 +62,8 @@ export default class NotecardCarousel extends React.Component {
         if (newActive < 0) {
             var newCard = {
                 id: newId,
-                front: "New Card Front",
-                back: "New Card Back",
+                front: "",
+                back: "",
                 order: this.state.notecards[this.state.activeId].order -1
             };
 

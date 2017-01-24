@@ -166,6 +166,12 @@ $zoom-scale: 1.2;
 
 .carousel-left {
   .modal-dialog {
+    //-webkit-animation-name: rotateLeft; /* Safari 4.0 - 8.0 */
+    //-webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    //-webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
+    //animation-name: rotateLeft;
+    //animation-duration: 2s;
+    //animation-iteration-count: 1;
     -webkit-transform: rotateY(-60deg);
     margin-left: 160px;
   }
@@ -173,9 +179,39 @@ $zoom-scale: 1.2;
 
 .carousel-right {
   .modal-dialog {
+    //-webkit-animation-name: rotateRight; /* Safari 4.0 - 8.0 */
+    //-webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    //-webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
+    //animation-name: rotateRight;
+    //animation-duration: 2s;
+    //animation-iteration-count: 1;
     -webkit-transform: rotateY(60deg);
     margin-left: 1400px;
   }
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes rotateLeft {
+    from {    -webkit-transform: rotateY(-90deg);  }
+    to {    -webkit-transform: rotateY(-60deg);  }
+}
+
+/* Standard syntax */
+@keyframes rotateLeft {
+    from {    -webkit-transform: rotateY(-90deg);  }
+    to {    -webkit-transform: rotateY(-60deg);  }
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes rotateRight {
+    from {    -webkit-transform: rotateY(0deg);  }
+    to {    -webkit-transform: rotateY(60deg);  }
+}
+
+/* Standard syntax */
+@keyframes rotateRight {
+  from {    -webkit-transform: rotateY(0deg);  }
+  to {    -webkit-transform: rotateY(60deg);  }
 }
 
 .carousel-left, .carousel-right {
