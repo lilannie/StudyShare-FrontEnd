@@ -1,5 +1,10 @@
 import React from 'react';
 
+import ContentHeader from 'ContentHeader';
+import BrowseRow from './browse/BrowseRow';
+import BrowseRowHeader from './browse/BrowseRowHeader'
+import '../scss/index.scss';
+
 export default class Index extends React.Component {
     static defaultProps = {
         foo: 'bar'
@@ -11,22 +16,41 @@ export default class Index extends React.Component {
 
     render() {
         return (
-            <h1>Index</h1>
+            <div className="index-page">
+                <div className="container-fluid">
+
+                    <ContentHeader title="Browse" />
+
+                    <div className="index-body">
+                        <BrowseRowHeader title="Subjects"/>
+                        <BrowseRow />
+                        <BrowseRowHeader title="Notebooks"/>
+                        <BrowseRow />
+                        <BrowseRowHeader title="Notecard Decks"/>
+                        <BrowseRow />
+                    </div>
+                </div>
+            </div>
         );
     }
 
-    componentWillMount() {}
+    componentWillMount() {
+    }
 
-    componentDidMount() {}
+    componentDidMount() {
+    }
 
-    componentWillReceiveProps(nextProps) {}
+    componentWillReceiveProps(nextProps) {
+    }
 
     shouldComponentUpdate(nextProps, nextState) {
         return true;
     }
 
-    componentWillUpdate(nextProps, nextState) {}
+    componentWillUpdate(nextProps, nextState) {
+    }
 
-    componentDidUpdate(prevProps, prevState) {}
+    componentDidUpdate(prevProps, prevState) {
+    }
 
 }
