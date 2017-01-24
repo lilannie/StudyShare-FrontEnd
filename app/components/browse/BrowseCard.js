@@ -1,8 +1,9 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 export default class BrowseCard extends React.Component {
     static defaultProps = {
-        foo: 'bar'
+        link: '/subjects'
     };
 
     state = {
@@ -11,10 +12,9 @@ export default class BrowseCard extends React.Component {
 
     render() {
         return (
-            <div className="col-md-2 portfolio-item">
-                <a href="">
-                    <img className="img-responsive" src="http://placehold.it/750x450" alt=""/>
-                </a>
+            <div className="browse-card col-md-2 portfolio-item">
+                <Link to={this.props.link}>
+                </Link>
             </div>
         );
     }

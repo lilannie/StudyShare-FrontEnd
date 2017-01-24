@@ -1,3 +1,7 @@
+$theme-blue: #1b6d85;
+$theme-blue-light: #d5f6f6;
+$grey: #333333;
+
 .index-page {
 
   .index-body {
@@ -5,9 +9,29 @@
   }
   .portfolio-item {
     margin-bottom: 25px;
+    margin-right: 25px;
   }
+
+  .browse-card {
+    background-color: $theme-blue;
+    width: 300px;
+    height: 300px;
+    max-height: 500px;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
 }
 
 .browse-header {
-
+  hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 1px solid $grey;
+    margin: 1em 0;
+    padding: 0;
+    overflow: hidden;
+    width: 1000px;
+  }
 }
