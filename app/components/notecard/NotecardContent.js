@@ -73,9 +73,9 @@ export default class NotecardContent extends React.Component {
         if (deckId === undefined) {
             deckId = 0;
         }
-        this.state.decks[deckId].notecards.sort(function (x, y) {
-            return x.order - y.order;
-        });
+        // this.state.decks[deckId].notecards.sort(function (x, y) {
+        //     return x.order - y.order;
+        // });
 
         return this.state.decks[deckId].notecards.map(function (notecard) {
             return <NotecardItem cardId={notecard.id}

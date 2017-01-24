@@ -3,7 +3,8 @@ import RichEditor from 'RichEditor';
 
 export default class NotecardForm extends React.Component {
     static defaultProps = {
-        foo: "bar"
+        front: "FRONT SIDE TEXT",
+        back: "BACK SIDE TEXT"
     };
 
     state = {
@@ -22,13 +23,14 @@ export default class NotecardForm extends React.Component {
                 <h5>
                     Front
                 </h5>
-                <RichEditor />
+                <textarea className="form-control" placeholder="Front"
+                          value={this.props.front}  />
                 <hr/>
                 <h5>
                     Back
                 </h5>
-                <RichEditor />
-            </div>
+                <textarea className="form-control" placeholder="Back"
+                          value={this.props.back}  />            </div>
         );
     }
 

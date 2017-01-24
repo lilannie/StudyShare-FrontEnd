@@ -128,6 +128,10 @@ $zoom-scale: 1.2;
     border-radius: 0px;
 
   }
+
+  #addCardModal {
+    margin-top: 100px;
+  }
 }
 
 .notecard-carousel {
@@ -142,18 +146,6 @@ $zoom-scale: 1.2;
   .modal-content {
     color: black;
     border: 0px solid black;
-  }
-
-  .card-blue {
-    .modal-content {
-      background: -webkit-linear-gradient(left, #1b6d85, #d5f6f6);
-    }
-  }
-
-  .card-grey {
-    .modal-content {
-      background: -webkit-linear-gradient(left, #000000, #333333);
-    }
   }
 
   .arrow {
@@ -240,7 +232,7 @@ $zoom-scale: 1.2;
   }
 
   .modal-content {
-    height: 380px;
+    height: 300px;
     width: 50px;
   }
 
@@ -255,6 +247,33 @@ $zoom-scale: 1.2;
   transform: translateY(-50%);
 }
 
+.carousel-left, .carousel-left-arrow {
+  .card-blue {
+    .modal-content {
+      background: -webkit-linear-gradient(left, #1b6d85, #d5f6f6);
+    }
+  }
+
+  .card-grey {
+    .modal-content {
+      background: -webkit-linear-gradient(left, #000000, #333333);
+    }
+  }
+}
+
+.carousel-right, .carousel-right-arrow {
+  .card-blue {
+    .modal-content {
+      background: -webkit-linear-gradient(left, #d5f6f6, #1b6d85);
+    }
+  }
+
+  .card-grey {
+    .modal-content {
+      background: -webkit-linear-gradient(left, #333333, #000000);
+    }
+  }
+}
 .notecard-create {
   .modal-footer {
     button.btn-primary {

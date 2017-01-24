@@ -3,7 +3,9 @@ import NotecardForm from './NotecardForm';
 
 export default class NotecardCreate extends React.Component {
     static defaultProps = {
-        foo: "bar"
+        create: false,
+        front: "",
+        back: ""
     };
 
     state = {
@@ -22,18 +24,27 @@ export default class NotecardCreate extends React.Component {
     }
 
     render() {
+        var title = "";
+        if (this.props.create) {
+            title = "Add Notecard";
+        }
+        else {
+            title = "Edit Notecard";
+        }
+
         return (
             <div className="modal-dialog notecard-create" role="document">
                 <div className="modal-content">
                     <div className="modal-header">
                         <h5 className="modal-title" id="exampleModalLongTitle">
-                           Add Notecard
+                            {title}
                         </h5>
                         <button type="button" className="close" data-dismiss="modal" >
                             <span>&times;</span>
                         </button>
                     </div>
-                    <NotecardForm/>
+                    <NotecardForm front={this.props.notecard.front}
+                                  back={this.props.notecard.back}/>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="button" className="btn btn-primary">Save changes</button>

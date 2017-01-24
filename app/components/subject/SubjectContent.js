@@ -71,54 +71,31 @@ export default class SubjectContent extends React.Component {
     }
 
     handleEdit(subject) {
-        // console.log("SubjectContent - Handle Edit");
-        // console.log("New Subject: "+JSON.stringify(subject));
-        // console.log("Prev State: "+JSON.stringify(this.state));
         this.setState(function (prevState, props) {
-            // console.log("New Subject in function: "+JSON.stringify(subject));
-            // console.log("Prev State in function: "+JSON.stringify(prevState));
-            // var newState = update(prevState, {subjects: [{$merge: subject}]});
-            // console.log("New State in function: "+JSON.stringify(newState));
-            // console.log("State has changed");
             return update(prevState, {subjects: [{$merge: subject}]});
         });
     }
 
     handleDelete(id) {
-        // console.log("SubjectContent - Handle Delete");
-        // console.log("Subject Id: "+id);
-        // console.log("Prev State: "+JSON.stringify(this.state));
         this.setState(function (prevState, props) {
-            // console.log("Subject Id in function: "+id);
-            // console.log("Prev State in function: "+JSON.stringify(prevState));
             var newStateObj = {subjects: []};
             for (var key in prevState.subjects) {
                 if (prevState.subjects[key].id != id) {
                     newStateObj.subjects.push(prevState.subjects[key]);
                 }
             }
-            // console.log("New State Obj: "+JSON.stringify(newStateObj));
-            // var newState = update(prevState, {$merge: newStateObj});
-            // console.log("New State in function: "+JSON.stringify(newState));
-            // console.log("State has changed");
-            // return newState;
             return update(prevState, {$merge: newStateObj});
         });
     }
 
     handleChangeView() {
-        // console.log("SubjectContent - Handle Change View");
         this.props.changeView(1);
     }
 
     getItems() {
-        // console.log("SubjectContent - Getting Items");
-        // console.log("State.subjects: "+this.state.subjects);
-
         var arr = [];
         for (var key in this.state.subjects) {
             var subject = this.state.subjects[key];
-            // console.log("Key: "+JSON.stringify(subject));
             arr.push(<SubjectItem key={"subject-" + subject.id}
                                   id={subject.id}
                                   title={subject.title}

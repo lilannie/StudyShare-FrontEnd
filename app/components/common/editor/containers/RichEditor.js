@@ -24,9 +24,14 @@ class RichEditor extends Component {
     constructor(props) {
         super(props);
 
+        this.defaultProps = {
+            text: "Fake text"
+        };
+
         this.state = {
             editorState: EditorState.createEmpty(),
-            inlineToolbar: {show: false}
+            inlineToolbar: {show: false},
+            text: this.props.text
         };
 
         this.onChange = (editorState) => {
