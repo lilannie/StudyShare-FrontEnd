@@ -7,7 +7,17 @@ import '../scss/index.scss';
 
 export default class Index extends React.Component {
     static defaultProps = {
-        foo: 'bar'
+        content: [
+            {
+                type: "subjects",
+                items: [
+                    {
+                        title: 'Calculus',
+                        description: "Before studying calculus, all students should complete four years of secondary mathematics designed for college-bound students: courses in which they study algebra, geometry, trigonometry, analytic geometry, and elementary functions. These functions include linear, polynomial, rational, exponential, logarithmic, trigonometric, inverse trigonometric, and piecewise-defined functions"
+                    }
+                ]
+            },
+        ]
     };
 
     state = {
@@ -19,7 +29,7 @@ export default class Index extends React.Component {
             <div className="index-page">
                 <div className="container-fluid">
 
-                    <ContentHeader title="Browse" />
+                    <ContentHeader title="Browse"/>
 
                     <div className="index-body">
                         <BrowseRowHeader title="Subjects"/>
