@@ -38,6 +38,7 @@ ReactDOM.render(
         <Route path="/friends" component={Main}>
             <IndexRoute component={Friend}/>
         </Route>
+        
     </Router>,
     document.getElementById('app')
 );
