@@ -55,20 +55,20 @@ export default class Index extends React.Component {
                     {
                         id: 1,
                         title: "Linear Functions",
-                        description: (<ul>
+                        description: (<div className="body-list"><ul>
                             <li>Definition of Linear Functions</li>
                             <li>Identifying Linear Functions</li>
                             <li>Working with Linear Functions</li>
-                        </ul>)
+                        </ul></div>)
                     },
                     {
                         id: 2,
                         title: "Chemical Compounds",
-                        description: (<ul>
+                        description: (<div className="body-list"><ul>
                             <li>Ionic Bonds</li>
                             <li>Hydrogen Bonds</li>
                             <li>Covalent Bonds</li>
-                        </ul>)
+                        </ul></div>)
                     },
                     {
                         id: 3,
@@ -78,11 +78,11 @@ export default class Index extends React.Component {
                     {
                         id: 4,
                         title: "Create your own website",
-                        description: (<ul>
+                        description: (<div className="body-list"><ul>
                             <li>For Beginners</li>
                             <li>HTML CSS JavaScript</li>
                             <li>In-note animations and multimedia</li>
-                        </ul>)
+                        </ul></div>)
                     }
                 ]
             },
@@ -141,7 +141,7 @@ export default class Index extends React.Component {
             return (
                 <div key={"type-" + type.id}>
                     <BrowseRowHeader title={type.type}/>
-                    <BrowseRow type={type.title} items={type.items}/>
+                    <BrowseRow type={type.type} items={type.items}/>
                 </div>
             );
         });

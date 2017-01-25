@@ -36,8 +36,34 @@ $theme-dark-pink: #e63342;
 
     .description {
       text-align: right;
-      font-size: small;
+      color: $off-white;
+      font-size: 14px;
+
+      .body-list {
+        margin-left: -35px;
+      }
+
+      ul {
+        list-style: none;
+        text-align: left;
+
+        li {
+          font-size: 16px;
+          font-weight: bold;
+
+        }
+      }
+    }
+
+    .deck-caption {
+      float: right;
+      clear: right;
+      font-size: 18px;
+      font-weight: bolder;
+      background: $theme-blue-dark;
       color: white;
+      padding: 10px 10px;
+      border-radius: 5px;
     }
   }
 
@@ -58,7 +84,7 @@ $theme-dark-pink: #e63342;
 }
 
 .ribbon:hover {
-  background-color:  $theme-dark-pink;
+  background-color: $theme-dark-pink;
 }
 
 .browse-card:hover {
@@ -68,6 +94,7 @@ $theme-dark-pink: #e63342;
 .browse-link {
   text-decoration: none;
 }
+
 .browse-link:hover {
   text-decoration: none;
 }

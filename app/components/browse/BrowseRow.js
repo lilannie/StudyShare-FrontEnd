@@ -56,10 +56,10 @@ export default class BrowseRow extends React.Component {
         return this.props.items.map(function(item) {
             let url = "";
             let key = "";
-            if (type == "Subjects") {
+            if (type === "Subjects") {
                 url = "/subjects";
                 key = "subject-";
-            } else if (type == "Notebooks") {
+            } else if (type === "Notebooks") {
                 url = "/notebooks";
                 key = "notebook-";
             } else {
