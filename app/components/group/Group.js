@@ -1,32 +1,38 @@
 import React from 'react';
 
-export default class Group extends React.Component {
-    static defaultProps = {
-        foo: 'bar'
-    };
+import ContentHeader from 'ContentHeader';
+import GroupNewsFeed from './GroupNewsFeed';
 
-    state = {
-        foo: 'bar'
-    };
+import {
+    Row,
+    Col,
+    Icon,
+    Grid,
+    Panel,
+    Image,
+    Button,
+    PanelBody,
+    PanelHeader,
+    PanelFooter,
+    FormControl,
+    PanelContainer,
+} from '@sketchpixy/rubix';
+
+import '../../scss/group.scss';
+
+export default class Group extends React.Component {
+    componentDidMount() {
+    }
+
+    componentWillUnmount() {
+    }
 
     render() {
         return (
-            <h1>Group</h1>
+            <div className="group">
+                <ContentHeader title="Groups"/>
+                <GroupNewsFeed />
+            </div>
         );
     }
-
-    componentWillMount() {}
-
-    componentDidMount() {}
-
-    componentWillReceiveProps(nextProps) {}
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return true;
-    }
-
-    componentWillUpdate(nextProps, nextState) {}
-
-    componentDidUpdate(prevProps, prevState) {}
-
 }

@@ -1,0 +1,42 @@
+$theme-blue: #1b6d85;
+$theme-blue-light: #d5f6f6;
+$theme-blue-dark: #114555;
+$grey: #333333;
+$grey-light: #E5E5E5;
+$off-white: rgba(233, 237, 239, 0.8);
+
+.groups {
+
+ .group-body {
+   margin-top: 10px;
+
+   .panel {
+     background-color: $theme-blue;
+   }
+
+   .panel-body {
+     padding: 25px;
+     padding-top: 12.5px;
+     color: white;
+   }
+
+   .theme-button-white {
+     background-color: white;
+     color: $theme-blue;
+     font-size: 14px;
+   }
+
+   .theme-button-white:hover {
+     background-color: $grey-light;
+     color: $theme-blue-dark;
+   }
+
+   .status-link {
+     border: none;
+   }
+
+   .status-link:hover {
+     background-color: $theme-blue-dark;
+   }
+ }
+}

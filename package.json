@@ -23,6 +23,7 @@
     "classnames": "^2.2.5"
   },
   "devDependencies": {
+    "@sketchpixy/rubix": "^2.0.0",
     "babel-core": "^6.5.1",
     "babel-loader": "^6.2.2",
     "babel-plugin-syntax-class-properties": "^6.13.0",
