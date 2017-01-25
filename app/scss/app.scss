@@ -1,6 +1,8 @@
 $theme-blue: #1b6d85;
 $theme-blue-light: #d5f6f6;
 $grey: #333333;
+$off-white: rgba(233, 237, 239, 0.8);
+
 
 #header {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -257,7 +259,6 @@ $grey: #333333;
   margin-left: 1em;
   border-bottom: 1px #2196F3;
   color: #fff;
-
 }
 
 .card-footer {
@@ -272,6 +273,8 @@ $grey: #333333;
 #subject-sidebar {
   width: 100%;
   padding: 8px 0;
+  background: white;
+  border: 0px;
 
   ul {
     margin: .1em .5em;
