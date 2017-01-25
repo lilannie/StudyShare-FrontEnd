@@ -1,4 +1,5 @@
 $theme-blue: #1b6d85;
+$theme-blue-dark: #114555;
 $theme-blue-light: #d5f6f6;
 $grey: #333333;
 $off-white: rgba(233, 237, 239, 1);
@@ -18,7 +19,7 @@ $off-white: rgba(233, 237, 239, 1);
     width: 300px;
     height: 300px;
     max-height: 500px;
-    overflow: hidden;
+    overflow: scroll;
     border-radius: 5px;
 
     .browse-card-body {
@@ -37,7 +38,17 @@ $off-white: rgba(233, 237, 239, 1);
       }
     }
   }
+}
 
+.browse-card:hover {
+  background-color: $theme-blue-dark;
+}
+
+.browse-link {
+  text-decoration: none;
+}
+.browse-link:hover {
+  text-decoration: none;
 }
 
 .browse-header {
