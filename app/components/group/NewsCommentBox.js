@@ -22,17 +22,34 @@ export default class NewsCommentBox extends React.Component {
 
     render() {
         var footerStyle = {
-            padding: 12.5
+            padding: 25
         };
-        var formStyle = {
-            border: 'none'
+
+        var inputStyle = {
+          width: 514,
+            minHeight: 55,
+            maxWidth: 514
+        };
+
+        var buttonStyle = {
+            height: 55,
         };
 
         return (
             <PanelFooter style={footerStyle}>
-                <FormControl componentClass='textarea' rows='1'
-                             placeholder='Write a comment...'
-                             style={formStyle}/>
+                <form className="form-inline">
+                    <div className="form-group">
+                        <label htmlFor="comment" className="sr-only">Comment</label>
+                        <textarea type="text" className="form-control theme-input"
+                               id="commentbox" placeholder="Comment"
+                                style={inputStyle}/>
+                        <button type="submit" style={buttonStyle}
+                                className="btn theme-button-white">
+                            Send
+                            <i className="fa fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
             </PanelFooter>
         );
     }

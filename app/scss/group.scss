@@ -42,6 +42,9 @@ $theme-pink-dark: #e63342;
 }
 .theme-button-white:hover {
   background-color: $grey-light;
-  background: $grey-light;
   color: $theme-pink-dark;
+}
+
+.theme-input {
+  width: 514px;
 }
