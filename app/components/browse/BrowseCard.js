@@ -25,6 +25,13 @@ export default class BrowseCard extends React.Component {
                         </div>
                     </div>
                 </Link>
+                <div className="footer">
+                    <nav className="nav-tabs" style={{"background": "white"}}>
+                        <ul className="nav nav-pills pull-left">
+                            <li>Share</li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         );
     }

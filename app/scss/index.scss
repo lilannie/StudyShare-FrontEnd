@@ -13,31 +13,38 @@ $off-white: rgba(233, 237, 239, 1);
     margin-bottom: 25px;
     margin-right: 25px;
   }
+}
 
-  .browse-card {
-    background-color: $theme-blue;
-    width: 300px;
-    height: 300px;
-    max-height: 500px;
-    overflow: scroll;
-    border-radius: 5px;
+.browse-card {
+  background-color: $theme-blue;
+  width: 300px;
+  height: 300px;
+  max-height: 500px;
+  overflow: scroll;
+  border-radius: 5px;
 
-    .browse-card-body {
-        padding: 1px;
+  .browse-card-body {
+    padding: 1px;
 
-      .title {
-        color: white;
-        margin-bottom: 25px;
+    .title {
+      color: white;
+      margin-bottom: 25px;
 
-      }
+    }
 
-      .description {
-        text-align: right;
-        font-size: small;
-        color: white;
-      }
+    .description {
+      text-align: right;
+      font-size: small;
+      color: white;
     }
   }
+
+  .footer {
+    background: #FFFFFF;
+
+
+  }
+
 }
 
 .browse-card:hover {

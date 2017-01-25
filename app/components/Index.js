@@ -88,7 +88,7 @@ export default class Index extends React.Component {
             },
             {
                 id: 2,
-                title: "Notecards",
+                type: "Notecards",
                 items: [
                     {
                         id: 0,
@@ -140,7 +140,7 @@ export default class Index extends React.Component {
         return this.state.content.map(function (type) {
             return (
                 <div key={"type-" + type.id}>
-                    <BrowseRowHeader title={type.title}/>
+                    <BrowseRowHeader title={type.type}/>
                     <BrowseRow type={type.title} items={type.items}/>
                 </div>
             );
