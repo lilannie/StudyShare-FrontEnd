@@ -5,14 +5,10 @@ import {
     Col,
     Icon,
     Grid,
-    Panel,
-    Image,
     Button,
     PanelBody,
-    PanelHeader,
     PanelFooter,
     FormControl,
-    PanelContainer,
 } from '@sketchpixy/rubix';
 
 export default class GroupStatusBox extends React.Component {
@@ -67,9 +63,11 @@ export default class GroupStatusBox extends React.Component {
                                         style={iconStyle}/>
                                 </a>
                             </Col>
-                            <Col xs={6} className='text-right' collapseLeft collapseRight>
-                                <Button className='theme-button-white'>Send</Button>
-                            </Col>
+                            <div className='text-right'>
+                                <button className='btn theme-button-white'>
+                                    Send
+                                </button>
+                            </div>
                         </Row>
                     </Grid>
                 </PanelFooter>
