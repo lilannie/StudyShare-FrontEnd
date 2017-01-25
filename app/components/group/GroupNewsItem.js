@@ -52,6 +52,9 @@ export default class GroupNewsFeed extends React.Component {
         return (
             <div className="panel" style={panelStyle}>
                 <PanelBody style={panelBodyStyle}>
+                    <div className="ribbon-left">
+                        Share
+                    </div>
                     <AvatarHeader/>
                     <div className='panel-body'>
                             {"I'll be out of my mind and you'll be out of ideas pretty soon. So let's spend the afternoon in a cold hot air balloon. Leave your jacket behind. Lean out and touch the tree tops over town. I can't wait to kiss the ground wherever we touch back down."}

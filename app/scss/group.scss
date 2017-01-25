@@ -20,6 +20,7 @@ $theme-pink-dark: #e63342;
      padding: 25px;
      padding-top: 12.5px;
      color: white;
+     font-size: 16px;
    }
 
    .status-link {
@@ -47,4 +48,19 @@ $theme-pink-dark: #e63342;
 
 .theme-input {
   width: 514px;
+}
+
+.ribbon-left {
+  background-color: $theme-pink;
+  color: white;
+  float: left;
+  clear: left;
+  padding: .5em 1em .5em 2em;
+  margin: 5px 0px 0 0;
+  margin-left: -15px;
+  z-index: 5;
+}
+
+.ribbon-left:hover {
+  background-color: $theme-pink-dark;
 }
