@@ -23,7 +23,10 @@ module.exports = {
         Notebook: 'app/components/notebook/Notebook.js',
         Notecard: 'app/components/notecard/Notecard.js',
         Subject: 'app/components/subject/Subject.js',
-        User: 'app/components/user/User.js'
+        User: 'app/components/user/User.js',
+        Login: 'app/components/auth/Login',
+        Signup: 'app/components/auth/Signup.js'
+
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -42,3 +45,5 @@ module.exports = {
     ]
   }
 };
+
+

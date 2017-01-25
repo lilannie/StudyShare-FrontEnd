@@ -11,7 +11,8 @@ import Animation from 'Animation';
 import Browse from 'Browse';
 import Class from 'Class';
 import Friend from 'Friend';
-
+import Login from 'Login';
+import Signup from 'Signup';
 ReactDOM.render(
     <Router history={browserHistory}>
         <Route path="/" component={Main}>
@@ -35,9 +36,13 @@ ReactDOM.render(
         <Route path="/classes" component={Main}>
             <IndexRoute component={Class}/>
         </Route>
-        <Route path="/friends" component={Main}>
+        <Route path="/friends" component={Main}>$
             <IndexRoute component={Friend}/>
         </Route>
+        <Route path="/login" component={Login}/>
+        <Route path="/signup" component={Signup}/>
     </Router>,
     document.getElementById('app')
 );
+
+
