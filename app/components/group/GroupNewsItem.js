@@ -27,37 +27,47 @@ export default class GroupNewsFeed extends React.Component {
     }
 
     render() {
-        var bodyStyle = {
-            marginTop: 10
-        }
         var panelStyle = {
             "backgroundColor": "#1b6d85"
         };
 
         var panelBodyStyle = {
-            "padding": 25,
-            "paddingTop": 12.5,
-            "color": "white"
+            padding: 10,
+            paddingTop: 2,
+            color: "white"
         };
+
+        var imageStyle = {
+            margin: "0px 0px 0px 15px"
+        };
+
+        var avatarStyle = {
+            marginRight: 20
+        };
+
         return (
             <div className="panel" style={panelStyle}>
                 <PanelBody style={panelBodyStyle}>
-                    <div className='inbox-avatar'>
-                        <img src='/imgs/app/avatars/avatar7.png' width='40' height='40'/>
-                        <div className='inbox-avatar-name'>
-                            <div className='fg-darkgrayishblue75'>Toby King</div>
-                            <div className='fg-text'>
-                                <small>Wisconsin, USA</small>
+
+                    <Row>
+                        <div className='avatar' style={avatarStyle}>
+
+                            <h3 className="name text-right">
+                                Toby King
+                                <img src='/images/avatars/guy.png'
+                                     width='40' height='40'
+                                    style={imageStyle} />
+                            </h3>
+                            <h4 className='company text-right'>Iowa State University</h4>
+
+                            <div className='inbox-date hidden-sm hidden-xs fg-text text-right'>
+                                <div style={{position: 'relative', top: -10}}>
+                                    <small><strong>2 hours ago</strong></small>
+                                </div>
                             </div>
                         </div>
-                        <div className='inbox-date hidden-sm hidden-xs fg-text text-right'>
-                            <div style={{position: 'relative', top: 0}}><Icon
-                                glyph='icon-fontello-anchor icon-1-and-quarter-x'/></div>
-                            <div style={{position: 'relative', top: -10}}>
-                                <small><strong>2 hours ago</strong></small>
-                            </div>
-                        </div>
-                    </div>
+                    </Row>
+
                     <div>
                         <div className='fg-text'>
                             {"I'll be out of my mind and you'll be out of ideas pretty soon. So let's spend the afternoon in a cold hot air balloon. Leave your jacket behind. Lean out and touch the tree tops over town. I can't wait to kiss the ground wherever we touch back down."}

@@ -30,15 +30,6 @@ export default class GroupNewsFeed extends React.Component {
     render() {
         var bodyStyle = {
             marginTop: 10
-        }
-        var panelStyle = {
-            "backgroundColor": "#1b6d85"
-        };
-
-        var panelBodyStyle = {
-            "padding": 25,
-            "paddingTop": 12.5,
-            "color": "white"
         };
         return (
             <div className='group-body' style={bodyStyle}>
