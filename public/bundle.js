@@ -55249,7 +55249,47 @@
 	    _createClass(SubjectContent, [{
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement(_SubjectAll2.default, null);
+
+	            var subjects = [{
+	                id: 0,
+	                title: "Calculus",
+	                description: "Calculus is the study of how things change. It provides a framework for modeling systems in which there is change, and a way to deduce the predictions of such models. Calculus is the study of how things change. It provides a framework for modeling systems in which there is change, and a way to deduce the predictions of such models.",
+	                content: [{
+	                    id: 0,
+	                    title: "Derivatives",
+	                    type: "Notebook",
+	                    description: "Brief overview of derivatives",
+	                    date_created: "01/01/2017",
+	                    last_modified: "01/07/2017"
+	                }, {
+	                    id: 1,
+	                    title: "Integrals",
+	                    type: "Notecards",
+	                    description: "Brief overview of integrals",
+	                    date_created: "01/01/2017",
+	                    last_modified: "01/07/2017"
+	                }]
+	            }, {
+	                id: 1,
+	                title: "Algorithms",
+	                description: "What are algorithms and why should you care? We'll start with an overview of algorithms and then discuss two games that you could use an algorithm to solve more efficiently - the number guessing game and a route-finding game.",
+	                content: [{
+	                    id: 2,
+	                    title: "Binary Search",
+	                    type: "Notebook",
+	                    description: "Notes on binary search",
+	                    date_created: "01/01/2017",
+	                    last_modified: "01/07/2017"
+	                }, {
+	                    id: 3,
+	                    title: "Mergesort",
+	                    type: "Notecards",
+	                    description: "Review the Mergesort steps",
+	                    date_created: "01/01/2017",
+	                    last_modified: "01/07/2017"
+	                }]
+	            }];
+	            return _react2.default.createElement(_SubjectAll2.default, { subjects: subjects });
 	        }
 	    }, {
 	        key: 'componentWillMount',
@@ -55312,27 +55352,39 @@
 	var SubjectAll = function (_React$Component) {
 	    _inherits(SubjectAll, _React$Component);
 
-	    function SubjectAll() {
-	        var _ref;
-
-	        var _temp, _this, _ret;
-
+	    function SubjectAll(props) {
 	        _classCallCheck(this, SubjectAll);
 
-	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-	            args[_key] = arguments[_key];
-	        }
+	        var _this = _possibleConstructorReturn(this, (SubjectAll.__proto__ || Object.getPrototypeOf(SubjectAll)).call(this, props));
 
-	        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SubjectAll.__proto__ || Object.getPrototypeOf(SubjectAll)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+	        _this.state = {
 	            foo: 'bar'
-	        }, _temp), _possibleConstructorReturn(_this, _ret);
+	        };
+
+
+	        _this.getItems = _this.getItems.bind(_this);
+	        return _this;
 	    }
 
 	    _createClass(SubjectAll, [{
+	        key: 'getItems',
+	        value: function getItems() {
+	            return this.props.subjects.map(function (subject) {
+	                return _react2.default.createElement(_SubjectItem2.default, { key: "subject-" + subject.id,
+	                    title: subject.title,
+	                    description: subject.description,
+	                    content: subject.content });
+	            });
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
-	            var description = 'Calculus is the study of how things change. It provides a framework for modeling systems in which there is change, and a way to deduce the predictions of such models. Calculus is the study of how things change. It provides a framework for modeling systems in which there is change, and a way to deduce the predictions of such models.';
-	            return _react2.default.createElement(_SubjectItem2.default, { title: 'Calculus', description: description });
+
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                this.getItems()
+	            );
 	        }
 	    }, {
 	        key: 'componentWillMount',
@@ -55392,6 +55444,14 @@
 
 	var _SubjectItemActions2 = _interopRequireDefault(_SubjectItemActions);
 
+	var _SubjectEdit = __webpack_require__(486);
+
+	var _SubjectEdit2 = _interopRequireDefault(_SubjectEdit);
+
+	var _SubjectDelete = __webpack_require__(487);
+
+	var _SubjectDelete2 = _interopRequireDefault(_SubjectDelete);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -55409,12 +55469,41 @@
 	        var _this = _possibleConstructorReturn(this, (SubjectItem.__proto__ || Object.getPrototypeOf(SubjectItem)).call(this, props));
 
 	        _this.state = {
-	            foo: 'bar'
+	            view: 0
 	        };
+
+
+	        _this.changeView = _this.changeView.bind(_this);
+	        _this.getView = _this.getView.bind(_this);
 	        return _this;
 	    }
 
 	    _createClass(SubjectItem, [{
+	        key: 'changeView',
+	        value: function changeView(viewId) {
+	            this.setState({ view: viewId });
+	        }
+	    }, {
+	        key: 'getView',
+	        value: function getView() {
+	            switch (this.state.view) {
+	                case 0:
+	                    {
+	                        return _react2.default.createElement(_SubjectItemContent2.default, {
+	                            description: this.props.description,
+	                            content: this.props.content });
+	                    }
+	                case 1:
+	                    {
+	                        return _react2.default.createElement(_SubjectEdit2.default, null);
+	                    }
+	                case 2:
+	                    {
+	                        return _react2.default.createElement(_SubjectDelete2.default, null);
+	                    }
+	            }
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -55430,9 +55519,9 @@
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: 'card-body' },
-	                            _react2.default.createElement(_SubjectItemContent2.default, { description: this.props.description })
+	                            this.getView()
 	                        ),
-	                        _react2.default.createElement(_SubjectItemActions2.default, null)
+	                        _react2.default.createElement(_SubjectItemActions2.default, { changeView: this.changeView })
 	                    )
 	                )
 	            );
@@ -55580,23 +55669,56 @@
 	var SubjectItemContent = function (_React$Component) {
 	    _inherits(SubjectItemContent, _React$Component);
 
-	    function SubjectItemContent() {
-	        var _ref;
-
-	        var _temp, _this, _ret;
-
+	    function SubjectItemContent(props) {
 	        _classCallCheck(this, SubjectItemContent);
 
-	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-	            args[_key] = arguments[_key];
-	        }
+	        var _this = _possibleConstructorReturn(this, (SubjectItemContent.__proto__ || Object.getPrototypeOf(SubjectItemContent)).call(this, props));
 
-	        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SubjectItemContent.__proto__ || Object.getPrototypeOf(SubjectItemContent)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+	        _this.state = {
 	            foo: 'bar'
-	        }, _temp), _possibleConstructorReturn(_this, _ret);
+	        };
+
+
+	        _this.getContent = _this.getContent.bind(_this);
+	        return _this;
 	    }
 
 	    _createClass(SubjectItemContent, [{
+	        key: 'getContent',
+	        value: function getContent() {
+	            return this.props.content.map(function (item) {
+	                return _react2.default.createElement(
+	                    'tr',
+	                    { key: "content-" + item.id },
+	                    _react2.default.createElement(
+	                        'td',
+	                        null,
+	                        item.title
+	                    ),
+	                    _react2.default.createElement(
+	                        'td',
+	                        null,
+	                        item.type
+	                    ),
+	                    _react2.default.createElement(
+	                        'td',
+	                        null,
+	                        item.description
+	                    ),
+	                    _react2.default.createElement(
+	                        'td',
+	                        null,
+	                        item.date_created
+	                    ),
+	                    _react2.default.createElement(
+	                        'td',
+	                        null,
+	                        item.last_modified
+	                    )
+	                );
+	            });
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -55660,35 +55782,7 @@
 	                                'Last Modified'
 	                            )
 	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                'Fake'
-	                            ),
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                'Fake'
-	                            ),
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                'Fake'
-	                            ),
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                'Fake'
-	                            ),
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                'Fake'
-	                            )
-	                        )
+	                        this.getContent()
 	                    )
 	                )
 	            );
@@ -55739,22 +55833,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _SubjectItemHeader = __webpack_require__(483);
-
-	var _SubjectItemHeader2 = _interopRequireDefault(_SubjectItemHeader);
-
-	var _SubjectItemContent = __webpack_require__(484);
-
-	var _SubjectItemContent2 = _interopRequireDefault(_SubjectItemContent);
-
-	var _SubjectEdit = __webpack_require__(486);
-
-	var _SubjectEdit2 = _interopRequireDefault(_SubjectEdit);
-
-	var _SubjectDelete = __webpack_require__(487);
-
-	var _SubjectDelete2 = _interopRequireDefault(_SubjectDelete);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -55774,12 +55852,17 @@
 	        _this.state = {
 	            foo: 'bar'
 	        };
+
+
+	        _this.handleClick = _this.handleClick.bind(_this);
 	        return _this;
 	    }
 
 	    _createClass(SubjectItem, [{
 	        key: 'handleClick',
-	        value: function handleClick() {}
+	        value: function handleClick(id) {
+	            this.props.changeView(id);
+	        }
 	    }, {
 	        key: 'render',
 	        value: function render() {
@@ -55794,7 +55877,16 @@
 	                        null,
 	                        _react2.default.createElement(
 	                            'a',
-	                            { className: 'card-action-grey', onClick: this.handleClick() },
+	                            { className: 'card-action-grey', onClick: this.handleClick.bind(null, 0) },
+	                            'About'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'a',
+	                            { className: 'card-action-grey', onClick: this.handleClick.bind(null, 1) },
 	                            'Edit'
 	                        )
 	                    ),
@@ -55803,7 +55895,7 @@
 	                        null,
 	                        _react2.default.createElement(
 	                            'a',
-	                            { className: 'card-action-grey', onClick: this.handleClick() },
+	                            { className: 'card-action-grey', onClick: this.handleClick.bind(null, 2) },
 	                            'Delete'
 	                        )
 	                    ),

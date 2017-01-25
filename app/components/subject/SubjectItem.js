@@ -3,6 +3,8 @@ import React from 'react';
 import SubjectItemHeader from './SubjectItemHeader';
 import SubjectItemContent from './SubjectItemContent';
 import SubjectItemActions from './SubjectItemActions';
+import SubjectEdit from './SubjectEdit';
+import SubjectDelete from './SubjectDelete';
 
 export default class SubjectItem extends React.Component {
     static defaultProps = {
@@ -10,13 +12,35 @@ export default class SubjectItem extends React.Component {
     };
 
     state = {
-        foo: 'bar'
+        view: 0
     };
 
     constructor(props) {
         super(props);
+
+        this.changeView = this.changeView.bind(this);
+        this.getView = this.getView.bind(this);
     }
 
+    changeView(viewId) {
+        this.setState({view: viewId});
+    }
+
+    getView() {
+        switch (this.state.view) {
+            case 0: {
+                return <SubjectItemContent
+                    description={this.props.description}
+                    content={this.props.content}/>;
+            }
+            case 1: {
+                return <SubjectEdit />;
+            }
+            case 2: {
+                return <SubjectDelete />;
+            }
+        }
+    }
 
 
     render() {
@@ -26,9 +50,9 @@ export default class SubjectItem extends React.Component {
                     <div className="card-content">
                         <SubjectItemHeader title={this.props.title}/>
                         <div className="card-body">
-                            <SubjectItemContent description={this.props.description}/>
+                            {this.getView()}
                         </div>
-                        <SubjectItemActions/>
+                        <SubjectItemActions changeView={this.changeView}/>
                     </div>
                 </div>
 
