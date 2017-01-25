@@ -78,7 +78,7 @@ export default class Sidebar extends React.Component {
                                         <i className="fa fa-graduation-cap fa-2x"></i>
                                     </span>
                                     <span className="sidebar-title">
-                                        Classes
+                                        Groups
                                     </span>
                                 </a>
                             </li>

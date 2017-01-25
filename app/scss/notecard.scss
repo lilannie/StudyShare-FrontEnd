@@ -2,6 +2,9 @@ $theme-blue: #1b6d85;
 $theme-blue-light: #d5f6f6;
 $grey: #333333;
 $zoom-scale: 1.2;
+$off-white: rgba(233, 237, 239, 0.8);
+$card-back: $off-white;
+
 
 .notecard-selector {
   zoom: $zoom-scale;
@@ -18,7 +21,7 @@ $zoom-scale: 1.2;
 }
 
 .notecard-sidebar {
-  background-color: $theme-blue-light;
+  background-color: $card-back;
   padding: 5px 20px 5px 10px;
   min-width: 200px;
 }
@@ -77,7 +80,7 @@ $zoom-scale: 1.2;
   }
 
   .back {
-    background-color: white;
+    background-color: $card-back;
     color: $theme-blue;
     width: 250px;
     height: 330px;
@@ -89,7 +92,7 @@ $zoom-scale: 1.2;
     }
 
     .panel-footer {
-      background-color: white;
+      background-color: $card-back;
 
       button {
         background-color: $theme-blue;

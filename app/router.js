@@ -10,7 +10,7 @@ import Notecard from 'Notecard';
 import Deck from 'Deck';
 import Animation from 'Animation';
 import Browse from 'Browse';
-import Class from 'Class';
+import Group from 'Group';
 import Friend from 'Friend';
 
 ReactDOM.render(
@@ -36,8 +36,8 @@ ReactDOM.render(
         <Route path="/explore" component={Main}>
             <IndexRoute component={Browse}/>
         </Route>
-        <Route path="/classes" component={Main}>
-            <IndexRoute component={Class}/>
+        <Route path="/groups" component={Main}>
+            <IndexRoute component={Group}/>
         </Route>
         <Route path="/friends" component={Main}>
             <IndexRoute component={Friend}/>

@@ -16,7 +16,7 @@ module.exports = {
         Sidebar: 'app/components/common/Sidebar.js',
         Animation: 'app/components/animation/Animation.js',
         Browse: 'app/components/browse/Browse.js',
-        Class: 'app/components/class/Class.js',
+        Group: 'app/components/group/Group.js',
         Deck: 'app/components/deck/Deck.js',
         Friend: 'app/components/friend/Friend.js',
         Note: 'app/components/note/Note.js',

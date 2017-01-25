@@ -1,6 +1,8 @@
 import React from 'react';
 
 import {Grid, Row, Col} from 'react-bootstrap';
+import {Link} from 'react-router';
+
 
 export default class NotecardSidebar extends React.Component {
     static defaultProps = {
@@ -32,9 +34,11 @@ export default class NotecardSidebar extends React.Component {
                           className="form-control"
                           placeholder="description"/>
                 <br/>
+                <Link to={'/notecards'}>
                     <button id="save-deck"
                             className="btn">Save
                     </button>
+                </Link>
             </div>
         );
 

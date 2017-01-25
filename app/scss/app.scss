@@ -97,13 +97,17 @@ $off-white: rgba(233, 237, 239, 0.8);
     a {
       display: block;
       text-decoration: none;
-      color: #428bca;
     }
   }
 
   #sidemenu {
     li a {
       padding-top: .4em;
+      color: $off-white;
+    }
+    li a:hover {
+      background-color: black;
+      color: white;
     }
     .sidebar-title {
       font-size: large;

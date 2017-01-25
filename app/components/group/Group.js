@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Class extends React.Component {
+export default class Group extends React.Component {
     static defaultProps = {
         foo: 'bar'
     };
@@ -11,7 +11,7 @@ export default class Class extends React.Component {
 
     render() {
         return (
-            <h1>Class</h1>
+            <h1>Group</h1>
         );
     }
 
