@@ -39,7 +39,7 @@ export default class GroupStatusBox extends React.Component {
                 <PanelBody style={panelBodyStyle}>
                     <FormControl componentClass='textarea' rows='3'
                                  placeholder="Share with the group..."
-                                 style={{border: 'none'}}/>
+                                 style={{border: 'none', maxWidth: "590px"}}/>
                 </PanelBody>
                 <PanelFooter className='fg-black75 bg-gray' style={{padding: '12.5px 25px'}}>
                     <Grid>
