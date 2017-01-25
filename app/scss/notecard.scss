@@ -1,6 +1,8 @@
 $theme-blue: #1b6d85;
 $theme-blue-light: #d5f6f6;
+$theme-blue-dark: #114555;
 $grey: #333333;
+$grey-light: #E5E5E5;
 $zoom-scale: 1.2;
 $off-white: rgba(233, 237, 239, 0.8);
 $card-back: $off-white;
@@ -29,6 +31,7 @@ $card-back: $off-white;
 .notecard-deck {
   margin-left: 50px;
   margin-top: 10px;
+
 }
 
 #save-deck {
@@ -36,6 +39,10 @@ $card-back: $off-white;
   color: white;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+#save-deck:hover {
+  background-color: $theme-blue-dark;
 }
 
 .notecard {
@@ -75,7 +82,10 @@ $card-back: $off-white;
         border-radius: 5px;
         border: 1px solid white;
       }
-
+      button:hover {
+        background: $grey-light;
+        border: 1px solid $grey-light;
+      }
     }
   }
 
@@ -99,6 +109,9 @@ $card-back: $off-white;
         color: white;
         border-radius: 5px;
         border: 0 solid black;
+      }
+      button:hover {
+        background-color: $theme-blue-dark;
       }
     }
   }
@@ -134,6 +147,11 @@ $card-back: $off-white;
 
   #addCardModal {
     margin-top: 100px;
+  }
+
+  button:hover, button:focus {
+    border-color: $theme-blue;
+    box-shadow: 0 0 10px $theme-blue;
   }
 }
 
