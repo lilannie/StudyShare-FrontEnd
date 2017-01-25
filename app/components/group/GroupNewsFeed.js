@@ -21,6 +21,14 @@ import {
 import '../../scss/group.scss';
 
 export default class GroupNewsFeed extends React.Component {
+    static defaultProps = {
+        foo: 'bar'
+    };
+
+    state = {
+        foo: 'bar'
+    };
+
     componentDidMount() {
     }
 
