@@ -3,6 +3,8 @@ $theme-blue-dark: #114555;
 $theme-blue-light: #d5f6f6;
 $grey: #333333;
 $off-white: rgba(233, 237, 239, 1);
+$theme-pink: #ed6b75;
+$theme-dark-pink: #e63342;
 
 .index-page {
 
@@ -42,9 +44,21 @@ $off-white: rgba(233, 237, 239, 1);
   .footer {
     background: #FFFFFF;
 
-
   }
+}
 
+.ribbon {
+  background-color: $theme-pink;
+  color: white;
+  float: right;
+  clear: right;
+  padding: .5em 2em .5em 1em;
+  margin: 5px -15.2px 0 0;
+  z-index: 5;
+}
+
+.ribbon:hover {
+  background-color:  $theme-dark-pink;
 }
 
 .browse-card:hover {

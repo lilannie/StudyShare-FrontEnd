@@ -17,6 +17,9 @@ export default class BrowseCard extends React.Component {
             <div className="browse-card col-md-2 portfolio-item">
                 <Link className="browse-link" to={this.props.link}>
                     <div className="browse-card-body">
+                        <div className="ribbon">
+                            Share
+                        </div>
                         <h2 className="title">
                             {this.props.title}
                         </h2>
@@ -25,13 +28,6 @@ export default class BrowseCard extends React.Component {
                         </div>
                     </div>
                 </Link>
-                <div className="footer">
-                    <nav className="nav-tabs" style={{"background": "white"}}>
-                        <ul className="nav nav-pills pull-left">
-                            <li>Share</li>
-                        </ul>
-                    </nav>
-                </div>
             </div>
         );
     }
