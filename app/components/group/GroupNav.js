@@ -7,7 +7,7 @@ import GroupNavContent from './GroupNavContent';
 import GroupNewsFeed from './GroupNewsFeed';
 import NavDropdown from './NavDropdown';
 import GroupNavDropdown from './GroupNavDropdown';
-import GroupPage from './GroupPage';
+import GroupPage from './page/GroupPage';
 
 import '../../scss/group.scss';
 
