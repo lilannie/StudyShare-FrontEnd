@@ -57,7 +57,7 @@ export default class NewsLikeDisplay extends React.Component {
            top: -10,
            right: 20,
            position: 'relative',
-           color: "white"
+           color: "#ED6B75"
        };
 
        var countStyle = {

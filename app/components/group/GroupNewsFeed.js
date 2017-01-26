@@ -41,19 +41,16 @@ export default class GroupNewsFeed extends React.Component {
         };
         return (
             <div className='group-body' style={bodyStyle}>
-                <Row >
-                    <Col xs={10}>
-                        <Row>
-                            <Col className="newsfeed-left" sm={5} collapseRight>
-                                <GroupStatusBox />
-                                <GroupNewsItem />
-                            </Col>
-                            <Col className="newsfeed-right" sm={5}>
-                                <GroupNewsItem />
-                            </Col>
-                        </Row>
+                <Row>
+                    <Col className="newsfeed-left" sm={6} collapseRight>
+                        <GroupStatusBox />
+                        <GroupNewsItem />
+                    </Col>
+                    <Col className="newsfeed-right" sm={6}>
+                        <GroupNewsItem />
                     </Col>
                 </Row>
+
             </div>
         );
     }

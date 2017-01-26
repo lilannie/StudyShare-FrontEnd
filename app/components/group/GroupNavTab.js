@@ -22,15 +22,21 @@ export default class GroupNavTab extends React.Component {
     render() {
         if (this.props.active) {
             return (
-                <div className="tab-pane active" id={this.props.tabId}>
-                    {this.props.content}
-                </div>
+                <li className="active">
+                    <a href={this.props.tabId}
+                       data-toggle="tab">
+                        <h3>{this.props.title}</h3>
+                    </a>
+                </li>
             );
         }
         return (
-            <div className="tab-pane" id={this.props.tabId}>
-                {this.props.content}
-            </div>
+            <li>
+                <a href={this.props.tabId}
+                   data-toggle="tab">
+                    <h3>{this.props.title}</h3>
+                </a>
+            </li>
         );
     }
 }

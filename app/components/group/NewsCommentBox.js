@@ -26,9 +26,9 @@ export default class NewsCommentBox extends React.Component {
         };
 
         var inputStyle = {
-          width: 514,
+            width: 550,
             minHeight: 55,
-            maxWidth: 514
+            maxWidth: 550
         };
 
         var buttonStyle = {

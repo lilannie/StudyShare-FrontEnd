@@ -20,18 +20,29 @@ export default class GroupStatusBox extends React.Component {
 
     render() {
         var panelStyle = {
-            "backgroundColor": "#1b6d85"
+            backgroundColor: "white"
         };
 
         var panelBodyStyle = {
-            "padding": 25,
-            "paddingTop": 12.5,
-            "color": "white"
+            padding: "5px 10px 0px 10px",
+            paddingTop: 12.5,
+            color: "#1b6d85"
         };
 
         var iconStyle = {
             marginRight: 25,
-            color: "white"
+            color: "#1b6d85"
+        };
+
+        var formStyle = {
+            border: 'none',
+            maxWidth: "650px",
+            padding: 0,
+            backgroundColor: "rgba(233, 237, 239, 0.8)"
+        };
+
+        var footerStyle = {
+            padding: '10px 5px'
         };
 
         return (
@@ -39,9 +50,9 @@ export default class GroupStatusBox extends React.Component {
                 <PanelBody style={panelBodyStyle}>
                     <FormControl componentClass='textarea' rows='3'
                                  placeholder="Share with the group..."
-                                 style={{border: 'none', maxWidth: "590px"}}/>
+                                 style={formStyle}/>
                 </PanelBody>
-                <PanelFooter className='fg-black75 bg-gray' style={{padding: '12.5px 25px'}}>
+                <PanelFooter className='fg-black75 bg-gray' style={footerStyle}>
                     <Grid>
                         <Row>
                             <Col xs={6} collapseLeft collapseRight>

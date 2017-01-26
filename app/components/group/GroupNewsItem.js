@@ -40,13 +40,13 @@ export default class GroupNewsFeed extends React.Component {
 
     render() {
         var panelStyle = {
-            "backgroundColor": "#1b6d85"
+            "backgroundColor": "white"
         };
 
         var panelBodyStyle = {
             padding: 10,
             paddingTop: 2,
-            color: "white"
+            color: "#1b6d85"
         };
 
         return (

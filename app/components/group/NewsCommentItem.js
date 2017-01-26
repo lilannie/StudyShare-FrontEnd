@@ -18,7 +18,7 @@ export default class NewsCommentItem extends React.Component {
     render() {
         var commentStyle = {
             borderBottom: '2px solid #EAEDF1',
-            color: "white",
+            color: "#1b6d85",
             paddingBottom: 5,
             fontSize: 18
         };
