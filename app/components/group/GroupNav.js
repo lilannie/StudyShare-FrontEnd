@@ -5,6 +5,7 @@ import {Row, Col} from 'react-bootstrap';
 import GroupNavTab from './GroupNavTab';
 import GroupNavContent from './GroupNavContent';
 import GroupNewsFeed from './GroupNewsFeed';
+import NavDropdown from './NavDropdown';
 
 import '../../scss/group.scss';
 
@@ -32,25 +33,25 @@ export default class GroupNav extends React.Component {
                             <ul className="nav nav-pills">
                                 <GroupNavTab active={true}
                                              title={'Timeline'}
-                                             tabId={'#tab-0'} />
-                                <GroupNavTab active={false}
+                                             tabId={'#tab-0'}/>
+                                <NavDropdown active={false}
                                              title={'Groups'}
-                                             tabId={'#tab-1'} />
+                                             tabId={'#tab-1'}/>
                                 <GroupNavTab active={false}
                                              title={'Settings'}
-                                             tabId={'#tab-2'} />
+                                             tabId={'#tab-2'}/>
                             </ul>
 
                             <div className="tab-content clearfix">
                                 <GroupNavContent tabId={"tab-0"}
                                                  content={<GroupNewsFeed />}
-                                                 active={true} />
+                                                 active={true}/>
                                 <GroupNavContent tabId={"tab-1"}
                                                  content={<GroupNewsFeed />}
-                                                 active={false} />
+                                                 active={false}/>
                                 <GroupNavContent tabId={"tab-2"}
                                                  content={<GroupNewsFeed />}
-                                                 active={false} />
+                                                 active={false}/>
                             </div>
                         </div>
                     </Row>
