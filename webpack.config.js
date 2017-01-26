@@ -24,7 +24,7 @@ module.exports = {
         Notecard: 'app/components/notecard/Notecard.js',
         Subject: 'app/components/subject/Subject.js',
         User: 'app/components/user/User.js',
-        Login: 'app/components/auth/Login',
+        Login: 'app/components/auth/Login.js',
         Signup: 'app/components/auth/Signup.js'
 
     },
