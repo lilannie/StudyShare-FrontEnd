@@ -5,7 +5,7 @@ import '../../scss/group.scss';
 export default class GroupNavContent extends React.Component {
     static defaultProps = {
         active: false,
-        tabId: '#tab-0',
+        tabId: 'tab-0',
         title: 'FAKE TAB'
     };
 

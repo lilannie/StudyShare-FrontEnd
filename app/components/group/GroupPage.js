@@ -2,6 +2,7 @@ import React from 'react';
 
 import '../../scss/group.scss';
 import GroupCover from 'GroupCover';
+import GroupSidebar from './GroupSidebar';
 
 export default class GroupPage extends React.Component {
     static defaultProps = {
@@ -24,7 +25,7 @@ export default class GroupPage extends React.Component {
                 <GroupCover background={'/images/gallery/math.jpg'}
                     title={this.props.title}/>
                 <div className="group-page-body">
-
+                    <GroupSidebar />
                 </div>
             </div>
         );
