@@ -1,5 +1,8 @@
 import React from 'react';
 
+import {Link} from 'react-router';
+import {Button, Icon} from '@sketchpixy/rubix';
+
 import '../../scss/login.scss';
 
 export default class Login extends React.Component {
@@ -14,12 +17,21 @@ export default class Login extends React.Component {
     render() {
         return (
             <div className="login">
+                <div className="cover-container" >
+                    <div className='cover' >
+                        <img className="login-image"
+                             src="/images/app/logo-light.png"
+                             alt="logo"/>
+                    </div>
+                </div>
+
                 <div className="container-fluid">
                     <div className="row">
                         <div className="main">
-                            <h3>Please Log In, or
+                            <h3 className="header">Please Log In, or
                                 <Link to={'/signup'}>Sign Up</Link>
                             </h3>
+                            <br/>
                             <div className="row">
                                 <div className="col-xs-6 col-sm-6 col-md-6">
                                     <a href="#" className="btn btn-lg btn-primary btn-block">Facebook</a>
@@ -39,19 +51,21 @@ export default class Login extends React.Component {
                                 <input type="text" className="form-control" id="inputUsernameEmail"/>
                             </div>
                             <div className="form-group">
-                                <a className="pull-right" href="#">Forgot password?</a>
+                                <a className="login-text pull-right" href="">Forgot password?</a>
                                 <label htmlFor="inputPassword">Password</label>
                                 <input type="password" className="form-control" id="inputPassword"/>
                             </div>
                             <div className="checkbox pull-right">
                                 <label>
-                                    <input type="checkbox"/>
+                                    <input type="checkbox"/> Remember me
                                 </label>
-                                Remember me
+
                             </div>
-                            <button type="submit" className="btn btn btn-primary">
-                                Log In
-                            </button>
+                            <Link to={'/'}>
+                                <button type="submit" className="btn theme-button-pink">
+                                    Log In
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

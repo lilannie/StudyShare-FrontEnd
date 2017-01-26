@@ -25,7 +25,7 @@ module.exports = {
         Subject: 'app/components/subject/Subject.js',
         User: 'app/components/user/User.js',
         Login: 'app/components/auth/Login.js',
-        Signup: 'app/components/auth/Signup.js'
+        Signup: 'app/components/auth/Signup.js',
         ContentHeader: 'app/components/common/content/ContentHeader.js',
         ContentSidebar: 'app/components/common/content/ContentSidebar.js',
         ContentBody: 'app/components/common/content/ContentBody.js',
