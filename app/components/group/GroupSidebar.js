@@ -37,7 +37,8 @@ export default class GroupSidebar extends React.Component {
                         </li>
                         <li className="sidebar-brand"
                             onClick={toggleGroupSidebar}>
-                                Start Bootstrap
+                            <i className="fa fa-home"></i>
+                            Home
                         </li>
                         <li onClick={toggleGroupSidebar}>
                                 Home

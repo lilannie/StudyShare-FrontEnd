@@ -164,7 +164,7 @@ $theme-pink-dark: #e63342;
     height: 100%;
     transform: translateX(-250px);
     overflow-y: auto;
-    background: #222;
+    background: $grey;
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
     -ms-transition: all 0.4s ease 0s;
