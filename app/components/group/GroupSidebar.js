@@ -20,6 +20,10 @@ export default class GroupSidebar extends React.Component {
     }
 
     render() {
+        let iconStyle = {
+            paddingRight: 10,
+            marginLeft: -20
+        };
         return (
             <div className="group-sidebar">
                 <a id="menu-toggle"
@@ -37,14 +41,19 @@ export default class GroupSidebar extends React.Component {
                         </li>
                         <li className="sidebar-brand"
                             onClick={toggleGroupSidebar}>
-                            <i className="fa fa-home"></i>
+                            <i className="fa fa-home"
+                                style={iconStyle}></i>
                             Home
                         </li>
                         <li onClick={toggleGroupSidebar}>
-                                Home
+                            <i className="fa fa-book"
+                               style={iconStyle}></i>
+                            Content
                         </li>
                         <li onClick={toggleGroupSidebar}>
-                            About
+                            <i className="fa fa-users"
+                               style={iconStyle}></i>
+                            Members
                         </li>
                     </ul>
                 </nav>
