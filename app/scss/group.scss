@@ -34,6 +34,30 @@ $theme-pink-dark: #e63342;
  }
 }
 
+.group-nav {
+  overflow: hidden;
+  #group-nav {
+    padding: 0px;
+    padding-top: 10px;
+
+    .tab-content {
+      color : white;
+      background-color: $theme-blue;
+      padding : 5px 15px;
+    }
+
+    .nav-pills > li > a {
+      color: $theme-blue;
+      border-radius: 0;
+    }
+
+    .nav-pills > li.active  > a {
+      background: $theme-blue;
+      color: white;
+      border-radius: 0;
+    }
+  }
+}
 
 .theme-button-white {
   background-color: white;

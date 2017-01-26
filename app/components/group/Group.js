@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ContentHeader from 'ContentHeader';
-import GroupNewsFeed from './GroupNewsFeed';
+import GroupNav from './GroupNav'
 
 import '../../scss/group.scss';
 
@@ -24,7 +24,7 @@ export default class Group extends React.Component {
         return (
             <div className="group">
                 <ContentHeader title="Groups"/>
-                <GroupNewsFeed />
+                <GroupNav />
             </div>
         );
     }
