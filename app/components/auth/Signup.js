@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-import Cover from './Cover';
+import Cover from 'Cover';
 
 import '../../scss/signup.scss';
 

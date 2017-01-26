@@ -37,7 +37,8 @@ export default class GroupNewsFeed extends React.Component {
 
     render() {
         var bodyStyle = {
-            marginTop: 10
+            marginTop: 10,
+            padding : "5px 15px"
         };
         return (
             <div className='group-body' style={bodyStyle}>
