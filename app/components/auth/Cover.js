@@ -1,11 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router';
 
-import Cover from './Cover';
+import '../../scss/login.scss';
 
-import '../../scss/signup.scss';
-
-export default class Signup extends React.Component {
+export default class Cover extends React.Component {
     static defaultProps = {
         foo: 'bar'
     };
@@ -16,12 +13,11 @@ export default class Signup extends React.Component {
 
     render() {
         return (
-            <div className="signup">
-                <Cover />
-                <div className="signup-body container-fluid">
-
-                    {/** Your JSX code goes here **/}
-
+            <div className="cover-container">
+                <div className='cover'>
+                    <img className="login-image"
+                         src="/images/app/logo-light.png"
+                         alt="logo"/>
                 </div>
             </div>
         );
@@ -36,7 +32,7 @@ export default class Signup extends React.Component {
     componentWillReceiveProps(nextProps) {
     }
 
-    static shouldComponentUpdate(nextProps, nextState) {
+    shouldComponentUpdate(nextProps, nextState) {
         return true;
     }
 
@@ -46,5 +42,4 @@ export default class Signup extends React.Component {
     componentDidUpdate(prevProps, prevState) {
     }
 
-};
-
+}

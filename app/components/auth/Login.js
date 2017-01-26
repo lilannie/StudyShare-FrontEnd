@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {Link} from 'react-router';
-import {Button, Icon} from '@sketchpixy/rubix';
+import Cover from './Cover';
 
 import '../../scss/login.scss';
 
@@ -17,13 +17,7 @@ export default class Login extends React.Component {
     render() {
         return (
             <div className="login">
-                <div className="cover-container" >
-                    <div className='cover' >
-                        <img className="login-image"
-                             src="/images/app/logo-light.png"
-                             alt="logo"/>
-                    </div>
-                </div>
+                <Cover />
 
                 <div className="container-fluid">
                     <div className="row">

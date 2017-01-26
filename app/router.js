@@ -14,6 +14,7 @@ import Group from 'Group';
 import Friend from 'Friend';
 import Login from 'Login';
 import Signup from 'Signup';
+
 ReactDOM.render(
     <Router history={browserHistory}>
         <Route path="/" component={Main}>
