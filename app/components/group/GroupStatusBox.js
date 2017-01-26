@@ -37,7 +37,7 @@ export default class GroupStatusBox extends React.Component {
         var formStyle = {
             border: 'none',
             maxWidth: "650px",
-            padding: 0,
+            padding: 10,
             backgroundColor: "rgba(233, 237, 239, 0.8)"
         };
 
@@ -49,7 +49,7 @@ export default class GroupStatusBox extends React.Component {
             <div className="panel" style={panelStyle}>
                 <PanelBody style={panelBodyStyle}>
                     <FormControl componentClass='textarea' rows='3'
-                                 placeholder="Share with the group..."
+                                 placeholder="Share with your friends..."
                                  style={formStyle}/>
                 </PanelBody>
                 <PanelFooter className='fg-black75 bg-gray' style={footerStyle}>

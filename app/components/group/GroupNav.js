@@ -6,6 +6,7 @@ import GroupNavTab from './GroupNavTab';
 import GroupNavContent from './GroupNavContent';
 import GroupNewsFeed from './GroupNewsFeed';
 import NavDropdown from './NavDropdown';
+import GroupNavDropdown from './GroupNavDropdown';
 
 import '../../scss/group.scss';
 
@@ -36,7 +37,8 @@ export default class GroupNav extends React.Component {
                                              tabId={'#tab-0'}/>
                                 <NavDropdown active={false}
                                              title={'Groups'}
-                                             tabId={'#tab-1'}/>
+                                             tabId={'#tab-1'}
+                                            menu={<GroupNavDropdown />}/>
                                 <GroupNavTab active={false}
                                              title={'Settings'}
                                              tabId={'#tab-2'}/>

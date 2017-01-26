@@ -59,6 +59,22 @@ $theme-pink-dark: #e63342;
       border-radius: 0;
     }
   }
+
+  .dropdown-menu > li > a {
+    font-size: 14px;
+    color: $theme-blue;
+  }
+
+  .dropdown-menu > li > a:hover {
+    background-color: $grey-light;
+    color: $theme-blue;
+  }
+
+  .dropdown-menu > li.active  > a {
+    background: $theme-blue;
+    color: white;
+    border-radius: 0;
+  }
 }
 
 .theme-button-white {
