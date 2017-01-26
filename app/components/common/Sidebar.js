@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {Col} from 'react-bootstrap';
+
 export default class Sidebar extends React.Component {
     static defaultProps = {
         foo: 'bar'
@@ -11,6 +13,7 @@ export default class Sidebar extends React.Component {
 
     render() {
         return (
+            <Col md={1}>
             <div id="sidebar-container" className="">
                 <div id="sidebar-wrapper">
                     <aside id="sidebar">
@@ -70,12 +73,12 @@ export default class Sidebar extends React.Component {
                                 </a>
                             </li>
                             <li>
-                                <a href="/classes">
+                                <a href="/groups">
                                     <span className="sidebar-icon">
                                         <i className="fa fa-graduation-cap fa-2x"></i>
                                     </span>
                                     <span className="sidebar-title">
-                                        Classes
+                                        Groups
                                     </span>
                                 </a>
                             </li>
@@ -95,6 +98,7 @@ export default class Sidebar extends React.Component {
                 <main id="page-content-wrapper" role="main">
                 </main>
             </div>
+            </Col>
         );
     }
 

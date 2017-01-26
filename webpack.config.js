@@ -16,7 +16,7 @@ module.exports = {
         Sidebar: 'app/components/common/Sidebar.js',
         Animation: 'app/components/animation/Animation.js',
         Browse: 'app/components/browse/Browse.js',
-        Class: 'app/components/class/Class.js',
+        Group: 'app/components/group/Group.js',
         Deck: 'app/components/deck/Deck.js',
         Friend: 'app/components/friend/Friend.js',
         Note: 'app/components/note/Note.js',
@@ -26,7 +26,14 @@ module.exports = {
         User: 'app/components/user/User.js',
         Login: 'app/components/auth/Login.js',
         Signup: 'app/components/auth/Signup.js'
-
+        ContentHeader: 'app/components/common/content/ContentHeader.js',
+        ContentSidebar: 'app/components/common/content/ContentSidebar.js',
+        ContentBody: 'app/components/common/content/ContentBody.js',
+        CardTemplate: 'app/components/common/content/CardTemplate.js',
+        CardHeader: 'app/components/common/content/CardHeader.js',
+        CardActions: 'app/components/common/content/CardActions.js',
+        RichEditor: 'app/components/common/editor/containers/RichEditor.js',
+        Background: 'public/images/app/background.jpg'
     },
     extensions: ['', '.js', '.jsx']
   },

@@ -1,8 +1,7 @@
 import React from 'react';
 
-export default class SubjectItemHeader extends React.Component {
+export default class BrowseCardDeckCaption extends React.Component {
     static defaultProps = {
-        foo: 'bar'
     };
 
     state = {
@@ -11,8 +10,8 @@ export default class SubjectItemHeader extends React.Component {
 
     render() {
         return (
-            <div className="card-header-grey">
-                <h1 className="card-heading">{this.props.title}</h1>
+            <div className="deck-caption">
+                {this.props.numCards} Cards
             </div>
         );
     }
@@ -21,7 +20,6 @@ export default class SubjectItemHeader extends React.Component {
     }
 
     componentDidMount() {
-
     }
 
     componentWillReceiveProps(nextProps) {

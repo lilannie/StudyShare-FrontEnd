@@ -6,7 +6,8 @@ var app = express();
 
 app.use(express.static('public'));
 
-app.get('*', function (req, res) {
+app.all('*', function (req, res) {
+    res.set('Content-Type', 'text/html');
     res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
 

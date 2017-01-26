@@ -1,32 +1,59 @@
 import React from 'react';
+import {Row, Col} from 'react-bootstrap';
+
+import NotecardContent from './NotecardContent';
+import NotecardSidebar from './NotecardSidebar';
+import ContentHeader from 'ContentHeader';
 
 export default class Notecard extends React.Component {
     static defaultProps = {
-        foo: 'bar'
+        foo: "bar"
     };
 
     state = {
-        foo: 'bar'
+        foo: "bar"
+
     };
+
+    constructor(props) {
+        super(props);
+
+    }
 
     render() {
         return (
-            <h1>Notecard</h1>
+            <div className="notecard-container">
+                <ContentHeader title="Edit Deck"/>
+                <Row>
+                    <Col md={1} style={{"padding": "0px"}}>
+                        <NotecardSidebar/>
+                    </Col>
+                    <Col md={9} style={{"padding": "0px"}}>
+
+                        <NotecardContent />
+                    </Col>
+                </Row>
+            </div>
         );
     }
 
-    componentWillMount() {}
+    componentWillMount() {
+    }
 
-    componentDidMount() {}
+    componentDidMount() {
+    }
 
-    componentWillReceiveProps(nextProps) {}
+    componentWillReceiveProps(nextProps) {
+    }
 
     shouldComponentUpdate(nextProps, nextState) {
         return true;
     }
 
-    componentWillUpdate(nextProps, nextState) {}
+    componentWillUpdate(nextProps, nextState) {
+    }
 
-    componentDidUpdate(prevProps, prevState) {}
+    componentDidUpdate(prevProps, prevState) {
+    }
 
 }

@@ -1,35 +1,36 @@
 import React from 'react';
-import SubjectItem from './SubjectItem';
 
-export default class SubjectAll extends React.Component {
+import DeckItem from './DeckItem';
+
+export default class DeckBody extends React.Component {
     static defaultProps = {
         foo: 'bar'
     };
 
     state = {
-        foo: 'bar'
+        view: 0
     };
 
     constructor(props) {
         super(props);
 
-        this.getItems = this.getItems.bind(this);
+        this.getDeckItems = this.getDeckItems.bind(this);
     }
 
-    getItems() {
-        return this.props.subjects.map(function (subject) {
-            return <SubjectItem key={"subject-"+subject.id}
-                                title={subject.title}
-                                description={subject.description}
-                                content={subject.content} />;
+    getDeckItems() {
+        return this.props.decks.map(function(deck) {
+            return <DeckItem key={"deck-"+deck.id}
+                deckId={deck.id} title={deck.title}
+                             description={deck.description}/>
+
         });
     }
 
     render() {
-
         return (
-            <div>
-                {this.getItems()}
+            <div className=""
+                 style={{"margin": "10px"}}>
+                {this.getDeckItems()}
             </div>
         );
     }
@@ -38,7 +39,6 @@ export default class SubjectAll extends React.Component {
     }
 
     componentDidMount() {
-
     }
 
     componentWillReceiveProps(nextProps) {
