@@ -21,8 +21,10 @@ export default class GroupPage extends React.Component {
     render() {
         return (
             <div className="group-page">
-                <GroupCover background={'/images/gallery/math.jpg'}/>
+                <GroupCover background={'/images/gallery/math.jpg'}
+                    title={this.props.title}/>
                 <div className="group-page-body">
+
                 </div>
             </div>
         );

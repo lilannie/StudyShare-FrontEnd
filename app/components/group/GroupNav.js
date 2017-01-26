@@ -53,7 +53,24 @@ export default class GroupNav extends React.Component {
                                                  content={<GroupNewsFeed />}
                                                  active={false}/>
                                 <GroupNavContent tabId={"tab-4"}
-                                                 content={<GroupPage />}
+                                                 content={
+                                     <GroupPage title="MATH 140 Homework"/>}
+                                                 active={false}/>
+                                <GroupNavContent tabId={"tab-5"}
+                                                 content={
+                                     <GroupPage title="COM S 227 Final Review"/>}
+                                                 active={false}/>
+                                <GroupNavContent tabId={"tab-6"}
+                                                 content={
+                                     <GroupPage title="Digital Logic Learning Community"/>}
+                                                 active={false}/>
+                                <GroupNavContent tabId={"tab-7"}
+                                                 content={
+                                     <GroupPage title="Sorority Study Group"/>}
+                                                 active={false}/>
+                                <GroupNavContent tabId={"tab-8"}
+                                                 content={
+                                     <GroupPage title="Physics 221 Project"/>}
                                                  active={false}/>
                             </div>
                         </div>
