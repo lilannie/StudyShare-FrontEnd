@@ -26,6 +26,8 @@
   }
 
   h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 15px 25px;
     background-color: $theme-teal;
     font-size: large;
@@ -58,8 +60,12 @@
     background-color: $theme-yellow-dark;
   }
 
-  p {
-    padding: 10px 35px;
+  .accordion-opened {
+    display: block;
+  }
+
+  .accordion-content {
+    padding: 20px 35px;
     background-color: $off-white;
     font-family: "Georgia";
     font-size: medium;
@@ -68,7 +74,4 @@
     margin-bottom: 0px;
   }
 
-  .accordion-opened {
-    display: block;
-  }
 }

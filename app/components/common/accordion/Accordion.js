@@ -141,7 +141,7 @@ class HeaderOne extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="accordion-content">
                 {this.props.content}
                 {this.getChildren()}
             </div>
