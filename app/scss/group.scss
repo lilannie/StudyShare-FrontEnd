@@ -135,7 +135,7 @@ $theme-pink-dark: #e63342;
 }
 
 .group-page-body {
-  background: $grey-light;
+  background: $theme-blue;
   height: 100%;
   min-height: 400px;
 }
@@ -146,14 +146,14 @@ $theme-pink-dark: #e63342;
   #menu-toggle {
     z-index: 1;
     position: fixed;
-    color: white;
+    color: $theme-blue;
     margin-top: 10px;
-    background: $theme-blue;
+    background: white;
     margin-left: 10px;
   }
 
   #menu-toggle:hover {
-    background: $theme-blue-dark;
+    background: $grey-light;
   }
 
   #sidebar-wrapper {

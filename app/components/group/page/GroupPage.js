@@ -3,7 +3,7 @@ import React from 'react';
 import '../../../scss/group.scss';
 import GroupCover from 'GroupCover';
 import GroupSidebar from '../GroupSidebar';
-import GroupPageDashboard from './GroupPageDashboard';
+import GroupDashboard from './GroupDashboard';
 
 export default class GroupPage extends React.Component {
     static defaultProps = {
@@ -23,7 +23,7 @@ export default class GroupPage extends React.Component {
                     title={this.props.title}/>
                 <div className="group-page-body">
                     <GroupSidebar />
-                    <GroupPageDashboard />
+                    <GroupDashboard />
                 </div>
             </div>
         );

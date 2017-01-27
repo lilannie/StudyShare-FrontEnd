@@ -10,7 +10,7 @@ $theme-pink-dark: #e63342;
 .group-dashboard {
   margin-left: 200px;
 
-  .group-toolbar {
+  .dashboard-content {
     .container-fluid .row-fluid:first-child {
       margin-top: 20px;
     }
@@ -21,7 +21,7 @@ $theme-pink-dark: #e63342;
     }
 
     /* Stat boxes and quick actions */
-    .quick-actions_homepage {
+    .content-container {
       width: 100%;
       text-align: center;
       position: relative;
@@ -29,37 +29,37 @@ $theme-pink-dark: #e63342;
       margin-top: 10px;
     }
 
-    .quick-actions_homepage .quick-actions .span3 {
-      width: 30%;
+    .content-container .content-list .span3 {
+      width: 45%;
     }
 
-    .quick-actions {
+    .content-list {
       display: block;
       list-style: none outside none;
       margin: 15px 0;
       text-align: center;
     }
 
-    .quick-actions li {
+    .content-list li {
       float: left;
       line-height: 50px;
       margin: 0 10px 10px 0px;
       min-width: 14%;
       min-height: 50px;
-      background: $theme-pink;
+      background: $grey;
       color: #fff;
       font-size: 16px;
       font-weight: bold;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
     }
 
-    .quick-actions li:hover {
-      background: #2E363F;
+    .content {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      min-height: 500px;
+      background-color: white;
+
     }
   }
-
-  .group-dashboard-content {
-
-  }
-
-
 }
