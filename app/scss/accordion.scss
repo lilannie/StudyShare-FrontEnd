@@ -1,0 +1,74 @@
+@import './colors';
+
+.accordion {
+  width: 100%;
+  margin: 0px auto;
+
+  h1, h2, h3, h4 {
+    cursor: pointer;
+    margin: 0px;
+  }
+
+  h1 {
+    padding: 15px 20px;
+    background-color: white;
+    font-size: larger;
+    font-weight: bold;
+    color: $theme-teal;
+  }
+
+  h1:hover {
+    color: $theme-teal-dark;
+  }
+
+  div, p {
+    display: none;
+  }
+
+  h2 {
+    padding: 15px 25px;
+    background-color: $theme-teal;
+    font-size: large;
+    color: $grey;
+  }
+
+  h2:hover {
+    background-color: $theme-teal-dark;
+  }
+
+  h3 {
+    padding: 15px;
+    background-color: $theme-red;
+    font-size: large;
+    color: #ddd;
+  }
+
+  h3:hover {
+    background-color: $theme-red-dark;
+  }
+
+  h4 {
+    padding: 10px 35px;
+    background-color: $theme-yellow;
+    font-size: medium;
+    color: $theme-yellow-text;
+  }
+
+  h4:hover {
+    background-color: $theme-yellow-dark;
+  }
+
+  p {
+    padding: 10px 35px;
+    background-color: $off-white;
+    font-family: "Georgia";
+    font-size: medium;
+    color: #333;
+    line-height: 1.3rem;
+    margin-bottom: 0px;
+  }
+
+  .accordion-opened {
+    display: block;
+  }
+}

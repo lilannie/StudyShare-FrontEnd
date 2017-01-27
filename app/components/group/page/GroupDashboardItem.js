@@ -1,6 +1,7 @@
 import React from 'react';
 
-import DashboardSubject from './DashboardSubject'
+import Accordion from 'Accordion';
+
 import '../../../scss/group-dashboard.scss';
 
 export default class GroupDashboardItem extends React.Component {
@@ -28,19 +29,6 @@ export default class GroupDashboardItem extends React.Component {
     constructor(props) {
         super(props);
         this.getContent = this.getContent.bind(this);
-        this.getItems = this.getItems.bind(this);
-    }
-
-    getItems(type) {
-        return this.props[type].map(function (item) {
-            return (
-                <tr key={'item-'+item.id}>
-                    <td>{item.title}</td>
-                    <td>{item.description}</td>
-                    <td>{item.dateCreated}</td>
-                </tr>
-            );
-        });
     }
 
     getContent() {
@@ -48,7 +36,7 @@ export default class GroupDashboardItem extends React.Component {
             case 0: {
                 // Subjects
                 return (
-                    <DashboardSubject />
+                    <Accordion />
                 );
             }
             case 1: {

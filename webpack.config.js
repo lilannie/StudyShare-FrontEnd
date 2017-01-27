@@ -34,8 +34,8 @@ module.exports = {
         CardActions: 'app/components/common/content/CardActions.js',
         RichEditor: 'app/components/common/editor/containers/RichEditor.js',
         Cover: 'app/components/common/Cover.js',
-        GroupCover: 'app/components/common/GroupCover.js'
-
+        GroupCover: 'app/components/common/GroupCover.js',
+        Accordion: 'app/components/common/accordion/Accordion.js'
     },
     extensions: ['', '.js', '.jsx']
   },
