@@ -1,19 +1,61 @@
 import React from 'react';
 
+import GroupDashboardItem from './GroupDashboardItem';
 import '../../../scss/group-dashboard.scss';
 
 export default class GroupDashboard extends React.Component {
     static defaultProps = {
-        foo: 'bar'
+        content: [
+            {
+                id: 0,
+                title: "Subjects",
+                type: 0
+            },
+            {
+                id: 1,
+                title: "Notebooks",
+                type: 1
+            },
+            {
+                id: 2,
+                title: "Notecards",
+                type: 2
+            },
+            {
+                id: 3,
+                title: "Discussion",
+                type: 3
+            },
+            {
+                id: 4,
+                title: "Members",
+                type: 4
+            },
+            {
+                id: 5,
+                title: "Settings",
+                type: 5
+            }
+        ]
+
     };
     state = {
         foo: 'bar'
     };
 
-    componentDidMount() {
+    constructor(props) {
+        super(props);
+
+        this.getContent = this.getContent.bind(this);
     }
 
-    componentWillUnmount() {
+    getContent() {
+        return this.props.content.map(function (content) {
+            return <GroupDashboardItem
+                key={'item-'+content.id}
+                itemId={content.id}
+                title={content.title} type={content.type}/>
+        });
     }
 
     render() {
@@ -23,38 +65,7 @@ export default class GroupDashboard extends React.Component {
                     <div className="container-fluid">
                         <div className="content-container">
                             <ul className="content-list">
-                                <li className="span3">
-                                    <h3>Subjects</h3>
-                                    <div className="content">
-                                    </div>
-                                </li>
-                                <li className="span3">
-                                    <h3>Notebooks</h3>
-                                    <div className="content">
-                                    </div>
-                                </li>
-                                <li className="span3">
-                                    <h3>Notecards</h3>
-                                    <div className="content">
-                                    </div>
-
-                                </li>
-                                <li className="span3">
-                                    <h3>Discussion</h3>
-                                    <div className="content">
-
-                                    </div>
-                                </li>
-                                <li className="span3">
-                                    <h3>Members</h3>
-                                    <div className="content">
-                                    </div>
-                                </li>
-                                <li className="span3">
-                                    <h3>Settings</h3>
-                                    <div className="content">
-                                    </div>
-                                </li>
+                                {this.getContent()}
                             </ul>
                         </div>
                     </div>

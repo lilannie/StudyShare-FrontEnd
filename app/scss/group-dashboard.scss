@@ -3,9 +3,17 @@ $theme-blue-light: #d5f6f6;
 $theme-blue-dark: #114555;
 $grey: #333333;
 $grey-light: #E5E5E5;
-$off-white: rgba(233, 237, 239, 0.8);
+$off-white: #ddd;
 $theme-pink: #ed6b75;
 $theme-pink-dark: #e63342;
+$theme-teal: #1abc9c;
+$theme-teal-light: #4afcdc;
+$theme-teal-dark: #09ab8b;
+$theme-red: #b94152;
+$theme-red-dark: #a93142;
+$theme-yellow: #ffc25a;
+$theme-yellow-dark: #e0b040;
+$theme-yellow-text: #af720a;
 
 .group-dashboard {
   margin-left: 200px;
@@ -27,6 +35,13 @@ $theme-pink-dark: #e63342;
       position: relative;
       float: left;
       margin-top: 10px;
+
+      .item-title {
+        padding: 20px;
+        background: $grey;
+        margin-bottom: 0px;
+      }
+
     }
 
     .content-container .content-list .span3 {
@@ -46,24 +61,94 @@ $theme-pink-dark: #e63342;
       margin: 0 10px 10px 0px;
       min-width: 14%;
       min-height: 50px;
-      background: $grey;
       color: #fff;
       font-size: 16px;
       font-weight: bold;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
-
-
-
-
     }
 
     .content {
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
-      min-height: 500px;
-      background-color: white;
+    }
 
+    .dashboard-item {
+      color: $grey;
+      overflow: scroll;
+    }
+  }
+
+  .accordion {
+    width: 100%;
+    margin: 0px auto;
+
+    h1, h2, h3, h4 {
+      cursor: pointer;
+      margin: 0px;
+    }
+
+    h1 {
+      padding: 15px 20px;
+      background-color: white;
+      font-size: larger;
+      font-weight: bold;
+      color: $theme-teal;
+    }
+
+    h1:hover {
+      color: $theme-teal-dark;
+    }
+
+    div, p {
+      display: none;
+    }
+
+    h2 {
+      padding: 15px 25px;
+      background-color: $theme-teal;
+      font-size: large;
+      color: $grey;
+    }
+
+    h2:hover {
+      background-color: $theme-teal-dark;
+    }
+
+    h3 {
+      padding: 15px;
+      background-color: $theme-red;
+      font-size: large;
+      color: #ddd;
+    }
+
+    h3:hover {
+      background-color: $theme-red-dark;
+    }
+
+    h4 {
+      padding: 10px 35px;
+      background-color: $theme-yellow;
+      font-size: medium;
+      color: $theme-yellow-text;
+    }
+
+    h4:hover {
+      background-color: $theme-yellow-dark;
+    }
+
+    p {
+      padding: 10px 35px;
+      background-color: $off-white;
+      font-family: "Georgia";
+      font-size: medium;
+      color: #333;
+      line-height: 1.3rem;
+      margin-bottom: 0px;
+    }
+
+    .opened-for-codepen {
+      display: block;
     }
   }
 }
