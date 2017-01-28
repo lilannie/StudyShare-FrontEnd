@@ -14,6 +14,7 @@ import Group from 'Group';
 import Friend from 'Friend';
 import Login from 'Login';
 import Signup from 'Signup';
+import Search from 'Search';
 
 ReactDOM.render(
     <Router history={browserHistory}>
@@ -46,6 +47,10 @@ ReactDOM.render(
         </Route>
         <Route path="/login" component={Login}/>
         <Route path="/signup" component={Signup}/>
+        <Route path="/search" component={Main}>
+            <IndexRoute component={Search}/>
+        </Route>
+
     </Router>,
     document.getElementById('app')
 );

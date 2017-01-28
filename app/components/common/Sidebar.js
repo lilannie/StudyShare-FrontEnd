@@ -68,14 +68,14 @@ export default class Sidebar extends React.Component {
                                         <i className="fa fa-laptop fa-2x"></i>
                                     </span>
                                     <span className="sidebar-title">
-                                        Explore
+                                        Discover
                                     </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="/groups">
                                     <span className="sidebar-icon">
-                                        <i className="fa fa-graduation-cap fa-2x"></i>
+                                        <i className="fa fa-sitemap fa-2x"></i>
                                     </span>
                                     <span className="sidebar-title">
                                         Groups

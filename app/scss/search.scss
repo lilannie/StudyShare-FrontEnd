@@ -1,0 +1,158 @@
+@import './colors.scss';
+
+.search-page {
+
+  margin-left: -20px;
+
+
+  .field {
+    display: flex;
+    position: relative;
+    width: 70%;
+    flex-direction: row;
+    box-shadow: 1px 1px 0 $theme-blue-dark,
+    2px 2px 0 $theme-blue-dark,
+    3px 3px 0 $theme-blue-dark,
+    4px 4px 0 $theme-blue-dark,
+    5px 5px 0 $theme-blue-dark,
+    6px 6px 0 $theme-blue-dark,
+    7px 7px 0 $theme-blue-dark;
+  }
+
+  .field > input[type=text],
+  .field > button {
+    display: block;
+    font: 1.2em 'Montserrat Alternates';
+    border: 0.2em solid $theme-blue;
+  }
+
+  .field >input[type=text]:focus {
+    border: 0.2em solid $theme-blue;
+  }
+
+  .field > input[type=text] {
+    flex: 1;
+    padding: 0.6em;
+    border: 0.2em solid $theme-blue;
+    min-width: 400px;
+    color: black;
+  }
+
+  .field > button {
+    padding: 0.6em 0.8em;
+    background-color: $theme-blue;
+    border: 0.2em solid $theme-blue;
+    color: white;
+  }
+
+  .search-toolbar {
+    h1 {
+      margin: 20px 20px;
+    }
+
+    section {
+      height: 100%;
+      min-height: 250px;
+    }
+
+    .bodysec {
+      min-height: 700px;
+    }
+
+    #homesec {
+      background:
+              url(http://orig15.deviantart.net/b927/f/2014/279/1/8/school_classroom__late_afternoon__by_enigma_xiii-d801u9q.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      min-height: 600px;
+    }
+
+    #nav_wrap {
+      background: white;
+      width: 100%;
+      height: 65px;
+      position: absolute;
+      bottom: 0;
+      overflow: hidden;
+      z-index: 100;
+      box-shadow: 0px 1px 4px #343434;
+
+      i {
+        margin-right: 10px
+      }
+    }
+
+    nav {
+      width: 100%;
+      margin: 0 auto;
+      transition: .5s;
+    }
+
+    .nav_animate {
+      width: 70%;
+      transition: .5s;
+    }
+
+    nav a {
+      display: inline-block;
+      font-size: 21px;
+      text-decoration: none;
+      color: #505050;
+      width: 25%;
+      text-align: center;
+      line-height: 65px;
+      text-transform: uppercase;
+      border-top: 5px solid #9B5E5E;
+    }
+
+    nav a:hover {
+      border-top: 5px solid #4a4a4a;
+      transition: .4s;
+      background-color: $grey-light;
+    }
+
+    #logo{
+      position: absolute;
+      color: black;
+      z-index: 100;
+      transition: 1s;
+      line-height: 80px;
+      left: -150px;
+      font-size: 25px;
+      background: #4a4a4a;
+      height: 65px;
+      padding: 0 10px;
+      margin: 0;
+      cursor: pointer;
+      font-weight: bolder;
+    }
+
+    #mainlogo {
+      color: white;
+      display: inline-block;
+      padding: 35px;
+      position: absolute;
+      top: 50%;
+      margin-top: -90px;
+      left: 50%;
+      text-align: center;
+      margin-left: -300px;
+    }
+
+    #copy {
+      padding: 20px 80px;
+      font-size: 24px;
+      text-align: justify;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .sticky {
+      position: fixed !important;
+      top: 0;
+    }
+  }
+}

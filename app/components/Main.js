@@ -1,9 +1,7 @@
 import React from 'react';
-import $ from 'jquery';
 import {Row, Col} from 'react-bootstrap';
 
 import Header from 'Header';
-import Footer from 'Footer';
 import Sidebar from 'Sidebar';
 import '../scss/app.scss';
 
@@ -23,7 +21,7 @@ export default class Main extends React.Component {
                 <Row>
                 <Sidebar/>
                 <Col id="main-content-wrapper"
-                     style={{"padding":"0px"}}
+
                      role="main">
                     {this.props.children}
                 </Col>
