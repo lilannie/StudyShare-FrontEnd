@@ -3,6 +3,7 @@ import {
     Icon
 } from '@sketchpixy/rubix';
 
+import DiscussionBody from './DiscussionBody';
 import Accordion from 'Accordion';
 
 import '../../../scss/group-dashboard.scss';
@@ -113,7 +114,7 @@ export default class GroupDashboardItem extends React.Component {
             case 3: {
                 // Discussion
                 return (
-                    <Accordion h1={this.convertSubjectsToAccordion()}/>
+                    <DiscussionBody />
                 );
             }
             case 4: {

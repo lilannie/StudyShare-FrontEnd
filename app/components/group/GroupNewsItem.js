@@ -7,64 +7,63 @@ import NewsComments from './NewsComments';
 import NewsCommentBox from './NewsCommentBox';
 
 import {
-    Row,
-    Col,
-    Icon,
-    Grid,
-    Panel,
-    Image,
-    Button,
     PanelBody,
-    PanelHeader,
-    PanelFooter,
-    FormControl,
-    PanelContainer,
 } from '@sketchpixy/rubix';
 
 import '../../scss/group.scss';
 
-export default class GroupNewsFeed extends React.Component {
+export default class GroupNewsItem extends React.Component {
     static defaultProps = {
-        foo: 'bar'
-    };
-
-    state = {
-        foo: 'bar'
-    };
-
-    componentDidMount() {
-    }
-
-    componentWillUnmount() {
-    }
-
-    render() {
-        var panelStyle = {
+        id: 0,
+        message: 'Ill be out of my mind and youll be out of ideas pretty soon. So lets spend the afternoon in a cold hot air balloon. Leave your jacket behind. Lean out and touch the tree tops over town. I cant wait to kiss the ground wherever we touch back down.',
+        groupPage: false,
+        avatarHeader: (<AvatarHeader/>),
+        newsImage: (<NewsImage />),
+        newsLikeDisplay: (<NewsLikeDisplay />),
+        shareClass: 'ribbon-left',
+        panelStyle: {
             "backgroundColor": "white"
-        };
-
-        var panelBodyStyle = {
+        },
+        panelBodyStyle: {
             padding: 10,
             paddingTop: 2,
             color: "#1b6d85"
-        };
+        },
+        messageStyle: {
+            border: 0
+        }
+    };
+
+    render() {
+        var footer = "";
+        var ribbon = "";
+
+        if (!this.props.groupPage) {
+            footer = [
+                ( <NewsComments key={"coments-" + this.props.id }/>),
+                ( <NewsCommentBox key={"comentbox-" + this.props.id }/>)
+            ];
+
+            ribbon = (<div className={this.props.shareClass}>
+                Share
+            </div>);
+        }
 
         return (
-            <div className="panel" style={panelStyle}>
-                <PanelBody style={panelBodyStyle}>
-                    <div className="ribbon-left">
-                        Share
-                    </div>
-                    <AvatarHeader/>
-                    <div className='panel-body'>
-                            {"I'll be out of my mind and you'll be out of ideas pretty soon. So let's spend the afternoon in a cold hot air balloon. Leave your jacket behind. Lean out and touch the tree tops over town. I can't wait to kiss the ground wherever we touch back down."}
-                    </div>
-                    <NewsImage />
-                </PanelBody>
+            <div className="panel" style={this.props.panelStyle}>
+                <PanelBody style={this.props.panelBodyStyle}>
+                    {ribbon}
 
-                <NewsLikeDisplay />
-                <NewsComments />
-                <NewsCommentBox />
+                    {this.props.avatarHeader}
+
+                    <div className='panel-body' style={this.props.messageStyle}>
+                        {this.props.message}
+                    </div>
+
+                    {this.props.newsImage}
+                </PanelBody>
+                {this.props.newsLikeDisplay}
+                {footer}
             </div>
         );
     }

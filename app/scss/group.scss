@@ -2,6 +2,7 @@ $theme-blue: #1b6d85;
 $theme-blue-light: #d5f6f6;
 $theme-blue-dark: #114555;
 $grey: #333333;
+$grey-med: #999;
 $grey-light: #E5E5E5;
 $off-white: rgba(233, 237, 239, 0.8);
 $theme-pink: #ed6b75;
@@ -108,6 +109,21 @@ $theme-pink-dark: #e63342;
   background-color: $theme-pink-dark;
 }
 
+.ribbon-right {
+  background-color: $theme-pink;
+  color: white;
+  float: right;
+  clear: right;
+  padding: .5em 1em .5em 2em;
+  margin: 5px 0px 0 0;
+  margin-left: -15px;
+  z-index: 5;
+}
+
+.ribbon-right:hover {
+  background-color: $theme-pink-dark;
+}
+
 .group-cover-container {
   height: 250px;
   background-size: cover;
@@ -145,7 +161,7 @@ $theme-pink-dark: #e63342;
 
   #menu-toggle {
     z-index: 1;
-    position: fixed;
+    position: absolute;
     color: $theme-blue;
     margin-top: 10px;
     background: white;
@@ -164,7 +180,7 @@ $theme-pink-dark: #e63342;
     height: 100%;
     transform: translateX(-250px);
     overflow-y: auto;
-    background: $grey;
+    background: $theme-blue-dark;
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
     -ms-transition: all 0.4s ease 0s;
@@ -194,7 +210,7 @@ $theme-pink-dark: #e63342;
     line-height: 40px;
     display: block;
     text-decoration: none;
-    color: #999;
+    color: white;
   }
   .sidebar-nav li:hover {
     text-decoration: none;

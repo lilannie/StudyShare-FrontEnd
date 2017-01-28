@@ -5,17 +5,7 @@ import GroupNewsItem from './GroupNewsItem';
 
 import {
     Row,
-    Col,
-    Icon,
-    Grid,
-    Panel,
-    Image,
-    Button,
-    PanelBody,
-    PanelHeader,
-    PanelFooter,
-    FormControl,
-    PanelContainer,
+    Col
 } from '@sketchpixy/rubix';
 
 import '../../scss/group.scss';

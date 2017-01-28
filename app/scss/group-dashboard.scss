@@ -57,6 +57,13 @@
     .content {
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
+
+      .discussion-body {
+        .panel {
+          margin-bottom: 0px;
+
+        }
+      }
     }
 
     .dashboard-item {

@@ -12,6 +12,30 @@ import {
 } from '@sketchpixy/rubix';
 
 export default class GroupStatusBox extends React.Component {
+    static defaultProps = {
+        panelStyle: {
+            backgroundColor: "white"
+        },
+        panelBodyStyle:{
+            padding: "5px 10px 0px 10px",
+            paddingTop: 12.5,
+            color: "#1b6d85"
+        },
+        iconStyle :{
+            marginRight: 25,
+            color: "#1b6d85"
+        },
+        formStyle: {
+            border: 'none',
+            maxWidth: "650px",
+            padding: 10,
+            backgroundColor: "rgba(233, 237, 239, 0.8)"
+        },
+        footerStyle: {
+            padding: '10px 5px'
+        }
+
+    };
     componentDidMount() {
     }
 
@@ -19,59 +43,33 @@ export default class GroupStatusBox extends React.Component {
     }
 
     render() {
-        var panelStyle = {
-            backgroundColor: "white"
-        };
-
-        var panelBodyStyle = {
-            padding: "5px 10px 0px 10px",
-            paddingTop: 12.5,
-            color: "#1b6d85"
-        };
-
-        var iconStyle = {
-            marginRight: 25,
-            color: "#1b6d85"
-        };
-
-        var formStyle = {
-            border: 'none',
-            maxWidth: "650px",
-            padding: 10,
-            backgroundColor: "rgba(233, 237, 239, 0.8)"
-        };
-
-        var footerStyle = {
-            padding: '10px 5px'
-        };
-
         return (
-            <div className="panel" style={panelStyle}>
-                <PanelBody style={panelBodyStyle}>
+            <div className="panel" style={this.props.panelStyle}>
+                <PanelBody style={this.props.panelBodyStyle}>
                     <FormControl componentClass='textarea' rows='3'
                                  placeholder="Share with your friends..."
-                                 style={formStyle}/>
+                                 style={this.props.formStyle}/>
                 </PanelBody>
-                <PanelFooter className='fg-black75 bg-gray' style={footerStyle}>
+                <PanelFooter className='fg-black75 bg-gray' style={this.props.footerStyle}>
                     <Grid>
                         <Row>
                             <Col xs={6} collapseLeft collapseRight>
                                 <a href=''>
                                     <Icon className="status-link"
                                         glyph='fa fa-2x fa-plus-square-o'
-                                        style={iconStyle}/>
+                                        style={this.props.iconStyle}/>
                                 </a>
                                 <a className="status-link"
                                    href=''>
                                     <Icon
                                         glyph='fa fa-2x fa-picture-o'
-                                        style={iconStyle}/>
+                                        style={this.props.iconStyle}/>
                                 </a>
                                 <a className="status-link"
                                    href=''>
                                     <Icon
                                         glyph='fa fa-2x fa-paperclip'
-                                        style={iconStyle}/>
+                                        style={this.props.iconStyle}/>
                                 </a>
                             </Col>
                             <div className='text-right'>
