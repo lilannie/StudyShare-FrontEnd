@@ -35,7 +35,7 @@ export default class SubjectSidebar extends React.Component {
             ];
         }
         return (
-            <div id="subject-sidebar" className="well ">
+            <div id="subject-sidebar" >
                 <ul className="nav nav-pills nav-stacked">
                     {view}
                 </ul>

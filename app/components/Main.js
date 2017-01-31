@@ -3,6 +3,7 @@ import {Row, Col} from 'react-bootstrap';
 
 import Header from 'Header';
 import Sidebar from 'Sidebar';
+import NotebookCreate from './notebook/NotebookCreate';
 import '../scss/app.scss';
 
 export default class Main extends React.Component {
@@ -26,6 +27,7 @@ export default class Main extends React.Component {
                     {this.props.children}
                 </Col>
                 </Row>
+                <NotebookCreate />
             </div>
         );
     }

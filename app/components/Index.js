@@ -49,7 +49,7 @@ export default class Index extends React.Component {
                 items: [
                     {
                         id: 0,
-                        title: "Civil War",
+                        title: 'Civil War',
                         description: "List of all major events and dates."
                     },
                     {

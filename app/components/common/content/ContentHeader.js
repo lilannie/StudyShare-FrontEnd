@@ -4,7 +4,13 @@ import {Row, Col} from 'react-bootstrap';
 
 export default class ContentHeader extends React.Component {
     static defaultProps = {
-        foo: 'bar'
+        title: 'default header',
+        contentHeaderStyle: {padding: 0},
+        headerStyle: {
+            paddingRight: 20
+        },
+        mdPull: 3,
+        md: 4
     };
 
     state = {
@@ -16,13 +22,14 @@ export default class ContentHeader extends React.Component {
     }
 
     render() {
-        var noPadding = {"padding": "0px"};
         return (
             <Row>
-            <Col md={4} mdPull={3} style={noPadding}>
-                <div className="container-fluid" style={noPadding}>
+            <Col md={this.props.md} mdPull={this.props.mdPull}
+                 style={this.props.contentHeaderStyle}>
+                <div className="container-fluid"
+                     style={this.props.contentHeaderStyle}>
                     <h1 className="content-header text-right"
-                        style={{"paddingRight": "20px"}}>
+                        style={this.props.headerStyle}>
                         {this.props.title}
                     </h1>
                 </div>

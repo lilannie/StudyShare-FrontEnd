@@ -10,22 +10,35 @@
     <link href="css/jquery-ui.css" rel="stylesheet" />
     <link href="css/font-awesome.min.css" rel="stylesheet"/>
     <link href="css/Draft.css" rel="stylesheet"/>
+    <link href="//cdn.quilljs.com/1.2.0/quill.snow.css" rel="stylesheet">
+    <link href="//cdn.quilljs.com/1.2.0/quill.bubble.css" rel="stylesheet">
+    <link href="//cdn.quilljs.com/1.2.0/quill.core.css" rel="stylesheet">
 
 </head>
 
 <body>
 <style>
-
+    html{
+        min-height:100%;/* make sure it is at least as tall as the viewport */
+        position:relative;
+    }
+    body{
+        height:100%; /* force the BODY element to match the height of the HTML element */
+        background: #333;
+    }
 </style>
 <div id="app"></div>
 
 <script src="js/jquery-3.1.1.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="//cdn.quilljs.com/1.2.0/quill.core.js"></script>
+<script src="//cdn.quilljs.com/1.2.0/quill.min.js"></script>
 <script src="js/notecard.js"></script>
 <script src="js/group.js"></script>
 <script src="js/search.js"></script>
 <script src="bundle.js"></script>
+<script src="js/quill.js"></script>
 
 </body>
 
