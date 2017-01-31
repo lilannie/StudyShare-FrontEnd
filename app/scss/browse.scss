@@ -1,0 +1,71 @@
+@import './colors.scss';
+
+.browse-body-container {
+  background-image: url('https://www.walldevil.com/wallpapers/a80/landscape-earth-planet-background-wallpapers.jpg');
+  background-size: cover;
+  min-height: 900px;
+
+  .browse-body {
+    margin-top: 25px;
+
+    h1 {
+      color: white;
+    }
+
+    .slide-image {
+      width: 100%;
+    }
+
+    .carousel-holder {
+      margin-bottom: 30px;
+    }
+
+    .carousel-control,
+    .item {
+      border-radius: 4px;
+    }
+
+    .caption {
+      height: 130px;
+      overflow: hidden;
+    }
+
+    .caption h4 {
+      white-space: nowrap;
+    }
+
+    .thumbnail img {
+      width: 100%;
+    }
+
+    .ratings {
+      padding-right: 10px;
+      padding-left: 10px;
+      color: #d17581;
+
+      .stars {
+        margin-left: 10px;
+      }
+    }
+
+    .thumbnail {
+      padding: 0;
+    }
+
+    .thumbnail .caption-full {
+      padding: 9px;
+      color: #333;
+    }
+
+    footer {
+      margin: 50px 0;
+    }
+  }
+
+  .lead {
+    color: white;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
