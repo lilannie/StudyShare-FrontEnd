@@ -19,27 +19,27 @@ export default class Index extends React.Component {
                     {
                         id: 0,
                         title: 'Calculus I',
-                        description: "Before studying calculus, all students should complete four years of secondary mathematics designed for college-bound students: courses in which they study algebra, geometry, trigonometry, analytic geometry, and elementary functions. These functions include linear, polynomial, rational, exponential, logarithmic, trigonometric, inverse trigonometric, and piecewise-defined functions"
+                        description: 'Before studying calculus, all students should complete four years of secondary mathematics designed for college-bound students: courses in which they study algebra, geometry, trigonometry, analytic geometry, and elementary functions. These functions include linear, polynomial, rational, exponential, logarithmic, trigonometric, inverse trigonometric, and piecewise-defined functions.'
                     },
                     {
                         id: 1,
-                        title: "Computer Science Algorithms",
-                        description: "What are algorithms and why should you care? We'll start with an overview of algorithms and then discuss two games that you could use an algorithm to solve more efficiently - the number guessing game and a route-finding game.",
+                        title: 'Computer Science Algorithms',
+                        description: 'What are algorithms and why should you care? Well start with an overview of algorithms and then discuss two games that you could use an algorithm to solve more efficiently - the number guessing game and a route-finding game',
                     },
                     {
                         id: 2,
-                        title: "Chemistry",
-                        description: "Chemistry is the science of matter at or near the atomic scale. (Matter is the substance of which all physical objects are made.) Chemistry deals with the properties of matter, and the transformation and interactions of matter and energy. Central to chemistry is the interaction of one substance with another, such as in a chemical reaction, where a substance or substances are transformed into another."
+                        title: 'Chemistry',
+                        description: 'Chemistry is the science of matter at or near the atomic scale. (Matter is the substance of which all physical objects are made.) Chemistry deals with the properties of matter, and the transformation and interactions of matter and energy. Central to chemistry is the interaction of one substance with another, such as in a chemical reaction, where a substance or substances are transformed into another.'
                     },
                     {
                         id: 3,
-                        title: "American Government",
-                        description: "The Federal Government of the United States is the federal government of the United States, a republic in North America, composed of 50 states, one district, Washington, D.C. (the nation's capital), and several territories. The federal government is composed of three distinct branches: legislative, executive, and judicial, whose powers are vested by the U.S. Constitution in the Congress, the President, and the federal courts, including the Supreme Court, respectively."
+                        title: 'American Government',
+                        description: 'The Federal Government of the United States is the federal government of the United States, a republic in North America, composed of 50 states, one district, Washington, D.C. (the nations capital), and several territories. The federal government is composed of three distinct branches: legislative, executive, and judicial, whose powers are vested by the U.S. Constitution in the Congress, the President, and the federal courts, including the Supreme Court, respectively.'
                     },
                     {
                         id: 4,
-                        title: "Spanish I",
-                        description: "This  online audio lesson will teach you how to describe people in Spanish. With these Spanish adjectives on hand you'll be able to talk about a person’s appearance in Spanish and the kind of person they are as well."
+                        title: 'Spanish I',
+                        description: 'This  online audio lesson will teach you how to describe people in Spanish. With these Spanish adjectives on hand youll be able to talk about a person’s appearance in Spanish and the kind of person they are as well.'
                     }
                 ]
             },
