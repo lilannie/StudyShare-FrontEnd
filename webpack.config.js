@@ -27,6 +27,7 @@ module.exports = {
         Login: 'app/components/auth/Login.js',
         Signup: 'app/components/auth/Signup.js',
         Search: 'app/components/search/Search.js',
+        UnderConstruction: 'app/components/UnderConstruction.js',
         ContentHeader: 'app/components/common/content/ContentHeader.js',
         ContentSidebar: 'app/components/common/content/ContentSidebar.js',
         ContentBody: 'app/components/common/content/ContentBody.js',

@@ -15,6 +15,7 @@ import Friend from 'Friend';
 import Login from 'Login';
 import Signup from 'Signup';
 import Search from 'Search';
+import UnderConstruction from 'UnderConstruction';
 
 ReactDOM.render(
     <Router history={browserHistory}>
@@ -43,7 +44,7 @@ ReactDOM.render(
             <IndexRoute component={Group}/>
         </Route>
         <Route path="/friends" component={Main}>$
-            <IndexRoute component={Friend}/>
+            <IndexRoute component={UnderConstruction}/>
         </Route>
         <Route path="/login" component={Login}/>
         <Route path="/signup" component={Signup}/>
