@@ -235,6 +235,7 @@ $off-white: rgba(233, 237, 239, 0.8);
   font-family: 'Roboto', sans-serif;
   -webkit-transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 20px;
 }
 
 .card-body {
@@ -297,7 +298,9 @@ $off-white: rgba(233, 237, 239, 0.8);
 }
 
 .subject {
-  background: url(https://hdwallsbox.com/wallpapers/l/1920x1080/62/library-buildings-books-bookshelf-man-made-1920x1080-61564.jpg);
+  background-image: url('http://www.imgbase.info/images/safe-wallpapers/photography/mountains/50365_mountains_clear_blue_mountain_lake.jpg');
+  background-size: cover;
+
   .subject-header {
     line-height: 70px;
     border-radius: 4px;

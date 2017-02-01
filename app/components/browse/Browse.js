@@ -65,7 +65,7 @@ export default class Browse extends React.Component {
                 price: '',
                 numReviews: 15,
                 numStars: 4,
-                imgSrc: '/images/subjects/calculus.jpg'
+                imgSrc: '/images/notebooks/civil-war.jpg'
             },
             {
                 cardId: 1,
@@ -78,7 +78,7 @@ export default class Browse extends React.Component {
                 price: '',
                 numReviews: 45,
                 numStars: 3,
-                imgSrc: '/images/subjects/calculus.jpg'
+                imgSrc: '/images/notebooks/linear.bmp'
             },
             {
                 cardId: 2,
@@ -91,7 +91,7 @@ export default class Browse extends React.Component {
                 price: '',
                 numReviews: 37,
                 numStars: 5,
-                imgSrc: '/images/subjects/calculus.jpg'
+                imgSrc: '/images/notebooks/compounds.jpg'
             },
             {
                 cardId: 3,
@@ -100,7 +100,7 @@ export default class Browse extends React.Component {
                 price: '',
                 numReviews: 23,
                 numStars: 2,
-                imgSrc: '/images/subjects/calculus.jpg'
+                imgSrc: '/images/notebooks/photosynthesis.jpg'
             },
             {
                 cardId: 4,
@@ -113,7 +113,7 @@ export default class Browse extends React.Component {
                 price: '',
                 numReviews: 59,
                 numStars: 4,
-                imgSrc: '/images/subjects/calculus.jpg'
+                imgSrc: '/images/notebooks/website.jpg'
             }
         ],
         decks: [
@@ -126,7 +126,7 @@ export default class Browse extends React.Component {
                 price: '',
                 numReviews: 59,
                 numStars: 4,
-                imgSrc: '/images/subjects/calculus.jpg'
+                imgSrc: '/images/notecards/kitchen.jpeg'
             },
             {
                 cardId: 1,
@@ -137,7 +137,7 @@ export default class Browse extends React.Component {
                 price: '',
                 numReviews: 23,
                 numStars: 2,
-                imgSrc: '/images/subjects/calculus.jpg'
+                imgSrc: '/images/notecards/linked-list.jpg'
             },
             {
                 cardId: 2,
@@ -148,7 +148,7 @@ export default class Browse extends React.Component {
                 price: '',
                 numReviews: 37,
                 numStars: 5,
-                imgSrc: '/images/subjects/calculus.jpg'
+                imgSrc: '/images/notecards/persia-art.jpg'
             },
             {
                 cardId: 3,
@@ -159,7 +159,7 @@ export default class Browse extends React.Component {
                 price: '',
                 numReviews: 45,
                 numStars: 3,
-                imgSrc: '/images/subjects/calculus.jpg'
+                imgSrc: '/images/notecards/binary-search.png'
             },
             {
                 cardId: 4,
@@ -170,7 +170,7 @@ export default class Browse extends React.Component {
                 price: '',
                 numReviews: 15,
                 numStars: 4,
-                imgSrc: '/images/subjects/calculus.jpg'
+                imgSrc: '/images/notecards/cookies.jpg'
             }
         ]
     };
