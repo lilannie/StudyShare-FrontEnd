@@ -7,15 +7,24 @@ export default class ExploreToolbar extends React.Component {
         foo: 'bar'
     };
 
+    constructor(props) {
+        super(props);
+        this.changeView = this.changeView.bind(this);
+    }
+
+    changeView(id) {
+        this.props.changeView(id);
+    }
+
 
     render() {
         return (
             <div className="col-md-2">
                 <h4 className="lead">Types</h4>
                 <div className="list-group">
-                    <a href="#" className="list-group-item">Subjects</a>
-                    <a href="#" className="list-group-item">Notebooks</a>
-                    <a href="#" className="list-group-item">Notecards</a>
+                    <a className="list-group-item" onClick={this.changeView.bind(null, 0)}>Subjects</a>
+                    <a className="list-group-item" onClick={this.changeView.bind(null, 1)}>Notebooks</a>
+                    <a className="list-group-item" onClick={this.changeView.bind(null, 2)}>Notecards</a>
                 </div>
             </div>
         );

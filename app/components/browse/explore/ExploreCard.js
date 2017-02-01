@@ -10,10 +10,14 @@ export default class ExploreCard extends React.Component {
         description: 'Calculus is fun (sometimes) (;',
         numReviews: 15,
         numStars: 2,
+        imgSrc: 'http://placehold.it/320x150',
         starsStyle: {
             marginLeft: 10
         },
-        imgSrc: 'http://placehold.it/320x150'
+        ribbonStyle: {
+            zIndex: 100,
+            marginLeft: -10
+        }
     };
 
     constructor(props) {
@@ -40,6 +44,9 @@ export default class ExploreCard extends React.Component {
             <div className="col-sm-4 col-lg-4 col-md-4">
                 <div className="thumbnail">
                     <img src={this.props.imgSrc} alt=""/>
+                    <div className="ribbon" style={this.props.ribbonStyle}>
+                        Share
+                    </div>
                     <div className="caption">
                         <h4 className="pull-right">{this.props.price}</h4>
                         <h4 className="thumbnail-title"><a href="#">{this.props.title}</a>

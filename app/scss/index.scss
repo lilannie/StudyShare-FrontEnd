@@ -5,10 +5,13 @@ $grey: #333333;
 $off-white: rgba(233, 237, 239, 1);
 $theme-pink: #ed6b75;
 $theme-dark-pink: #e63342;
+@import './colors.scss';
 
 .index-page {
+  background-image: url('https://lifeloveandseoul.files.wordpress.com/2012/03/colorful_bookshelf-wallpaper1.jpg');
 
   .index-body {
+    margin-left: 30px;
     margin-top: 25px;
   }
   .portfolio-item {
@@ -17,12 +20,33 @@ $theme-dark-pink: #e63342;
   }
 }
 
-.browse-card {
+.browse-card::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 0px;
+  background-color: #F5F5F5;
+}
+
+.browse-card::-webkit-scrollbar
+{
+  width: 0px;
+  background-color: #F5F5F5;
+}
+
+.browse-card::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
   background-color: $theme-blue;
+}
+
+.browse-card {
+  background-color: $grey;
   width: 300px;
   height: 300px;
   max-height: 500px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   border-radius: 5px;
 
   .browse-card-body {
@@ -88,7 +112,7 @@ $theme-dark-pink: #e63342;
 }
 
 .browse-card:hover {
-  background-color: $theme-blue-dark;
+  background-color: black;
 }
 
 .browse-link {
@@ -102,10 +126,15 @@ $theme-dark-pink: #e63342;
 .browse-header {
   h2 {
     margin: 0px;
+    width: 500px;
+    color: white;
+    background: rgba(51, 51, 51, .8);
+    padding: 10px;
+    border-radius: 10px;
   }
   hr {
     border: 0;
-    border-top: 5px solid $grey;
+    border-top: 5px solid white;
     padding: 0;
     overflow: hidden;
     width: 100%;
