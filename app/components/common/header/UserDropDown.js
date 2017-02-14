@@ -22,9 +22,9 @@ export default class UserDropDown extends React.Component {
                         <h4>Username</h4>
                     </a>
                     <ul className="dropdown-menu dropdown-block" role="menu">
-                        <li><a href="">Profile</a></li>
-                        <li><a href="">Settings</a></li>
-                        <li><a href="">Logout</a></li>
+                        <li><a href="/user">Profile</a></li>
+                        <li><a href="/settings">Settings</a></li>
+                        <li><a href="/login">Logout</a></li>
                     </ul>
                 </li>
             </ul>

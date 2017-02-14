@@ -35,7 +35,7 @@ ReactDOM.render(
             <IndexRoute component={Notecard} />
         </Route>
         <Route path="/animations" component={Main}>
-            <IndexRoute component={Animation}/>
+            <IndexRoute component={UnderConstruction}/>
         </Route>
         <Route path="/explore" component={Main}>
             <IndexRoute component={Browse}/>
@@ -50,6 +50,15 @@ ReactDOM.render(
         <Route path="/signup" component={Signup}/>
         <Route path="/search" component={Main}>
             <IndexRoute component={Search}/>
+        </Route>
+        <Route path="/user" component={Main}>$
+            <IndexRoute component={UnderConstruction}/>
+        </Route>
+        <Route path="/settings" component={Main}>$
+            <IndexRoute component={UnderConstruction}/>
+        </Route>
+        <Route path="/logout" component={Main}>$
+            <IndexRoute component={Login}/>
         </Route>
 
     </Router>,
